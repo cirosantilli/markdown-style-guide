@@ -21,39 +21,39 @@ which would produce decent looking output without looking stupid in vim.
 
   * Header text must use the `atx-style` with no closing `#` character.
 
-   ```
-   # Header 1
-   ## Header 2
-   ### Header 3
-   ```
+    ```
+    # Header 1
+    ## Header 2
+    ### Header 3
+    ```
 
   * Headers spanning more than 80 characters should be re-evaluated.
   * Headers must be preceded and followed by a newline except at the beginning
-   of a file.
+    of a file.
 
 ## Lists
 
   * **List items** must be indented 2 spaces further than their parent.
 
-   ```
-   This is arbitrary text, an unordered list begins on the next line.
-     * list item 1
-     * list item 2
-       * sub-list item
-   ```
+    ```
+    This is arbitrary text, an unordered list begins on the next line.
+      * list item 1
+      * list item 2
+        * sub-list item
+    ```
 
   * The first level of list items must not be preceded by a newline.
   * All lists must be followed by newlines.
 
     ```
     This text precedes a list of things.
-    * list item 1
-    * list item 2
-      1. sub-list item 1
-      2. sub-list item 2
+      * list item 1
+      * list item 2
+        1. sub-list item 1
+        2. sub-list item 2
 
-    * list item 3
-    * list item 4
+      * list item 3
+      * list item 4
 
     This is text of any kind that follows a list.
     ```
@@ -72,26 +72,26 @@ which would produce decent looking output without looking stupid in vim.
     ```
 
   * **Fenced code blocks** must be preceded and followed by a newline.
-  * When used inside **list items**, indent **fenced code blocks** as if they
-    were one level deeper that the list item that contains them.
+  * When used inside _list items_, **fenced code blocks** must be indented as if
+    they were one level deeper that the list item that contains them.
 
-  ```
-    * This list item contains a fenced code block
-    * Let's show how it might interact with a list.
+    ```
+      * This list item contains a fenced code block
+      * Let's show how it might interact with a list.
 
-      ```
-      .code-example {
-        property: value;
-      }
-      ```
+        ```
+        .code-example {
+          property: value;
+        }
+        ```
 
     There is a newline above this paragraph because it is both the end of a list
     and because it follows a fenced code block.
-  ```
+    ```
 
 # Tables
 Like fenced code blocks, tables in Markdown are provided by Markdown Extra which
-, so far, seems to be pretty widely implemented.
+seems to be pretty widely implemented.
 
   * Pipe characters must be preceded and followed by spaces for readability.
   * Table column width should be determined by the longest cell in the column.
