@@ -96,28 +96,41 @@ seems to be pretty widely implemented.
   * Pipe characters must be preceded and followed by spaces for readability.
   * Table column width should be determined by the longest cell in the column.
   * Always format tables so they are readable in pre-processing.
-  * Never use preceding or trailing pipes when writing tables.
 
     ```
-    # Bad! This is completely unreadable, although it is technically valid.
+    # This is completely unreadable, although it is technically valid.
     table header | other table header
     --- | ---
     table data | other table data
+    ```
 
-    # Bad! This wastes our precious 80 character limit.
+  * Never use preceding or trailing pipes when writing tables.
+
+    ```
+    # This wastes our precious 80 character limit.
     | table header | other table header |
     | ------------ | ------------------ |
     | table data   | table data         |
     ```
+
   * Tables must always be preceded and followed by newlines.
 
 ### Table example:
 
-```
-Group                     | Domain
-------------------------- | ---------------
-ShinRa                    | Mako Reactors
-Moogles                   | MogNet
-Vana'diel Chocobo Society | Chocobo Raising
+_This table meets all the criteria:_
 
 ```
+Group                     | Domain          | First Appearance
+------------------------- | --------------- | ----------------
+ShinRa                    | Mako Reactors   | FFVII
+Moogles                   | MogNet          | FFIII
+Vana'diel Chocobo Society | Chocobo Raising | FFXI:TOAU
+```
+
+_A handsome table in pre-processed markdown is also handsome when rendered:_
+
+Group                     | Domain          | First Appearance
+------------------------- | --------------- | ----------------
+ShinRa                    | Mako Reactors   | FFVII
+Moogles                   | MogNet          | FFIII
+Vana'diel Chocobo Society | Chocobo Raising | FFXI:TOAU
