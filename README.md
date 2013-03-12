@@ -89,3 +89,24 @@ which would produce decent looking output without looking stupid in vim.
     and because it follows a fenced code block.
   ```
 
+# Tables
+Like fenced code blocks, tables in Markdown are provided by Markdown Extra which
+, so far, seems to be pretty widely implemented.
+
+  * Pipe characters must be preceeded and followed by spaces for readability.
+  * Table column width should be determined by the longest cell in the column.
+  * Always format tables so they are readable in pre-processing.
+  * Never use preceeding or trailing pipes when writing tables.
+
+    ```
+    # Bad! This is completely unreadable, although it is technically valid.
+    table header | other table header
+    --- | ---
+    table data | other table data
+
+    # Bad! This wastes our precious 80 character limit.
+    | table header | other table header |
+    | ------------ | ------------------ |
+    | table data   | table data         |
+    ```
+
