@@ -14,8 +14,12 @@ which would produce decent looking output without looking stupid in vim.
 ## Basic conventions for Markdown files
 
   * Wrap all lines at 80 characters
+  * Lines exceeding 80 characters should have, at minimum, three words on
+    the following line.  
+    _(see this list item in raw format for an example.)_
   * Denote **Bold** text using the asterisk format: `**bold text**`.
   * Denote _italic_ text using the underscore format: `_emphasized text_`.
+  * Force a linebreak by ending a line with two spaces, no more.
 
 ## Headings
 
@@ -56,6 +60,14 @@ which would produce decent looking output without looking stupid in vim.
       * list item 4
 
     This is text of any kind that follows a list.
+    ```
+
+  * List item lines exceeding 80 characters should, when wrapped, align
+    vertically with the beginning of the preceding line's text.
+
+    ```
+      * Large avian creatures, chocobos roughly act as the equivalent of horses,
+        being domesticated for use as mounts...
     ```
 
 ## Code
@@ -134,3 +146,4 @@ Group                     | Domain          | First Appearance
 ShinRa                    | Mako Reactors   | FFVII
 Moogles                   | MogNet          | FFIII
 Vana'diel Chocobo Society | Chocobo Raising | FFXI:TOAU
+
