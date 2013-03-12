@@ -15,7 +15,7 @@ which would produce decent looking output without looking stupid in vim.
 
   * Wrap all lines at 80 characters
   * Lines exceeding 80 characters should have, at minimum, three words on
-    the following line.  
+    the following line.
     _(see this list item in raw format for an example.)_
   * Denote **Bold** text using the asterisk format: `**bold text**`.
   * Denote _italic_ text using the underscore format: `_emphasized text_`.
@@ -24,6 +24,7 @@ which would produce decent looking output without looking stupid in vim.
 ## Headings
 
   * Header text must use the `atx-style` with no closing `#` character.
+  * Include a space between the `#` and the text of the Header.^[1](#1)
 
     ```
     # Header 1
@@ -146,4 +147,10 @@ Group                     | Domain          | First Appearance
 ShinRa                    | Mako Reactors   | FFVII
 Moogles                   | MogNet          | FFIII
 Vana'diel Chocobo Society | Chocobo Raising | FFXI:TOAU
+
+
+## Footnotes
+  1. This is enforced locally through redcarpet2's configuration:
+     `:space_after_headers`.
+     <a id="1"></a>
 
