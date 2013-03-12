@@ -89,7 +89,7 @@ which would produce decent looking output without looking stupid in vim.
     and because it follows a fenced code block.
     ```
 
-# Tables
+## Tables
 Like fenced code blocks, tables in Markdown are provided by Markdown Extra which
 seems to be pretty widely implemented.
 
@@ -109,4 +109,15 @@ seems to be pretty widely implemented.
     | ------------ | ------------------ |
     | table data   | table data         |
     ```
+  * Tables must always be preceded and followed by newlines.
 
+### Table example:
+
+```
+Group                     | Domain
+------------------------- | ---------------
+ShinRa                    | Mako Reactors
+Moogles                   | MogNet
+Vana'diel Chocobo Society | Chocobo Raising
+
+```
