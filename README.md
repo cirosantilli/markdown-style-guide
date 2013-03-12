@@ -28,7 +28,7 @@ which would produce decent looking output without looking stupid in vim.
    ```
 
   * Headers spanning more than 80 characters should be re-evaluated.
-  * Headers must be preceeded and followed by a newline except at the beginning
+  * Headers must be preceded and followed by a newline except at the beginning
    of a file.
 
 ## Lists
@@ -42,11 +42,11 @@ which would produce decent looking output without looking stupid in vim.
        * sub-list item
    ```
 
-  * The first level of list items must not be preceeded by a newline.
+  * The first level of list items must not be preceded by a newline.
   * All lists must be followed by newlines.
 
     ```
-    This text preceeds a list of things.
+    This text precedes a list of things.
     * list item 1
     * list item 2
       1. sub-list item 1
@@ -71,7 +71,7 @@ which would produce decent looking output without looking stupid in vim.
     `.this-is-good`
     ```
 
-  * **Fenced code blocks** must be preceeded and followed by a newline.
+  * **Fenced code blocks** must be preceded and followed by a newline.
   * When used inside **list items**, indent **fenced code blocks** as if they
     were one level deeper that the list item that contains them.
 
@@ -93,10 +93,10 @@ which would produce decent looking output without looking stupid in vim.
 Like fenced code blocks, tables in Markdown are provided by Markdown Extra which
 , so far, seems to be pretty widely implemented.
 
-  * Pipe characters must be preceeded and followed by spaces for readability.
+  * Pipe characters must be preceded and followed by spaces for readability.
   * Table column width should be determined by the longest cell in the column.
   * Always format tables so they are readable in pre-processing.
-  * Never use preceeding or trailing pipes when writing tables.
+  * Never use preceding or trailing pipes when writing tables.
 
     ```
     # Bad! This is completely unreadable, although it is technically valid.
