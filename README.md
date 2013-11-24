@@ -1,4 +1,5 @@
 # Style Guidelines: Markdown
+
 This document contains formatting standards for creating readable, consistent
 files using Markdown.
 
@@ -67,7 +68,7 @@ which would produce decent looking output without looking stupid in vim.
     vertically with the beginning of the preceding line's text.
 
     ```
-      * Large avian creatures, chocobos roughly act as the equivalent of horses,
+      * Large, avian creatures, chocobos roughly act as the equivalent of horses,
         being domesticated for use as mounts...
     ```
 
