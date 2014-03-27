@@ -100,6 +100,7 @@ which would produce decent looking output without looking stupid in vim.
     ```
 
 ## Tables
+
 Like fenced code blocks, tables in Markdown are provided by Markdown Extra
 which seems to be pretty widely implemented.
 
@@ -147,6 +148,7 @@ Vana'diel Chocobo Society | Chocobo Raising | FFXI:TOAU
 
 
 ## Footnotes
+
   1. This is enforced locally through redcarpet2's configuration:
      `:space_after_headers`.
      <a name="1"><a>
