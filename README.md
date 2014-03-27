@@ -3,29 +3,25 @@
 This document contains formatting standards for creating readable, consistent
 files using Markdown.
 
-One problem I run into constantly when creating Markdown
-files is that I waste an ass-load of time fiddling with how the text looks
-before it gets parsed. Then, after I'm finished writing, I waste even more time
-adjusting what looks good in my text editor so that it looks good in a
-browser or Markdown viewer.
+One problem I run into constantly when creating Markdown files is that I waste
+an ass-load of time fiddling with how the text looks before it gets parsed.
+Then, after I'm finished writing, I waste even more time adjusting what looks
+good in my text editor so that it looks good in a browser or Markdown viewer.
 
 Being a masochist, I of course decided to create a guideline I could follow
 which would produce decent looking output without looking stupid in vim.
 
 ## Basic conventions for Markdown files
 
-  * Wrap all lines at 80 characters
-  * Lines exceeding 80 characters should have, at minimum, three words on
-    the following line.
-    _(see this list item in raw format for an example.)_
-  * Denote **Bold** text using the asterisk format: `**bold text**`.
+  * Wrap all lines at 80 characters.
+  * Denote **bold** text using the asterisk format: `**bold text**`.
   * Denote _italic_ text using the underscore format: `_emphasized text_`.
   * Force a linebreak by ending a line with two spaces, no more.
 
 ## Headings
 
   * Header text must use the `atx-style` with no closing `#` character.
-  * Include a space between the `#` and the text of the Header.^[1](#1)
+  * Include a space between the `#` and the text of the Header^[1](#1).
 
     ```
     # Header 1
@@ -68,8 +64,8 @@ which would produce decent looking output without looking stupid in vim.
     vertically with the beginning of the preceding line's text.
 
     ```
-      * Large, avian creatures, chocobos roughly act as the equivalent of horses,
-        being domesticated for use as mounts...
+      * Large, avian creatures, chocobos roughly act as the equivalent of
+        horses, being domesticated for use as mounts...
     ```
 
 ## Code
@@ -86,11 +82,11 @@ which would produce decent looking output without looking stupid in vim.
     ```
 
   * **Fenced code blocks** must be preceded and followed by a newline.
-  * When used inside _list items_, **fenced code blocks** must be indented as if
-    they were one level deeper that the list item that contains them.
+  * When used inside _list items_, **fenced code blocks** must be indented as
+    if they were one level deeper that the list item that contains them.
 
     ```
-      * This list item contains a fenced code block
+      * This list item contains a fenced code block.
       * Let's show how it might interact with a list.
 
         ```
@@ -99,13 +95,14 @@ which would produce decent looking output without looking stupid in vim.
         }
         ```
 
-    There is a newline above this paragraph because it is both the end of a list
-    and because it follows a fenced code block.
+    There is a newline above this paragraph because it is both the end of a
+    list and because it follows a fenced code block.
     ```
 
 ## Tables
-Like fenced code blocks, tables in Markdown are provided by Markdown Extra which
-seems to be pretty widely implemented.
+
+Like fenced code blocks, tables in Markdown are provided by Markdown Extra
+which seems to be pretty widely implemented.
 
   * Pipe characters must be preceded and followed by spaces for readability.
   * Table column width should be determined by the longest cell in the column.
@@ -151,6 +148,7 @@ Vana'diel Chocobo Society | Chocobo Raising | FFXI:TOAU
 
 
 ## Footnotes
+
   1. This is enforced locally through redcarpet2's configuration:
      `:space_after_headers`.
      <a name="1"><a>
