@@ -1,8 +1,10 @@
-Formatting standards for creating readable, consistent and portable Markdown code.
+Formatting standards for creating readable, consistent and portable original Markdown code.
+
+Considers both the [original specification](http://daringfireball.net/projects/markdown/syntax) and common extensions.
 
 # Line wrapping
 
-**Don't** wrap long lines. Set your editor to wrap them visualy instead.
+**Don't** wrap long lines. Set your editor to wrap them visually instead.
 
 Rationale: GitHub breaks the original markdown standard and inserts line breaks at newline characters. Since GitHub is a major markdown player, don't wrap lines for maximum compatibility.
 
@@ -12,16 +14,18 @@ Force a line break by ending a line with two spaces, no more.
 
 # Inline elements
 
-For all inline elements, **don't** use inner spaces.
+For all inline elements, *don't* use inner spaces.
 
 Good:
 
     **bold**
+    `code`
     [link](http://a.com)
 
 Bad:
 
     ** bold **
+    ` code `
     [ link ]( http://a.com )
 
 ## Bold
@@ -41,7 +45,7 @@ Rationale: more common and readable than the underscore form, and consistent wit
 - Header text must use the `atx-style` with no closing `#` character.
 - Include a space between the `#` and the text of the header.
 - Headers must be preceded and followed by a newline except at the beginning of a file.
-- Headers must **not** have spaces preceding the number sign.
+- Headers must *not* have spaces preceding the number sign.
 
 Good:
 
@@ -59,52 +63,97 @@ Bad:
 
 # Lists
 
-- **List items** must be indented 2 spaces further than their parent.
+- For unordered lists, only use the hyphen `-` marker, followed by one space:
 
-    ```
-    This is arbitrary text, an unordered list begins on the next line.
-    - list item 1
-    - list item 2
-      - sub-list item
-    ```
+    Rationale:
 
-- The first level of list items must not be preceded by a newline.
-- All lists must be followed by newlines.
+    - asterisk `*` can be confused with bold or italic markers.
+    - plus sign `+` is very rare.
 
-    ```
-    This text precedes a list of things.
-    - list item 1
-    - list item 2
-        1. sub-list item 1
-        2. sub-list item 2
+- For ordered lists, use only the marker `1.`.
 
-    - list item 3
-    - list item 4
+    Good:
 
-    This is text of any kind that follows a list.
-    ```
+        1. a
+        1. b
+        1. c
 
-- List item lines exceeding 80 characters should, when wrapped, align vertically with the beginning of the preceding line's text.
+    Bad:
 
-    ```
-    - Large, avian creatures, chocobos roughly act as the equivalent of
-        horses, being domesticated for use as mounts...
-    ```
+        1. a
+        2. b
+        3. c
 
-# Code
+    Rationale:
 
-- **Inline code** must use single backticks and must not have spaces between the backtick characters and the code.
+    - if you want to change a list item in the middle of the list, you don't have to modify all items that follow it.
+    - content stays aligned without extra effort if the numbers reach 2 digits. E.g.: the following is not aligned:
 
-    ```
-    # Bad
-    ` .this-is-wrong `
+            9. a
+            10. b
 
-    # Good
-    `.this-is-good`
-    ```
+- Indented list items and their content by 4 spaces further than their parent. The first level has no indent.
+
+    Good:
+
+        External paragraph.
+
+        - item 1
+
+            Content 1
+
+            - item 11
+
+            Content 1
+
+        - item 2
+            - item 21
+            - item 22
+
+- Either separate all list items of a list by newlines, or don't separate any of them, but never mix both, which is unspecified what happens in mixed cases. If you absolutely need a mixed case, use raw HTML.
+
+    Good:
+
+        External paragraph.
+
+        - par
+
+            - nopar
+            - nopar
+            - nopar
+                - par
+
+                - par
+
+                - par
+
+        - par
+
+        - par
+
+    Bad:
+
+        External paragraph.
+
+        - par
+
+        - par
+
+            - nopar
+            - nopar
+
+            - BAD: mixed tyle. Should not have newline.
+
+                - par
+
+                - par
+                - BAD: mixed style. Should have newline.
+        - BAD: mixed style. Should have newline.
+
+# Code Blocks
 
 - **Fenced code blocks** must be preceded and followed by a newline.
-- When used inside _list items_, **fenced code blocks** must be indented as if they were one level deeper that the list item that contains them.
+- When used inside list items, **fenced code blocks** must be indented as if they were one level deeper that the list item that contains them.
 
     ```
     - This list item contains a fenced code block.
@@ -148,7 +197,7 @@ Like fenced code blocks, tables in Markdown are provided by Markdown Extra which
 
 ## Table example
 
-_This table meets all the criteria:_
+This table meets all the criteria:
 
 ```
 Group                     | Domain          | First Appearance
@@ -158,7 +207,7 @@ Moogles                   | MogNet          | FFIII
 Vana'diel Chocobo Society | Chocobo Raising | FFXI:TOAU
 ```
 
-_A handsome table in pre-processed markdown is also handsome when rendered:_
+A handsome table in pre-processed markdown is also handsome when rendered:
 
 Group                     | Domain          | First Appearance
 ------------------------- | --------------- | ----------------
