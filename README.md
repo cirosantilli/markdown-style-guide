@@ -39,16 +39,23 @@ Rationale: more common and readable than the underscore form, and consistent wit
 # Headings
 
 - Header text must use the `atx-style` with no closing `#` character.
-- Include a space between the `#` and the text of the Header^[1](#1).
-
-    ```
-    # Header 1
-    # Header 2
-    ## Header 3
-    ```
-
-- Headers spanning more than 80 characters should be re-evaluated.
+- Include a space between the `#` and the text of the header.
 - Headers must be preceded and followed by a newline except at the beginning of a file.
+- Headers must **not** have spaces preceding the number sign.
+
+Good:
+
+    # Heading
+
+Bad:
+
+    # Heading #
+
+    #Heading
+
+    Content of last heading.
+    # Heading
+    Content of this heading.
 
 # Lists
 
@@ -158,7 +165,3 @@ Group                     | Domain          | First Appearance
 ShinRa                    | Mako Reactors   | FFVII
 Moogles                   | MogNet          | FFIII
 Vana'diel Chocobo Society | Chocobo Raising | FFXI:TOAU
-
-# Footnotes
-
-1. This is enforced locally through redcarpet2's configuration: `:space_after_headers`. <a name="1"><a>
