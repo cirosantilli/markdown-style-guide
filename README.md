@@ -1,11 +1,19 @@
 Formatting standards for creating readable, consistent and portable Markdown code.
 
-# Basic conventions for Markdown files
+# Line wrapping
 
-- Wrap all lines at 80 characters.
+**Don't** wrap long lines. Set your editor to wrap them visualy instead.
+
+Rationale: GitHub breaks the original markdown standard and inserts line breaks at newline characters. Since GitHub is a major markdown player, don't wrap lines for maximum compatibility.
+
+# Line breaks
+
+Force a linebreak by ending a line with two spaces, no more.
+
+# Inline elements
+
 - Denote **bold** text using the asterisk format: `**bold text**`.
 - Denote _italic_ text using the underscore format: `_emphasized text_`.
-- Force a linebreak by ending a line with two spaces, no more.
 
 # Headings
 
@@ -19,8 +27,7 @@ Formatting standards for creating readable, consistent and portable Markdown cod
     ```
 
 - Headers spanning more than 80 characters should be re-evaluated.
-- Headers must be preceded and followed by a newline except at the beginning
-    of a file.
+- Headers must be preceded and followed by a newline except at the beginning of a file.
 
 # Lists
 
@@ -49,8 +56,7 @@ Formatting standards for creating readable, consistent and portable Markdown cod
     This is text of any kind that follows a list.
     ```
 
-- List item lines exceeding 80 characters should, when wrapped, align
-    vertically with the beginning of the preceding line's text.
+- List item lines exceeding 80 characters should, when wrapped, align vertically with the beginning of the preceding line's text.
 
     ```
     - Large, avian creatures, chocobos roughly act as the equivalent of
@@ -59,8 +65,7 @@ Formatting standards for creating readable, consistent and portable Markdown cod
 
 # Code
 
-- **Inline code** must use single backticks and must not have spaces between
-    the backtick characters and the code.
+- **Inline code** must use single backticks and must not have spaces between the backtick characters and the code.
 
     ```
     # Bad
@@ -71,8 +76,7 @@ Formatting standards for creating readable, consistent and portable Markdown cod
     ```
 
 - **Fenced code blocks** must be preceded and followed by a newline.
-- When used inside _list items_, **fenced code blocks** must be indented as
-    if they were one level deeper that the list item that contains them.
+- When used inside _list items_, **fenced code blocks** must be indented as if they were one level deeper that the list item that contains them.
 
     ```
     - This list item contains a fenced code block.
@@ -90,8 +94,7 @@ Formatting standards for creating readable, consistent and portable Markdown cod
 
 # Tables
 
-Like fenced code blocks, tables in Markdown are provided by Markdown Extra
-which seems to be pretty widely implemented.
+Like fenced code blocks, tables in Markdown are provided by Markdown Extra which seems to be pretty widely implemented.
 
 - Pipe characters must be preceded and followed by spaces for readability.
 - Table column width should be determined by the longest cell in the column.
@@ -137,6 +140,4 @@ Vana'diel Chocobo Society | Chocobo Raising | FFXI:TOAU
 
 # Footnotes
 
-1. This is enforced locally through redcarpet2's configuration:
-    `:space_after_headers`.
-    <a name="1"><a>
+1. This is enforced locally through redcarpet2's configuration: `:space_after_headers`. <a name="1"><a>
