@@ -4,6 +4,16 @@ Readable, consistent and portable Markdown style guide.
 
 Considers both the [original specification](http://daringfireball.net/projects/markdown/syntax) and common extensions.
 
+# File extension
+
+Use `.md`.
+
+Rationale: why not `mkd` or `markdown`? `md` is:
+
+- shorter
+- the most common one
+- does not have important conflicts
+
 # Line wrapping
 
 *Don't* wrap long lines. Set your editor to wrap them visually instead.
