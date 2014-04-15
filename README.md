@@ -8,12 +8,33 @@ Rationale: GitHub breaks the original markdown standard and inserts line breaks 
 
 # Line breaks
 
-Force a linebreak by ending a line with two spaces, no more.
+Force a line break by ending a line with two spaces, no more.
 
 # Inline elements
 
-- Denote **bold** text using the asterisk format: `**bold text**`.
-- Denote _italic_ text using the underscore format: `_emphasized text_`.
+For all inline elements, **don't** use inner spaces.
+
+Good:
+
+    **bold**
+    [link](http://a.com)
+
+Bad:
+
+    ** bold **
+    [ link ]( http://a.com )
+
+## Bold
+
+Denote **bold** text using the double asterisk format: `**bold**`.
+
+Rationale: more common and readable than the double underline `__bold__` form.
+
+## Italic
+
+Denote *italic* text using the underscore format: `*italic*`.
+
+Rationale: more common and readable than the underscore form, and consistent with bold.
 
 # Headings
 
