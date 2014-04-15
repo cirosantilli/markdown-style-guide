@@ -1,4 +1,4 @@
-Formatting standards for creating readable, consistent and portable original Markdown code.
+Readable, consistent and portable Markdown style.
 
 Considers both the [original specification](http://daringfireball.net/projects/markdown/syntax) and common extensions.
 
