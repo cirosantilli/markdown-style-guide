@@ -135,10 +135,8 @@ ShinRa                    | Mako Reactors   | FFVII
 Moogles                   | MogNet          | FFIII
 Vana'diel Chocobo Society | Chocobo Raising | FFXI:TOAU
 
-
 # Footnotes
 
 1. This is enforced locally through redcarpet2's configuration:
     `:space_after_headers`.
     <a name="1"><a>
-
