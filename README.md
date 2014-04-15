@@ -201,3 +201,5 @@ Good table:
     |------|--------------|----------------|
     | abc  | def          | ghi            |
     | abc2 | def2         | ghi2           |
+
+Rationale: unaligned tables tables are much easier to write, but the readability gain of alignment is so large that we have decided to use aligned tables always. People read code much more often than they edit it.
