@@ -2,15 +2,15 @@ Formatting standards for creating readable, consistent and portable Markdown cod
 
 ## Basic conventions for Markdown files
 
-  * Wrap all lines at 80 characters.
-  * Denote **bold** text using the asterisk format: `**bold text**`.
-  * Denote _italic_ text using the underscore format: `_emphasized text_`.
-  * Force a linebreak by ending a line with two spaces, no more.
+- Wrap all lines at 80 characters.
+- Denote **bold** text using the asterisk format: `**bold text**`.
+- Denote _italic_ text using the underscore format: `_emphasized text_`.
+- Force a linebreak by ending a line with two spaces, no more.
 
 ## Headings
 
-  * Header text must use the `atx-style` with no closing `#` character.
-  * Include a space between the `#` and the text of the Header^[1](#1).
+- Header text must use the `atx-style` with no closing `#` character.
+- Include a space between the `#` and the text of the Header^[1](#1).
 
     ```
     # Header 1
@@ -18,48 +18,48 @@ Formatting standards for creating readable, consistent and portable Markdown cod
     ### Header 3
     ```
 
-  * Headers spanning more than 80 characters should be re-evaluated.
-  * Headers must be preceded and followed by a newline except at the beginning
+- Headers spanning more than 80 characters should be re-evaluated.
+- Headers must be preceded and followed by a newline except at the beginning
     of a file.
 
 ## Lists
 
-  * **List items** must be indented 2 spaces further than their parent.
+- **List items** must be indented 2 spaces further than their parent.
 
     ```
     This is arbitrary text, an unordered list begins on the next line.
-      * list item 1
-      * list item 2
-        * sub-list item
+    - list item 1
+    - list item 2
+      - sub-list item
     ```
 
-  * The first level of list items must not be preceded by a newline.
-  * All lists must be followed by newlines.
+- The first level of list items must not be preceded by a newline.
+- All lists must be followed by newlines.
 
     ```
     This text precedes a list of things.
-      * list item 1
-      * list item 2
+    - list item 1
+    - list item 2
         1. sub-list item 1
         2. sub-list item 2
 
-      * list item 3
-      * list item 4
+    - list item 3
+    - list item 4
 
     This is text of any kind that follows a list.
     ```
 
-  * List item lines exceeding 80 characters should, when wrapped, align
+- List item lines exceeding 80 characters should, when wrapped, align
     vertically with the beginning of the preceding line's text.
 
     ```
-      * Large, avian creatures, chocobos roughly act as the equivalent of
+    - Large, avian creatures, chocobos roughly act as the equivalent of
         horses, being domesticated for use as mounts...
     ```
 
 ## Code
 
-  * **Inline code** must use single backticks and must not have spaces between
+- **Inline code** must use single backticks and must not have spaces between
     the backtick characters and the code.
 
     ```
@@ -70,13 +70,13 @@ Formatting standards for creating readable, consistent and portable Markdown cod
     `.this-is-good`
     ```
 
-  * **Fenced code blocks** must be preceded and followed by a newline.
-  * When used inside _list items_, **fenced code blocks** must be indented as
+- **Fenced code blocks** must be preceded and followed by a newline.
+- When used inside _list items_, **fenced code blocks** must be indented as
     if they were one level deeper that the list item that contains them.
 
     ```
-      * This list item contains a fenced code block.
-      * Let's show how it might interact with a list.
+    - This list item contains a fenced code block.
+    - Let's show how it might interact with a list.
 
         ```
         .code-example {
@@ -93,9 +93,9 @@ Formatting standards for creating readable, consistent and portable Markdown cod
 Like fenced code blocks, tables in Markdown are provided by Markdown Extra
 which seems to be pretty widely implemented.
 
-  * Pipe characters must be preceded and followed by spaces for readability.
-  * Table column width should be determined by the longest cell in the column.
-  * Always format tables so they are readable in pre-processing.
+- Pipe characters must be preceded and followed by spaces for readability.
+- Table column width should be determined by the longest cell in the column.
+- Always format tables so they are readable in pre-processing.
 
     ```
     # This is completely unreadable, although it is technically valid.
@@ -104,7 +104,7 @@ which seems to be pretty widely implemented.
     table data | other table data
     ```
 
-  * Never use preceding or trailing pipes when writing tables.
+- Never use preceding or trailing pipes when writing tables.
 
     ```
     # This wastes our precious 80 character limit.
@@ -113,7 +113,7 @@ which seems to be pretty widely implemented.
     | table data   | table data         |
     ```
 
-  * Tables must always be preceded and followed by newlines.
+- Tables must always be preceded and followed by newlines.
 
 ### Table example:
 
@@ -138,7 +138,7 @@ Vana'diel Chocobo Society | Chocobo Raising | FFXI:TOAU
 
 ## Footnotes
 
-  1. This is enforced locally through redcarpet2's configuration:
-     `:space_after_headers`.
-     <a name="1"><a>
+1. This is enforced locally through redcarpet2's configuration:
+    `:space_after_headers`.
+    <a name="1"><a>
 
