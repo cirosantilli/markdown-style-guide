@@ -1,4 +1,6 @@
-Readable, consistent and portable Markdown style.
+# Markdown Style Guide
+
+Readable, consistent and portable Markdown style guide.
 
 Considers both the [original specification](http://daringfireball.net/projects/markdown/syntax) and common extensions.
 
