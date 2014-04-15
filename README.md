@@ -1,28 +1,28 @@
 Formatting standards for creating readable, consistent and portable Markdown code.
 
-## Basic conventions for Markdown files
+# Basic conventions for Markdown files
 
 - Wrap all lines at 80 characters.
 - Denote **bold** text using the asterisk format: `**bold text**`.
 - Denote _italic_ text using the underscore format: `_emphasized text_`.
 - Force a linebreak by ending a line with two spaces, no more.
 
-## Headings
+# Headings
 
 - Header text must use the `atx-style` with no closing `#` character.
 - Include a space between the `#` and the text of the Header^[1](#1).
 
     ```
     # Header 1
-    ## Header 2
-    ### Header 3
+    # Header 2
+    ## Header 3
     ```
 
 - Headers spanning more than 80 characters should be re-evaluated.
 - Headers must be preceded and followed by a newline except at the beginning
     of a file.
 
-## Lists
+# Lists
 
 - **List items** must be indented 2 spaces further than their parent.
 
@@ -57,7 +57,7 @@ Formatting standards for creating readable, consistent and portable Markdown cod
         horses, being domesticated for use as mounts...
     ```
 
-## Code
+# Code
 
 - **Inline code** must use single backticks and must not have spaces between
     the backtick characters and the code.
@@ -88,7 +88,7 @@ Formatting standards for creating readable, consistent and portable Markdown cod
     list and because it follows a fenced code block.
     ```
 
-## Tables
+# Tables
 
 Like fenced code blocks, tables in Markdown are provided by Markdown Extra
 which seems to be pretty widely implemented.
@@ -115,7 +115,7 @@ which seems to be pretty widely implemented.
 
 - Tables must always be preceded and followed by newlines.
 
-### Table example:
+## Table example
 
 _This table meets all the criteria:_
 
@@ -136,7 +136,7 @@ Moogles                   | MogNet          | FFIII
 Vana'diel Chocobo Society | Chocobo Raising | FFXI:TOAU
 
 
-## Footnotes
+# Footnotes
 
 1. This is enforced locally through redcarpet2's configuration:
     `:space_after_headers`.
