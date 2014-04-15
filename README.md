@@ -43,6 +43,15 @@ Rationale: more common and readable than the underscore form, and consistent wit
 # Headings
 
 - Header text must use the `atx-style` with no closing `#` character.
+
+    Rationale: `setex` style headers are:
+
+    - harder to write
+    - only go up to level 2
+    - occupy more screen lines
+
+    Any readability gain they have can be achieved for `atx-style` headers by configuring your editor to syntax highlight `atx-style` headers.
+
 - Include a space between the `#` and the text of the header.
 - Headers must be preceded and followed by a newline except at the beginning of a file.
 - Headers must *not* have spaces preceding the number sign.
@@ -53,9 +62,14 @@ Good:
 
 Bad:
 
+    Heading
+    =======
+
     # Heading #
 
     #Heading
+
+     # Heading
 
     Content of last heading.
     # Heading
@@ -111,6 +125,8 @@ Bad:
             - item 22
 
 - Either separate all list items of a list by newlines, or don't separate any of them, but never mix both, which is unspecified what happens in mixed cases. If you absolutely need a mixed case, use raw HTML.
+
+    TODO understand this point better. The standard is underspecified here.
 
     Good:
 
