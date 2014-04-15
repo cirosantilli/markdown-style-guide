@@ -4,7 +4,7 @@ Considers both the [original specification](http://daringfireball.net/projects/m
 
 # Line wrapping
 
-**Don't** wrap long lines. Set your editor to wrap them visually instead.
+*Don't* wrap long lines. Set your editor to wrap them visually instead.
 
 Rationale: GitHub breaks the original markdown standard and inserts line breaks at newline characters. Since GitHub is a major markdown player, don't wrap lines for maximum compatibility.
 
@@ -168,22 +168,9 @@ Bad:
 
 # Code Blocks
 
-- **Fenced code blocks** must be preceded and followed by a newline.
-- When used inside list items, **fenced code blocks** must be indented as if they were one level deeper that the list item that contains them.
+Prefer indented code blocks wherever you can use them, since they are part of the original standard.
 
-    ```
-    - This list item contains a fenced code block.
-    - Let's show how it might interact with a list.
-
-        ```
-        .code-example {
-          property: value;
-        }
-        ```
-
-    There is a newline above this paragraph because it is both the end of a
-    list and because it follows a fenced code block.
-    ```
+Fenced Code Blocks must be preceded and followed by a newline.
 
 # Tables
 
