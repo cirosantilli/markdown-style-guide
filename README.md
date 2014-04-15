@@ -44,13 +44,13 @@ Rationale: more common and readable than the underscore form, and consistent wit
 
 - Header text must use the `atx-style` with no closing `#` character.
 
-    Rationale: `setex` style headers are:
+    Rationale: `Setex` style headers are:
 
     - harder to write
     - only go up to level 2
     - occupy more screen lines
 
-    Any readability gain they have can be achieved for `atx-style` headers by configuring your editor to syntax highlight `atx-style` headers.
+    `Setex` headers are more visible, but this equal visibility can be achieved for `atx-style` headers by configuring your editor to syntax highlight them.
 
 - Include a space between the `#` and the text of the header.
 - Headers must be preceded and followed by a newline except at the beginning of a file.
@@ -170,50 +170,22 @@ Bad:
 
 Prefer indented code blocks wherever you can use them, since they are part of the original standard.
 
-Fenced Code Blocks must be preceded and followed by a newline.
+Fenced code blocks (extension) must be preceded and followed by a newline.
 
 # Tables
 
-Like fenced code blocks, tables in Markdown are provided by Markdown Extra which seems to be pretty widely implemented.
+Extension.
 
-- Pipe characters must be preceded and followed by spaces for readability.
-- Table column width should be determined by the longest cell in the column.
-- Always format tables so they are readable in pre-processing.
+- Separate header from body by hyphens.
+- Always use preceding and trailing pipes.
+- Align all pipes of a table border vertically.
+- Left align content, except for the header lines in flavors where they determine text alignment. The body of explicitly aligned columns must still be left aligned. 
+- Column width is determined by the longest cell in the column.
+- Must always be preceded and followed by newlines.
 
-    ```
-    # This is completely unreadable, although it is technically valid.
-    table header | other table header
-    --- | ---
-    table data | other table data
-    ```
+Good table:
 
-- Never use preceding or trailing pipes when writing tables.
-
-    ```
-    # This wastes our precious 80 character limit.
-    | table header | other table header |
-    | ------------ | ------------------ |
-    | table data   | table data         |
-    ```
-
-- Tables must always be preceded and followed by newlines.
-
-## Table example
-
-This table meets all the criteria:
-
-```
-Group                     | Domain          | First Appearance
-------------------------- | --------------- | ----------------
-ShinRa                    | Mako Reactors   | FFVII
-Moogles                   | MogNet          | FFIII
-Vana'diel Chocobo Society | Chocobo Raising | FFXI:TOAU
-```
-
-A handsome table in pre-processed markdown is also handsome when rendered:
-
-Group                     | Domain          | First Appearance
-------------------------- | --------------- | ----------------
-ShinRa                    | Mako Reactors   | FFVII
-Moogles                   | MogNet          | FFIII
-Vana'diel Chocobo Society | Chocobo Raising | FFXI:TOAU
+    | h    |  right align |  center align  |
+    |------|--------------|----------------|
+    | abc  | def          | ghi            |
+    | abc2 | def2         | ghi2           |
