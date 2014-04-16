@@ -120,6 +120,9 @@ Bad:
     Rationale:
 
     - if you want to change a list item in the middle of the list, you don't have to modify all items that follow it.
+
+        This is specially important if you version control your markdown code, in which case the diff will show multiple modified lines and it will be harder to determine where the significant change happened.
+
     - content stays aligned without extra effort if the numbers reach 2 digits. E.g.: the following is not aligned:
 
             9. a
