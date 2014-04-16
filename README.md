@@ -48,9 +48,12 @@ Rationale: more common and readable than the double underline `__bold__` form.
 
 ## Italic
 
-Denote *italic* text using the underscore format: `*italic*`.
+Denote *italic* text using the single asterisk format: `*italic*`.
 
-Rationale: more common and readable than the underscore form, and consistent with bold.
+Rationale:
+
+- more common and readable than the underscore form
+- consistent with the bold format, which also uses asterisks
 
 # Headings
 
