@@ -75,7 +75,15 @@ Good:
 
     # Heading
 
+    Content.
+
 Bad:
+
+    Content of last heading.
+    # Heading
+
+    # Heading
+    Content of this heading.
 
     Heading
     =======
@@ -85,10 +93,6 @@ Bad:
     #Heading
 
      # Heading
-
-    Content of last heading.
-    # Heading
-    Content of this heading.
 
 # Lists
 
