@@ -1,6 +1,11 @@
 # Markdown Style Guide
 
-Readable, consistent and portable Markdown style guide.
+Readable and portable Markdown style guide.
+
+Further design goals:
+
+- easy to write and update
+- diff friendly
 
 Considers both the [original specification](http://daringfireball.net/projects/markdown/syntax) and common extensions.
 
