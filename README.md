@@ -55,13 +55,13 @@ Bad:
 
 ## Bold
 
-Denote **bold** text using the double asterisk format: `**bold**`.
+Use double asterisk format: `**bold**`.
 
 Rationale: more common and readable than the double underline `__bold__` form.
 
 ## Italic
 
-Denote *italic* text using the single asterisk format: `*italic*`.
+Use single asterisk format: `*italic*`.
 
 Rationale:
 
@@ -70,7 +70,7 @@ Rationale:
 
 # Headings
 
-- Header text must use the `atx-style` with no closing `#` character.
+- Use the `atx-style` with no closing `#` character.
 
     Rationale: `Setex` style headers are:
 
@@ -110,14 +110,14 @@ Bad:
 
 # Lists
 
-- For unordered lists, only use the hyphen `-` marker, followed by one space:
+- Use the hyphen marker followed by one space `- `  for unordered lists.
 
     Rationale:
 
     - asterisk `*` can be confused with bold or italic markers.
-    - plus sign `+` is very rare.
+    - plus sign `+` is not popular.
 
-- For ordered lists, use only the marker `1.`.
+- For ordered lists, only use the marker `1.`.
 
     Good:
 
@@ -167,7 +167,7 @@ Bad:
     - separate all list items of a list by empty lines to generate `<li><p>`
     - don't separate any of them by empty lines to generate only `<li>`
 
-    Never mix both, which is unspecified.
+    Don't mix both, which is unspecified.
 
     Good:
 
@@ -230,7 +230,7 @@ Bad:
 
 # Code Blocks
 
-Prefer indented code blocks to fenced code blocks wherever you can use them, since they are part of the original standard, and fenced code blocks are not.
+Use indented code blocks wherever you can, since they are part of the original standard and fenced code blocks are not.
 
 Code blocks must be surrounded by an empty line.
 
@@ -238,16 +238,16 @@ Code blocks must be surrounded by an empty line.
 
 Extension.
 
+- Surround by an empty line.
+- Don't indent.
+- Surround by pipes.
+- Align all border pipes vertically.
 - Separate header from body by hyphens except at the aligned pipes `|`.
-- Always use preceding and trailing pipes.
-- Don't indent tables.
-- Align all pipes of a table border vertically.
-- Left align content inside cells. In flavors where header cells determine text alignment, align only the header, and keep the body cells left aligned.
-- Column width is determined by the longest cell in the column.
-- Must be surrounded by an empty line.
 - Pipes `|` must be surrounded by a space, except for:
     - pipes at the header separator, which are surrounded by a hyphen `-`.
-    - outer pipes which only get one space internally.
+    - outer pipes which only get one space or hyphen internally.
+- Column width is determined by the longest cell in the column.
+- Left align content inside cells. In flavors where header cells determine text alignment, align only the header, and keep the body cells left aligned.
 
 Good table:
 
@@ -260,7 +260,10 @@ Good table:
 
     After.
 
-Rationale: unaligned tables tables are much easier to write, but the readability gain of alignment is so large that we have decided to use aligned tables always. People read code much more often than they edit it.
+Rationale:
+
+- unaligned tables tables are easier to write, but aligned tables are more readable, and people read code much more often than they edit it.
+- preceding pipes make it easier to determine where a table starts and ends. Trailing pipes make it look better because of symmetry.
 
 # Separate consecutive elements
 
