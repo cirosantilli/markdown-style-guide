@@ -56,7 +56,7 @@ Rationale:
 
     `Setex` headers are more visible, but good visibility can be achieved for `atx-style` headers by configuring your editor to syntax highlight them.
 - Include a space between the `#` and the text of the header.
-- Headers must be surrounded by an empty line except at the beginning of a file.
+- Headers must be surrounded by one empty line except at the beginning of a file.
 - Headers must *not* have spaces preceding the number sign.
 
 Good:
@@ -182,83 +182,141 @@ Bad:
 
 - Either:
 
-    - separate all list items of a list by empty lines to generate `<li><p>`
+    - separate all list items of a list by one empty line to generate `<li><p>`
     - don't separate any of them by empty lines to generate only `<li>`
 
-    Don't mix both, which is unspecified.
+    Don't mix both, which is unspecified. If you need the mixed case, use raw HTML.
 
     Good:
 
-        - a
+        - p
 
-        - b
+        - p
 
-        - c
+        - p
+
+    <!-- -->
+
+        - no p
+        - no p
+        - no p
+
+    Bad, mixed:
+
+        - p
+
+        - no p
+        - no p
+
+- Surround lists by one empty line, except for a list without `<p>` inside another.
 
     Good:
 
-        - a
-        - b
-        - c
+        Before.
+
+        - list
+        - list
+
+        After.
+
+    <!-- -->
+
+        - p
+
+        - p
+
+            - no p
+            - no p
+            - no p
+
+        - p
+
+    <!-- -->
+
+        - p
+
+        - p
+
+            - no p
+
+            - no p
+
+            - no p
+
+        - p
+
+    Good, list without `<p>` inside another:
+
+        - no p
+        - no p
+            - no p
+            - no p
+            - no p
+        - no p
 
     Bad:
 
-        - a
+        Before.
+        - list
+        - list
+        After.
 
-        - b
-        - c
+    Bad, list without `<p>` inside list with `<p>` without preceding empty line:
 
-    If you absolutely need a mixed case, use raw HTML.
+        - no p
 
-- nested lists. TODO understand this point better
+        - no p
+            - no p
+            - no p
+            - no p
 
-    Good:
+        - no p
 
-        - par
-
-            - nopar
-            - nopar
-            - nopar
-                - par
-
-                - par
-
-                - par
-
-        - par
-
-        - par
+- Avoid multi-paragraph items inside lists without `<p>`, as this adds `<p>` to one element of the list, and some style sheets like GitHub's add an extra vertical space because of that.
 
     Bad:
 
-        - par
+        - no p
+        - no p
+        - no p
 
-        - par
+            Content
+        - no p
 
-            - nopar
-            - nopar
+    Because this generates:
 
-            - BAD: mixed tyle. Should not have newline.
+        <li>no p<li>
+        <li>no p<li>
+        <li>no p<li>
+        <li><p>p. Looks too separated from the item above if compared to the others.</p>
+            <p>Content</p>
+        <li>p<li>
 
-                - par
+    Bad for the same reason:
 
-                - par
-                - BAD: mixed style. Should have newline.
-        - BAD: mixed style. Should have newline.
+        - no p
+        - no p
+        - no p
+
+            - p
+
+            - p
+
+        - no p
 
 # Code blocks
 
 Use indented code blocks wherever you can, since they are part of the original standard and fenced code blocks are not.
 
-Code blocks must be surrounded by an empty line.
+Code blocks must be surrounded by one empty line.
 
 # Tables
 
 Extension.
 
-- Surround by an empty line.
-- Don't indent.
-- Surround by pipes.
+- Surround tables by one empty line.
+- Don't indent tables.
+- Surround every line of the table by pipes.
 - Align all border pipes vertically.
 - Separate header from body by hyphens except at the aligned pipes `|`.
 - Pipes `|` must be surrounded by a space, except for:
