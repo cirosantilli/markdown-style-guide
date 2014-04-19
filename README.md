@@ -24,6 +24,10 @@ Rationale: why not `.mkd` or `.markdown`?
 - more popular
 - does not have important conflicts
 
+# Line breaks
+
+Force a line break by ending a line with exactly two spaces.
+
 # Line wrapping
 
 *Don't* wrap long lines with newlines. Set your editor to wrap them visually instead.
@@ -33,42 +37,7 @@ Rationale:
 - GitHub breaks the original markdown standard and inserts line breaks at newline characters. Since GitHub is a major markdown player, it is better to be compatible with them.
 - diffs look better, since a change to a paragraph shows up as a single diff line.
 
-# Line breaks
-
-Force a line break by ending a line with exactly two spaces.
-
-# Inline elements
-
-*Don't* use inner spaces.
-
-Good:
-
-    **bold**
-    `code`
-    [link](http://a.com)
-
-Bad:
-
-    ** bold **
-    ` code `
-    [ link ]( http://a.com )
-
-## Bold
-
-Use double asterisk format: `**bold**`.
-
-Rationale: more common and readable than the double underline `__bold__` form.
-
-## Italic
-
-Use single asterisk format: `*italic*`.
-
-Rationale:
-
-- more common and readable than the underscore form
-- consistent with the bold format, which also uses asterisks
-
-# Headings
+# Headers
 
 - Use the `atx-style` with no closing `#` character.
 
@@ -286,3 +255,34 @@ Separate consecutive lists and code blocks with an empty HTML comment `<!-- -->`
 
         code 2
         code 2
+
+# Span elements
+
+*Don't* use inner spaces.
+
+Good:
+
+    **bold**
+    `code`
+    [link](http://a.com)
+
+Bad:
+
+    ** bold **
+    ` code `
+    [ link ]( http://a.com )
+
+## Bold
+
+Use double asterisk format: `**bold**`.
+
+Rationale: more common and readable than the double underline `__bold__` form.
+
+## Italic
+
+Use single asterisk format: `*italic*`.
+
+Rationale:
+
+- more common and readable than the underscore form
+- consistent with the bold format, which also uses asterisks
