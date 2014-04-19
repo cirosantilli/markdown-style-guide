@@ -39,7 +39,7 @@ Force a line break by ending a line with exactly two spaces.
 
 # Inline elements
 
-For all inline elements, *don't* use inner spaces.
+*Don't* use inner spaces.
 
 Good:
 
