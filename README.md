@@ -18,10 +18,10 @@ There were too many important points in which we disagreed with [carwin/markdown
 
 Use `.md`.
 
-Rationale: why not `mkd` or `markdown`? `md` is:
+Rationale: why not `mkd` or `markdown`?
 
 - shorter
-- the most common one
+- more popular
 - does not have important conflicts
 
 # Line wrapping
