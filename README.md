@@ -11,13 +11,15 @@ Considers both the [original specification](http://daringfireball.net/projects/m
 
 # Why fork Carwin
 
-There were too many important points in which we disagreed with [carwin/markdown-styleguide](https://github.com/carwin/markdown-styleguide/tree/9121c77bd177a3ade6713d50ab1228782d7c02a7). This guide proposes:
+This guide was forked from [carwin/markdown-styleguide](https://github.com/carwin/markdown-styleguide/tree/9121c77bd177a3ade6713d50ab1228782d7c02a7) because there were many important points in which we disagreed. This guide proposes:
 
 - don't wrap long lines
 - lists indented with 4 spaces, not 2
 - ordered lists only with `1.`
 - italics with `*it*`, not `_it_`
 - tables have pipes before and after
+
+The general structure of the guide was kept, but almost every line was modified, and many additions were made.
 
 # File extension
 
