@@ -77,6 +77,22 @@ Bad:
 
      # Heading
 
+# Blockquotes
+
+*Don't* use empty lines inside a single block quote.
+
+Good:
+
+    > a
+    >
+    > b
+
+Bad:
+
+    > a
+
+    > b
+
 # Lists
 
 - Use the hyphen marker followed by one space `- `  for unordered lists.
