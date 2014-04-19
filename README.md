@@ -85,17 +85,19 @@ Rationale:
 
 Good:
 
+    Before.
+
     # Heading
 
-    Content.
+    After.
 
 Bad:
 
-    Content of last heading.
+    Before.
     # Heading
 
     # Heading
-    Content of this heading.
+    After.
 
     Heading
     =======
@@ -144,7 +146,7 @@ Bad:
 
     Good:
 
-        External paragraph.
+        Before.
 
         - item 1
 
@@ -157,6 +159,8 @@ Bad:
         - item 2
             - item 21
             - item 22
+
+        After.
 
 - Either:
 
@@ -192,8 +196,6 @@ Bad:
 
     Good:
 
-        External paragraph.
-
         - par
 
             - nopar
@@ -210,8 +212,6 @@ Bad:
         - par
 
     Bad:
-
-        External paragraph.
 
         - par
 
@@ -251,14 +251,14 @@ Extension.
 
 Good table:
 
-    Before table.
+    Before.
 
     | h    |  right align |  center align  |
     |------|--------------|----------------|
     | abc  | def          | ghi            |
     | abc2 | def2         | ghi2           |
 
-    After table.
+    After.
 
 Rationale: unaligned tables tables are much easier to write, but the readability gain of alignment is so large that we have decided to use aligned tables always. People read code much more often than they edit it.
 
