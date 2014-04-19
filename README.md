@@ -272,6 +272,12 @@ Bad:
     ` code `
     [ link ]( http://a.com )
 
+Exception to the rule: inline code in which the space is crucial.
+
+    Use the hyphen marker followed by one space `- `  for unordered lists.
+
+When you use this exception, explicitly explain that the space must be there, or readers may not notice it.
+
 ## Bold
 
 Use double asterisk format: `**bold**`.
