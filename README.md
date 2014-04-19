@@ -252,7 +252,7 @@ Rationale:
 
 # Separate consecutive elements
 
-Separate consecutive lists and code blocks with an empty HTML comment `<!-- -->`:
+Separate consecutive lists, indented code blocks and blockquotes with an empty HTML comment `<!-- -->`:
 
     - l1
     - l1
@@ -271,6 +271,16 @@ Separate consecutive lists and code blocks with an empty HTML comment `<!-- -->`
 
         code 2
         code 2
+
+<!-- -->
+
+    > blockquote 1
+    > blockquote 1
+
+    <!-- -->
+
+    > blockquote 2
+    > blockquote 2
 
 # Span elements
 
