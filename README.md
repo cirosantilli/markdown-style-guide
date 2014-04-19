@@ -18,7 +18,10 @@ Rationale: why not `mkd` or `markdown`? `md` is:
 
 *Don't* wrap long lines. Set your editor to wrap them visually instead.
 
-Rationale: GitHub breaks the original markdown standard and inserts line breaks at newline characters. Since GitHub is a major markdown player, don't wrap lines for maximum compatibility.
+Rationale:
+
+- GitHub breaks the original markdown standard and inserts line breaks at newline characters. Since GitHub is a major markdown player, it is better to be compatible with them.
+- diffs look better, since a change to a paragraph shows up as a single diff line.
 
 # Line breaks
 
