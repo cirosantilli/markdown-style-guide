@@ -35,7 +35,7 @@ Rationale:
 
 # Line breaks
 
-Force a line break by ending a line with two spaces, no more.
+Force a line break by ending a line with exactly two spaces.
 
 # Inline elements
 
