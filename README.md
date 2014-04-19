@@ -253,3 +253,25 @@ Good table:
     | abc2 | def2         | ghi2           |
 
 Rationale: unaligned tables tables are much easier to write, but the readability gain of alignment is so large that we have decided to use aligned tables always. People read code much more often than they edit it.
+
+# Separate consecutive elements
+
+Separate consecutive lists and code blocks with an empty HTML comment `<!-- -->`:
+
+    - l1
+    - l1
+
+    <!-- -->
+
+    - l2
+    - l2
+
+<!-- -->
+
+        code 1
+        code 1
+
+    <!-- -->
+
+        code 2
+        code 2
