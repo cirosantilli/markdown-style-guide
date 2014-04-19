@@ -240,17 +240,25 @@ Extension.
 
 - Separate header from body by hyphens except at the aligned pipes `|`.
 - Always use preceding and trailing pipes.
+- Don't indent tables.
 - Align all pipes of a table border vertically.
-- Left align content, except for the header lines in flavors where they determine text alignment. The body of explicitly aligned columns must still be left aligned. 
+- Left align content inside cells. In flavors where header cells determine text alignment, align only the header, and keep the body cells left aligned.
 - Column width is determined by the longest cell in the column.
 - Must be preceded and followed by an empty line.
+- Pipes `|` must be surrounded by a space, except for:
+    - pipes at the header separator, which are surrounded by a hyphen `-`.
+    - outer pipes which only get one space internally.
 
 Good table:
+
+    Before table.
 
     | h    |  right align |  center align  |
     |------|--------------|----------------|
     | abc  | def          | ghi            |
     | abc2 | def2         | ghi2           |
+
+    After table.
 
 Rationale: unaligned tables tables are much easier to write, but the readability gain of alignment is so large that we have decided to use aligned tables always. People read code much more often than they edit it.
 
