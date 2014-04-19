@@ -6,7 +6,7 @@ Considers both the [original specification](http://daringfireball.net/projects/m
 
 # Why fork Carwin
 
-There were too many important points in which we disagreed with [carwin/markdown-styleguide](https://github.com/carwin/markdown-styleguide/tree/9121c77bd177a3ade6713d50ab1228782d7c02a7). Our views are:
+There were too many important points in which we disagreed with [carwin/markdown-styleguide](https://github.com/carwin/markdown-styleguide/tree/9121c77bd177a3ade6713d50ab1228782d7c02a7). This guide proposes:
 
 - don't wrap long lines
 - lists indented with 4 spaces, not 2
