@@ -4,6 +4,16 @@ Readable, consistent and portable Markdown style guide.
 
 Considers both the [original specification](http://daringfireball.net/projects/markdown/syntax) and common extensions.
 
+# Why fork Carwin
+
+There were too many important points in which we disagreed with [carwin/markdown-styleguide](https://github.com/carwin/markdown-styleguide/tree/9121c77bd177a3ade6713d50ab1228782d7c02a7). Our views are:
+
+- don't wrap long lines
+- lists indented with 4 spaces, not 2
+- ordered lists only with `1.`
+- italics with `*it*`, not `_it_`
+- tables have pipes before and after
+
 # File extension
 
 Use `.md`.
