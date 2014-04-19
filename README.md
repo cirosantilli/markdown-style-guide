@@ -334,6 +334,10 @@ Use indented code blocks wherever you can, since they are part of the original s
 
 Code blocks must be surrounded by one empty line.
 
+Indent indented code blocks with 4 spaces.
+
+*Don't* indent fenced code blocks.
+
 # Tables
 
 Extension.
