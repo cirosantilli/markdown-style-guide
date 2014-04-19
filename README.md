@@ -79,19 +79,33 @@ Bad:
 
 # Blockquotes
 
-*Don't* use empty lines inside a single block quote.
+- Follow the greater than marker by one space: `> `.
 
-Good:
+    Good:
 
-    > a
-    >
-    > b
+        > a
 
-Bad:
+    Bad:
 
-    > a
+        >b
 
-    > b
+    <!-- -->
+
+        >  b
+
+- *Don't* use empty lines inside a single block quote.
+
+    Good:
+
+        > a
+        >
+        > b
+
+    Bad:
+
+        > a
+
+        > b
 
 # Lists
 
@@ -102,7 +116,7 @@ Bad:
     - asterisk `*` can be confused with bold or italic markers.
     - plus sign `+` is not popular.
 
-- For ordered lists, only use the marker `1.`.
+- Only use the marker `1.` for ordered lists.
 
     Good:
 
