@@ -26,7 +26,7 @@ Rationale: why not `.mkd` or `.markdown`?
 
 # Line wrapping
 
-*Don't* wrap long lines. Set your editor to wrap them visually instead.
+*Don't* wrap long lines with newlines. Set your editor to wrap them visually instead.
 
 Rationale:
 
