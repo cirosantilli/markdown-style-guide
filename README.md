@@ -238,7 +238,7 @@ Code blocks must be preceded and followed by an empty line.
 
 Extension.
 
-- Separate header from body by hyphens.
+- Separate header from body by hyphens except at the aligned pipes `|`.
 - Always use preceding and trailing pipes.
 - Align all pipes of a table border vertically.
 - Left align content, except for the header lines in flavors where they determine text alignment. The body of explicitly aligned columns must still be left aligned. 
