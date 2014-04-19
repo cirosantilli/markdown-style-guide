@@ -94,11 +94,11 @@ Bad:
 
     Bad:
 
-        >b
+        >a
 
-    <!-- -->
+    Bad, 2 spaces:
 
-        >  b
+        >  a
 
 - *Don't* use empty lines inside a single block quote.
 
