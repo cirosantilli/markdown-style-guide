@@ -18,7 +18,7 @@ There were too many important points in which we disagreed with [carwin/markdown
 
 Use `.md`.
 
-Rationale: why not `mkd` or `markdown`?
+Rationale: why not `.mkd` or `.markdown`?
 
 - shorter
 - more popular
