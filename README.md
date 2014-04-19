@@ -6,6 +6,7 @@ Further design goals:
 
 - easy to write and update
 - diff friendly
+- easy to remember and implement on editors
 
 Considers both the [original specification](http://daringfireball.net/projects/markdown/syntax) and common extensions.
 
@@ -179,6 +180,29 @@ Bad:
             - item 22
 
         After.
+
+    Rationale: same indent as:
+
+    - code blocks, so it is simpler for editors to implement: 1 tab always equals 4 spaces.
+    - inner content must have, so inner lists look aligned with inner paragraphs.
+
+        Bad:
+
+            - Outer list.
+
+                Inner paragraph.
+
+              - Inner list. Bad. not aligend.
+
+        It is true that many implementations render the following the same as the above:
+
+            - Outer list.
+
+              Inner paragraph. 2 spaces: not standard.
+
+              - Inner list.
+
+        But the original markdown standard requires 4 spaces for inner paragraphs.
 
 - Either:
 
