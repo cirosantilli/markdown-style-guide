@@ -80,7 +80,7 @@ Rationale:
 
     `Setex` headers are more visible, but good visibility can be achieved for `atx-style` headers by configuring your editor to syntax highlight them.
 - Include a space between the `#` and the text of the header.
-- Headers must be preceded and followed by an empty line except at the beginning of a file.
+- Headers must be surrounded by an empty line except at the beginning of a file.
 - Headers must *not* have spaces preceding the number sign.
 
 Good:
@@ -232,7 +232,7 @@ Bad:
 
 Prefer indented code blocks to fenced code blocks wherever you can use them, since they are part of the original standard, and fenced code blocks are not.
 
-Code blocks must be preceded and followed by an empty line.
+Code blocks must be surrounded by an empty line.
 
 # Tables
 
@@ -244,7 +244,7 @@ Extension.
 - Align all pipes of a table border vertically.
 - Left align content inside cells. In flavors where header cells determine text alignment, align only the header, and keep the body cells left aligned.
 - Column width is determined by the longest cell in the column.
-- Must be preceded and followed by an empty line.
+- Must be surrounded by an empty line.
 - Pipes `|` must be surrounded by a space, except for:
     - pipes at the header separator, which are surrounded by a hyphen `-`.
     - outer pipes which only get one space internally.
