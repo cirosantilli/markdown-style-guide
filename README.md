@@ -158,9 +158,37 @@ Bad:
             - item 21
             - item 22
 
-- Either separate all list items of a list by newlines, or don't separate any of them, but never mix both, which is unspecified what happens in mixed cases. If you absolutely need a mixed case, use raw HTML.
+- Either:
 
-    TODO understand this point better. The standard is underspecified here.
+    - separate all list items of a list by empty lines to generate `<li><p>`
+    - don't separate any of them by empty lines to generate only `<li>`
+
+    Never mix both, which is unspecified.
+
+    Good:
+
+        - a
+
+        - b
+
+        - c
+
+    Good:
+
+        - a
+        - b
+        - c
+
+    Bad:
+
+        - a
+
+        - b
+        - c
+
+    If you absolutely need a mixed case, use raw HTML.
+
+- nested lists. TODO understand this point better
 
     Good:
 
