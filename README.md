@@ -4,7 +4,7 @@ Readable and portable Markdown style guide.
 
 Further design goals:
 
-- easy to write and update
+- easy to write and modify later
 - diff friendly
 - easy to remember and implement on editors
 
