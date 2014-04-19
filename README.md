@@ -239,7 +239,7 @@ Bad:
                 - BAD: mixed style. Should have newline.
         - BAD: mixed style. Should have newline.
 
-# Code Blocks
+# Code blocks
 
 Use indented code blocks wherever you can, since they are part of the original standard and fenced code blocks are not.
 
