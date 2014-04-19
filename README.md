@@ -79,7 +79,7 @@ Bad:
 
 # Blockquotes
 
-- Follow the greater than marker by one space: `> `.
+- Follow the greater than marker by one space.
 
     Good:
 
@@ -109,7 +109,19 @@ Bad:
 
 # Lists
 
-- Use the hyphen marker followed by one space `- `  for unordered lists.
+- Use the hyphen marker followed by one space for unordered lists.
+
+    Good:
+
+        - a
+
+    Bad:
+
+        -a
+
+    <!-- -->
+
+        -   a
 
     Rationale:
 
@@ -312,11 +324,16 @@ Bad:
     ` code `
     [ link ]( http://a.com )
 
-Exception to the rule: inline code in which the space is crucial.
+For inline code in which the space is crucial:
 
-    Use the hyphen marker followed by one space `- `  for unordered lists.
+- explain in writing that the spaces must be there
+- add something after the space if possible
 
-When you use this exception, explicitly explain that the space must be there, or readers may not notice it.
+Good:
+
+    Use the hyphen marker followed by one space `- a`  for unordered lists.
+
+Rationale: most browsers don't render the surrounding spaces nor add them to the clipboard on copy.
 
 ## Bold
 
