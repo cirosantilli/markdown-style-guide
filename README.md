@@ -85,6 +85,16 @@ Bad:
 
      # Heading
 
+To indicate the end of a header's content without creating a new header, use an horizontal rule:
+
+    # Heading
+
+    Content
+
+    ---
+
+    Outside heading.
+
 # Blockquotes
 
 - Follow the greater than marker by one space.
