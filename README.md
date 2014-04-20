@@ -64,36 +64,38 @@ Good:
 
     Before.
 
-    # Heading
+    # Header
 
     After.
 
 Bad:
 
     Before.
-    # Heading
+    # Header
 
-    # Heading
+    # Header
     After.
 
-    Heading
+    Header
     =======
 
-    # Heading #
+    # Header #
 
-    #Heading
+    #Header
 
-     # Heading
+     # Header
 
-To indicate the end of a header's content without creating a new header, use an horizontal rule:
+## End of a header
 
-    # Heading
+Indicate the end of a header's content that is not followed by a new header by an horizontal rule:
+
+    # Header
 
     Content
 
     ---
 
-    Outside heading.
+    Outside header.
 
 # Blockquotes
 
@@ -347,6 +349,19 @@ Code blocks must be surrounded by one empty line.
 Indent indented code blocks with 4 spaces.
 
 *Don't* indent fenced code blocks.
+
+# Horizontal rules
+
+*Don't* use horizontal rules except to indicate the [End of a header](#end-of-a-header)
+
+Rationale:
+
+- headers are better section separators since they say what a section is about.
+- horizontal rules don't have a generally accepted semantic meaning. This guide gives them one.
+
+Use 3 hyphens without spaces:
+
+    ---
 
 # Tables
 
