@@ -110,7 +110,9 @@ Rationale:
 
 ## Line breaks
 
-Force a line break by ending a line with exactly two spaces.
+Avoid line breaks, as they don't have generally accepted semantic meaning.
+
+In the rare case you absolutely need them, end a lines with exactly two spaces.
 
 ## Headers
 
