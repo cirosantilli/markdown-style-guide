@@ -34,6 +34,30 @@ Rationale: why not `.mkd` or `.markdown`?
 - more popular
 - does not have important conflicts
 
+### File name
+
+- use lower case letters
+- replace punctuation and white space characters by hyphens
+- replace consecutive hyphens by a single hyphen
+- strip surrounding hyphens
+
+Good:
+
+    file-name.md
+
+Bad, multiple consecutive hyphens:
+
+    file--name.md
+
+Bad, surrounding hyphens:
+
+    -file-name-.md
+
+Rationale: why not underscore or camel case? Hyphens are the most popular URL separator today, and markdown files are most often used in contexts where:
+
+- there are hyphen separated HTML files in the same project, possibly the same directory as the markdown files.
+- filenames will be used directly to URLs. E.g.: GitHub blobs.
+
 ## General rules
 
 ### Consecutive empty lines
@@ -64,7 +88,7 @@ Bad:
 
     # Header
 
-Rationale: it occupies more vertical screen space, and does not significantly improve readability. 
+Rationale: multiple empty lines occupy more vertical screen space, and do not significantly improve readability.
 
 ### Line wrapping
 
