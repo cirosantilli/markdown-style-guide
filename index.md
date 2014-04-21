@@ -123,8 +123,11 @@ Force a line break by ending a line with exactly two spaces.
     - occupy more screen lines
 
     `Setex` headers are more visible, but good visibility can be achieved for `atx-style` headers by configuring your editor to syntax highlight them.
+
 - Include a space between the `#` and the text of the header.
+
 - Headers must be surrounded by one empty line except at the beginning of a file.
+
 - Headers must *not* have spaces preceding the number sign.
 
 Good:
