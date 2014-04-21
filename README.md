@@ -34,11 +34,37 @@ Rationale: why not `.mkd` or `.markdown`?
 - more popular
 - does not have important conflicts
 
-## Block elements
+## General rules
 
-### Line breaks
+### Consecutive empty lines
 
-Force a line break by ending a line with exactly two spaces.
+*Don't* use 2 or more consecutive empty lines except where they must appear literally such as in code blocks.
+
+Good:
+
+    - list
+    - list
+
+    # Header
+
+Good, code block:
+
+    The markup language X requires you to use triple newlines to separate paragraphs:
+
+        p1
+
+
+        p2
+
+Bad:
+
+    - list
+    - list
+
+
+    # Header
+
+Rationale: it occupies more vertical screen space, and does not significantly improve readability. 
 
 ### Line wrapping
 
@@ -48,6 +74,12 @@ Rationale:
 
 - GitHub breaks the original markdown standard and inserts line breaks at newline characters. Since GitHub is a major markdown player, it is better to be compatible with them.
 - diffs look better, since a change to a paragraph shows up as a single diff line.
+
+## Block elements
+
+### Line breaks
+
+Force a line break by ending a line with exactly two spaces.
 
 ### Headers
 
