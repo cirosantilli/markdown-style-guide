@@ -85,6 +85,61 @@ Bad:
 
      # Header
 
+## Top-level header
+
+The *top-level header* is an:
+
+- optional
+- `h1` header
+- that is the first line of a `.md` file
+- and contains the entire file, that is, there are not other `h1` headers in the same file
+
+Top-level headers serve as a title for the entire document.
+
+Projects must be consistent if they use top-level headers or not: files which serve analogous functions must either all have top-level headers or not.
+
+Downsides of top-level headers:
+
+- take up one header level. This means that there are only 5 header levels left, and each new header will have one extra `#`, which looks worse and is harder to write.
+
+- duplicate filename information, which most often can already be seen on a URL. In most cases, the filename can be trivially converted to a top-level, e.g.: `some-filename.md` to `Some filename`.
+
+Advantages of top-level headers:
+
+- more readable than URL's, especially for non-technically inclined users.
+
+If possible, use a technology stack that stores top-level header information outside of the ordinary markdown. For example, in [Jekyll](https://github.com/jekyll/jekyll) projects, top-level header information can be stored as file metadata on the front matter, and used from templates.
+
+## Header case
+
+- use an upper case letter as the first letter of a header, unless it is a word that always starts with lowercase letters, e.g. computer code.
+
+    Good:
+
+        # Header
+
+    Good, computer code that always starts with lower case:
+
+        # int main
+
+    Bad:
+
+        # header
+
+- the other letters have the same case they would have in the middle of a sentence.
+
+    Good:
+
+        # The header of the example
+
+    Bad:
+
+        # The Header of the Example
+
+    As an exception, [title case](http://en.wikipedia.org/wiki/Title_case#Title_case) may be optionally used for the [top-level header](#top-level-header). Use this exception sparingly, in cases where typographical perfection is important, e.g.: `README` of a project.
+
+    Rationale: why not [Title case](http://en.wikipedia.org/wiki/Title_case#Title_case) for all headers? It requires too much effort to decide if edge-case words should be upper case or not.
+
 ## End of a header
 
 Indicate the end of a header's content that is not followed by a new header by an horizontal rule:
@@ -352,7 +407,7 @@ Indent indented code blocks with 4 spaces.
 
 # Horizontal rules
 
-*Don't* use horizontal rules except to indicate the [End of a header](#end-of-a-header)
+*Don't* use horizontal rules except to indicate the [End of a header](#end-of-a-header).
 
 Rationale:
 
