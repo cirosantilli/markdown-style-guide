@@ -22,7 +22,9 @@ This guide was forked from [carwin/markdown-styleguide](https://github.com/carwi
 
 The general structure of the guide was kept, but almost every line was modified, and many additions were made.
 
-## File extension
+## File
+
+### File extension
 
 Use `.md`.
 
@@ -32,11 +34,13 @@ Rationale: why not `.mkd` or `.markdown`?
 - more popular
 - does not have important conflicts
 
-## Line breaks
+## Block elements
+
+### Line breaks
 
 Force a line break by ending a line with exactly two spaces.
 
-## Line wrapping
+### Line wrapping
 
 *Don't* wrap long lines with newlines. Set your editor to wrap them visually instead.
 
@@ -45,7 +49,7 @@ Rationale:
 - GitHub breaks the original markdown standard and inserts line breaks at newline characters. Since GitHub is a major markdown player, it is better to be compatible with them.
 - diffs look better, since a change to a paragraph shows up as a single diff line.
 
-## Headers
+### Headers
 
 - Use the `atx-style` with no closing `#` character.
 
@@ -85,7 +89,7 @@ Bad:
 
      # Header
 
-### Top-level header
+#### Top-level header
 
 The *top-level header* is an:
 
@@ -110,7 +114,7 @@ Advantages of top-level headers:
 
 If possible, use a technology stack that stores top-level header information outside of the ordinary markdown. For example, in [Jekyll](https://github.com/jekyll/jekyll) projects, top-level header information can be stored as file metadata on the front matter, and used from templates.
 
-### Header case
+#### Header case
 
 - use an upper case letter as the first letter of a header, unless it is a word that always starts with lowercase letters, e.g. computer code.
 
@@ -140,7 +144,7 @@ If possible, use a technology stack that stores top-level header information out
 
     Rationale: why not [Title case](http://en.wikipedia.org/wiki/Title_case#Title_case) for all headers? It requires too much effort to decide if edge-case words should be upper case or not.
 
-### End of a header
+#### End of a header
 
 Indicate the end of a header's content that is not followed by a new header by an horizontal rule:
 
@@ -152,7 +156,7 @@ Indicate the end of a header's content that is not followed by a new header by a
 
     Outside header.
 
-## Blockquotes
+### Blockquotes
 
 - Follow the greater than marker by one space.
 
@@ -182,7 +186,7 @@ Indicate the end of a header's content that is not followed by a new header by a
 
         > b
 
-## Lists
+### Lists
 
 - Use the hyphen marker followed by one space for unordered lists.
 
@@ -395,7 +399,7 @@ Indicate the end of a header's content that is not followed by a new header by a
 
         - no p
 
-## Code blocks
+### Code blocks
 
 Use indented code blocks wherever you can, since they are part of the original standard and fenced code blocks are not.
 
@@ -405,7 +409,7 @@ Indent indented code blocks with 4 spaces.
 
 *Don't* indent fenced code blocks.
 
-## Horizontal rules
+### Horizontal rules
 
 *Don't* use horizontal rules except to indicate the [End of a header](#end-of-a-header).
 
@@ -418,7 +422,7 @@ Use 3 hyphens without spaces:
 
     ---
 
-## Tables
+### Tables
 
 Extension.
 
@@ -449,7 +453,7 @@ Rationale:
 - unaligned tables tables are easier to write, but aligned tables are more readable, and people read code much more often than they edit it.
 - preceding pipes make it easier to determine where a table starts and ends. Trailing pipes make it look better because of symmetry.
 
-## Separate consecutive elements
+### Separate consecutive elements
 
 Separate consecutive:
 
