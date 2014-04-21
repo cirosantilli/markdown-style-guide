@@ -170,6 +170,8 @@ Advantages of top-level headers:
 
 If possible, use a technology stack that stores top-level header information outside of the ordinary markdown. For example, in [Jekyll](https://github.com/jekyll/jekyll) projects, top-level header information can be stored as file metadata on the front matter, and used from templates.
 
+Prefer to start headers of files without a top-level header at level `h1`.
+
 #### Header case
 
 - use an upper case letter as the first letter of a header, unless it is a word that always starts with lowercase letters, e.g. computer code.
