@@ -601,6 +601,21 @@ Good:
 
 Rationale: most browsers don't render the surrounding spaces nor add them to the clipboard on copy.
 
+## Links
+
+### Reference-style links
+
+- must be the last thing on the file
+- must be sorted alphabetically by the ID
+- don't enclos URLs by angle brackets
+- align URLs and link names as in a table
+- link IDs use only lowercase letters. Rationale: they are case insensitive, lowercase only is easier to write, and the readability gain of mixed case is not very big.
+
+Good:
+
+    [id2]     http://long-url.com
+    [long id] http://a.com        "name 1"
+
 ## Bold
 
 Use double asterisk format: `**bold**`.
