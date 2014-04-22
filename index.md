@@ -616,13 +616,15 @@ Good:
     [id2]     http://long-url.com
     [long id] http://a.com        "name 1"
 
-## Bold
+## Emphasis
+
+### Bold
 
 Use double asterisk format: `**bold**`.
 
 Rationale: more common and readable than the double underline `__bold__` form.
 
-## Italic
+### Italic
 
 Use single asterisk format: `*italic*`.
 
