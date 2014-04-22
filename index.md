@@ -615,3 +615,9 @@ Rationale:
 
 - more common and readable than the underscore form
 - consistent with the bold format, which also uses asterisks
+
+## Email Automatic Links
+
+*Don't* use email autolinks `<address@example.com>`. Use raw HTML instead.
+
+Rationale: the original markdown specification states it "performs a bit of randomized decimal and hex entity-encoding to help obscure your address from address-harvesting spambots". Therefore, the output is random, ugly, and as the spec itself mentions "but an address published in this way will probably eventually start receiving spam".
