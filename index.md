@@ -17,6 +17,14 @@ Considers both the [original specification](http://daringfireball.net/projects/m
 - diff friendly
 - easy to remember and implement on editors
 
+# Notable users
+
+- [GitLab](https://github.com/gitlabhq/gitlabhq/blob/master/CONTRIBUTING.md#style-guides)
+
+Do you use this style guide? Add your name to [our wiki](https://github.com/cirosantilli/markdown-styleguide/wiki/Users).
+
+Are you notable? Send a pull request.
+
 # Why fork Carwin
 
 This guide was forked from [carwin/markdown-styleguide](https://github.com/carwin/markdown-styleguide/tree/9121c77bd177a3ade6713d50ab1228782d7c02a7) because there were many important points in which we disagreed. This guide proposes:
