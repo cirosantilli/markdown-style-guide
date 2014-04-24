@@ -31,7 +31,7 @@ If you are a notable user:
 
 - your vote on decisions will have much greater weight
 
-If are more likely to be notable if your project:
+You are more likely to be notable if your project:
 
 - uses Markdown heavily. E.g.: Markdown engines, text editors, lots of markdown documentation, etc.
 
