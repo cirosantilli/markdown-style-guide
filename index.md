@@ -150,11 +150,15 @@ In the rare case you absolutely need them, end a lines with exactly two spaces.
 
     `Setex` headers are more visible, but good visibility can be achieved for `atx-style` headers by configuring your editor to syntax highlight them.
 
-- Include a space between the `#` and the text of the header.
+-   Include a space between the `#` and the text of the header.
 
-- Headers must be surrounded by one empty line except at the beginning of a file.
+-   Headers must be surrounded by one empty line except at the beginning of a file.
 
-- Headers must *not* have spaces preceding the number sign.
+-   Headers must *not* have spaces preceding the number sign.
+
+-   *Don't* use two headers with the same content in the same markdown file.
+
+    Rationale: many markdown engines generate IDs for headers based on the header content.
 
 Good:
 
