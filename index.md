@@ -198,6 +198,8 @@ The *top-level header* is an:
 
 Top-level headers serve as a title for the entire document.
 
+Top-level headers on files such as `README.md`, `index.md` or analogous serve as a title for their parent directory.
+
 Projects must be consistent if they use top-level headers or not: files which serve analogous functions must either all have top-level headers or not.
 
 Downsides of top-level headers:
