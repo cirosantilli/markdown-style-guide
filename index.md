@@ -136,7 +136,7 @@ In the rare case you absolutely need them, end a lines with exactly two spaces.
 
 ## Headers
 
-- Use the `atx-style` with no closing `#` character.
+-   Use the `atx-style` with no closing `#` character.
 
     Rationale: `Setex` style headers are:
 
@@ -206,7 +206,7 @@ Prefer to start headers of files without a top-level header at level `h1`.
 
 ### Header case
 
-- use an upper case letter as the first letter of a header, unless it is a word that always starts with lowercase letters, e.g. computer code.
+-   Use an upper case letter as the first letter of a header, unless it is a word that always starts with lowercase letters, e.g. computer code.
 
     Good:
 
@@ -220,7 +220,7 @@ Prefer to start headers of files without a top-level header at level `h1`.
 
         # header
 
-- the other letters have the same case they would have in the middle of a sentence.
+-   The other letters have the same case they would have in the middle of a sentence.
 
     Good:
 
@@ -248,7 +248,7 @@ Indicate the end of a header's content that is not followed by a new header by a
 
 ## Blockquotes
 
-- Follow the greater than marker by one space.
+-   Follow the greater than marker by one space.
 
     Good:
 
@@ -262,7 +262,7 @@ Indicate the end of a header's content that is not followed by a new header by a
 
         >  a
 
-- *Don't* use empty lines inside a single block quote.
+-   *Don't* use empty lines inside a single block quote.
 
     Good:
 
@@ -278,57 +278,137 @@ Indicate the end of a header's content that is not followed by a new header by a
 
 ## Lists
 
-- Use the hyphen marker followed by one space for unordered lists.
+### Marker
 
-    Good:
+#### Unordered
 
-        - a
+Use the hyphen marker.
 
-    Bad:
+Good:
 
-        -a
+    - a
+    - b
 
-    <!-- -->
+Bad:
 
-        -   a
+    * a
+    * b
 
-    Rationale:
+<!-- -->
 
-    - asterisk `*` can be confused with bold or italic markers.
-    - plus sign `+` is not popular.
+    + a
+    + b
 
-- Only use the marker `1.` for ordered lists.
+Rationale:
 
-    Good:
+- asterisk `*` can be confused with bold or italic markers.
+- plus sign `+` is not popular.
 
-        1. a
-        1. b
-        1. c
+#### Ordered
 
-    Bad:
+Only use the marker `1.` for ordered lists.
 
-        1. a
-        2. b
-        3. c
+Good:
 
-    Rationale:
+    1. a
+    1. b
+    1. c
 
-    - if you want to change a list item in the middle of the list, you don't have to modify all items that follow it.
+Bad:
 
-        Diffs will show only the significant line which was modified.
+    1. a
+    2. b
+    3. c
 
-    - content stays aligned without extra effort if the numbers reach 2 digits. E.g.: the following is not aligned:
+Rationale:
 
-            9. a
-            10. b
+-   If you want to change a list item in the middle of the list, you don't have to modify all items that follow it.
 
-- Indented list items and their content by 4 spaces further than their parent. The first level has no indent.
+    Diffs will show only the significant line which was modified.
+
+-   Content stays aligned without extra effort if the numbers reach 2 digits. E.g.: the following is not aligned:
+
+        9. a
+        10. b
+
+### Spaces after marker
+
+- If the content of every item of the list is one line long, use a **1** space.
+- Otherwise, use **3** spaces.
+
+Good:
+
+    - a
+    - b
+
+<!-- -->
+
+    -   a
+
+        par
+
+    -   b
+
+            code
+
+    -   c
+
+Bad, single line content only:
+
+    -   a
+    -   b
+
+Bad, multi-line content with a single space
+
+    - a
+
+        par
+
+#### Rationale: why not always single space?
+
+Because important engines such as Marked and Kramdown indent relative to the last character, and are currently reluctant to even add options that allow to change that behavior, see: <https://github.com/chjj/marked/issues/227>, <https://github.com/gettalong/kramdown/issues/121>.
+
+Therefore they compile:
+
+    - a
+
+            code
+
+As:
+
+    <pre><code>  code
+
+with **2 extra spaces**, Instead of:
+
+    <pre><code>code
+
+This goes against our interpretation of the Original markdown documentation:
+
+> To put a code block within a list item, the code block needs to be indented twice — 8 spaces or two tabs
+
+and also from the actual behavior of the original markdown.
+
+On the other hand, all major engines compile:
+
+    -   a
+
+            code
+
+without the two extra spaces, so we chose that for greater compatibility.
+
+This divergence probably happened because all the examples of the original markdown documentation are of the above form.
+
+Most major engines however don't add the two extra spaces.
+
+### Indented lists
+
+-   Indented list items and their content by 4 spaces further than their parent. The first level has no indent.
 
     Good:
 
         Before.
 
-        - item 1
+        -   item 1
 
             Content 1
 
@@ -336,7 +416,8 @@ Indicate the end of a header's content that is not followed by a new header by a
 
             Content 1
 
-        - item 2
+        -   item 2
+
             - item 21
             - item 22
 
@@ -344,12 +425,12 @@ Indicate the end of a header's content that is not followed by a new header by a
 
     Rationale: same indent as:
 
-    - code blocks, so it is simpler for editors to implement: 1 tab always equals 4 spaces.
-    - inner content must have, so inner lists look aligned with inner paragraphs.
+    -   code blocks, so it is simpler for editors to implement: 1 tab always equals 4 spaces.
+    -   inner content must have, so inner lists look aligned with inner paragraphs.
 
         Bad:
 
-            - Outer list.
+            -   Outer list.
 
                 Inner paragraph.
 
@@ -365,7 +446,9 @@ Indicate the end of a header's content that is not followed by a new header by a
 
         But the original markdown standard requires 4 spaces for inner paragraphs.
 
-- Either:
+### Newlines for separation
+
+-   Either:
 
     - separate all list items of a list by one empty line to generate `<li><p>`
     - don't separate any of them by empty lines to generate only `<li>`
@@ -393,7 +476,7 @@ Indicate the end of a header's content that is not followed by a new header by a
         - no p
         - no p
 
-- Surround lists by one empty line, except for a list without `<p>` inside another.
+-   Surround lists by one empty line, except for a list without `<p>` inside another.
 
     Good:
 
@@ -406,38 +489,38 @@ Indicate the end of a header's content that is not followed by a new header by a
 
     <!-- -->
 
-        - p
+        -   p
 
-        - p
+        -   p
 
             - no p
             - no p
             - no p
 
-        - p
+        -   p
 
     <!-- -->
 
-        - p
+        -   p
 
-        - p
-
-            - no p
+        -   p
 
             - no p
 
             - no p
 
-        - p
+            - no p
+
+        -   p
 
     Good, list without `<p>` inside another:
 
-        - no p
-        - no p
+        -   no p
+        -   no p
             - no p
             - no p
             - no p
-        - no p
+        -   no p
 
     Bad:
 
@@ -448,25 +531,25 @@ Indicate the end of a header's content that is not followed by a new header by a
 
     Bad, list without `<p>` inside list with `<p>` without preceding empty line:
 
-        - no p
+        -   no p
 
-        - no p
+        -   no p
             - no p
             - no p
             - no p
 
-        - no p
+        -   no p
 
-- Avoid multi-paragraph items inside lists without `<p>`, as this adds `<p>` to one element of the list, and some style sheets like GitHub's add an extra vertical space because of that.
+-   Avoid multi-paragraph items inside lists without `<p>`, as this adds `<p>` to one element of the list, and some style sheets like GitHub's add an extra vertical space because of that.
 
     Bad:
 
-        - no p
-        - no p
-        - no p
+        -   no p
+        -   no p
+        -   no p
 
             Content
-        - no p
+        -   no p
 
     Because this generates:
 
@@ -479,15 +562,15 @@ Indicate the end of a header's content that is not followed by a new header by a
 
     Bad for the same reason:
 
-        - no p
-        - no p
-        - no p
+        -   no p
+        -   no p
+        -   no p
 
             - p
 
             - p
 
-        - no p
+        -   no p
 
 ## Code blocks
 
@@ -516,16 +599,16 @@ Use 3 hyphens without spaces:
 
 Extension.
 
-- Surround tables by one empty line.
-- Don't indent tables.
-- Surround every line of the table by pipes.
-- Align all border pipes vertically.
-- Separate header from body by hyphens except at the aligned pipes `|`.
-- Pipes `|` must be surrounded by a space, except for:
+-   Surround tables by one empty line.
+-   Don't indent tables.
+-   Surround every line of the table by pipes.
+-   Align all border pipes vertically.
+-   Separate header from body by hyphens except at the aligned pipes `|`.
+-   Pipes `|` must be surrounded by a space, except for:
     - pipes at the header separator, which are surrounded by a hyphen `-`.
     - outer pipes which only get one space or hyphen internally.
-- Column width is determined by the longest cell in the column.
-- Left align content inside cells. In flavors where header cells determine text alignment, align only the header, and keep the body cells left aligned.
+-   Column width is determined by the longest cell in the column.
+-   Left align content inside cells. In flavors where header cells determine text alignment, align only the header, and keep the body cells left aligned.
 
 Good table:
 
