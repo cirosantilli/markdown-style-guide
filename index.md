@@ -25,6 +25,18 @@ Do you use this style guide? Add your name to [our wiki](https://github.com/ciro
 
 Are you notable? Send a pull request.
 
+If you are a notable user:
+
+- you can opt to be contacted before any major changes happen to the standard. Please inform this on the pull request that adds you to the notable list.
+
+- your vote on decisions will have much greater weight
+
+If are more likely to be notable if your project:
+
+- uses Markdown heavily. E.g.: Markdown engines, text editors, lots of markdown documentation, etc.
+
+- is popular. Any popularity measure will be taken into account, e.g. GitHub stars, Google Rank, etc. 2K+ GitHub stars makes for a very strong case.
+
 # Why fork Carwin
 
 This guide was forked from [carwin/markdown-styleguide](https://github.com/carwin/markdown-styleguide/tree/9121c77bd177a3ade6713d50ab1228782d7c02a7) because there were many important points in which we disagreed. This guide proposes:
