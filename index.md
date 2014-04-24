@@ -91,6 +91,8 @@ Rationale: why not underscore or camel case? Hyphens are the most popular URL se
 
 *Don't* use 2 or more consecutive empty lines except where they must appear literally such as in code blocks.
 
+End files with a newline character, and *don't* leave empty lines at the end of the file.
+
 Good:
 
     - list
