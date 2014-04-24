@@ -87,11 +87,13 @@ Rationale: why not underscore or camel case? Hyphens are the most popular URL se
 
 # General rules
 
-## Consecutive empty lines
+## Space
 
-*Don't* use 2 or more consecutive empty lines except where they must appear literally such as in code blocks.
+*Don't* use 2 or more consecutive empty lines, that is, more than two consecutive newline characters, except where they must appear literally such as in code blocks.
 
 End files with a newline character, and *don't* leave empty lines at the end of the file.
+
+*Don't* use trailing whitespace unless it has a function such as indicating a line break.
 
 Good:
 
@@ -712,7 +714,7 @@ Rationale: most browsers don't render the surrounding spaces nor add them to the
 
 - must be the last thing on the file
 - must be sorted alphabetically by the ID
-- don't enclos URLs by angle brackets
+- don't enclose URLs by angle brackets
 - align URLs and link names as in a table
 - link IDs use only lowercase letters. Rationale: they are case insensitive, lowercase only is easier to write, and the readability gain of mixed case is not very big.
 
