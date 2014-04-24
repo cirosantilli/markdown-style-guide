@@ -748,17 +748,23 @@ Rationale:
 
 ## Automatic links without angle brackets
 
-*Don't* use automatic links without angle brackets.
+-   *Don't* use automatic links without angle brackets.
 
-Good:
+    Good:
 
-    <http://a.com>
+        <http://a.com>
 
-Bad:
+    Bad:
 
-    http://a.com
+        http://a.com
 
-Rationale: it is an extension, `<>` is easy to type and saner.
+    Rationale: it is an extension, `<>` is easy to type and saner.
+
+-   If you want literal links which are not autolinks, enclose them in code blocks. E.g.:
+
+        `http://not-a-link.com`
+
+    Rationale: many tools do that conversion by default.
 
 ### Email automatic links
 
