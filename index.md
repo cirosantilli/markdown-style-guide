@@ -160,6 +160,8 @@ In the rare case you absolutely need them, end a lines with exactly two spaces.
 
     Rationale: many markdown engines generate IDs for headers based on the header content.
 
+-   Don't skip header levels.
+
 Good:
 
     Before.
