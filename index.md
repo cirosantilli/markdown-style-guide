@@ -736,7 +736,23 @@ Rationale:
 - more common and readable than the underscore form
 - consistent with the bold format, which also uses asterisks
 
-## Email Automatic Links
+## Automatic links
+
+## Automatic links without angle brackets
+
+*Don't* use automatic links without angle brackets.
+
+Good:
+
+    <http://a.com>
+
+Bad:
+
+    http://a.com
+
+Rationale: it is an extension, `<>` is easy to type and saner.
+
+### Email automatic links
 
 *Don't* use email autolinks `<address@example.com>`. Use raw HTML instead.
 
