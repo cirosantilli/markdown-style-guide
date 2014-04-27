@@ -318,19 +318,47 @@ Rationale:
 
 #### Ordered
 
-Only use the marker `1.` for ordered lists.
+Prefer lists only with the marker `1.` for ordered lists, unless you intend to refer to items by their number in the same markdown file or externaly. 
 
-Good:
+Prefer unordered lists unless you intent to refer to items by their number.
+
+Best, we will never refer to the items of this list by their number:
+
+    - a
+    - c
+    - b
+
+Better, only `1.`:
 
     1. a
-    1. b
     1. c
+    1. b
 
-Bad:
+Worse, we will never refer to the items of this list by their number:
 
     1. a
-    2. b
-    3. c
+    2. c
+    3. b
+
+Acceptable, refer to them in the text:
+
+    The ouput of the `ls` command is of the form:
+
+        drwx------  2 ciro ciro        4096 Jul  5  2013 dir0
+        drwx------  4 ciro ciro        4096 Apr 27 08:00 dir1
+        1           2
+
+    Where:
+
+    1. permissions
+    2. number of files directory contains
+
+Acceptable, meant to be referred by number from outside of the markdown file:
+
+    Terms of use.
+
+    1. I will not do anything illegal.
+    2. I will not do anything that can harm the website.
 
 Rationale:
 
@@ -342,6 +370,11 @@ Rationale:
 
         9. a
         10. b
+
+-   References break when a new list item is added. To reduce this problem:
+
+    - keep references close to the list so authors are less likely to forget to update them
+    - when referring from an external document, always refer to an specific version of the markdown file
 
 ### Spaces after marker
 
