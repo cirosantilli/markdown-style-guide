@@ -381,7 +381,7 @@ Rationale:
 ### Spaces after marker
 
 - If the content of every item of the list is one line long, use a **1** space.
-- Otherwise, use **3** spaces.
+- Otherwise, use **3** spaces for every item of the list.
 
 Good:
 
