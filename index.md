@@ -405,11 +405,22 @@ Bad, single line content only:
     -   a
     -   b
 
-Bad, multi-line content with a single space
+Bad, content that does not fit in a single line:
 
     - a
 
         par
+
+<!-- -->
+
+    - a
+
+            code
+
+<!-- -->
+
+    - a
+        - nested list
 
 #### Rationale: why not always single space?
 
@@ -785,7 +796,7 @@ Rationale:
 
 ## Automatic links
 
-## Automatic links without angle brackets
+### Automatic links without angle brackets
 
 -   *Don't* use automatic links without angle brackets.
 
