@@ -127,8 +127,10 @@ Rationale: multiple empty lines occupy more vertical screen space, and do not si
 
 Rationale:
 
-- GitHub breaks the original markdown standard and inserts line breaks at newline characters. Since GitHub is a major markdown player, it is better to be compatible with them.
 - diffs look better, since a change to a paragraph shows up as a single diff line.
+- reduces the effort of deciding where to break lines.
+- visual wrapping does not significantly reduce the readability of Markdown, since the only language feature that can be indented to indicate hierarchy are nested lists.
+- at some point GitHub translated single newlines to line breaks in READMEs, and still does so on comments. Who knows which engine will be the next to do it?
 
 # Block elements
 
@@ -318,7 +320,7 @@ Rationale:
 
 #### Ordered
 
-Prefer lists only with the marker `1.` for ordered lists, unless you intend to refer to items by their number in the same markdown file or externaly. 
+Prefer lists only with the marker `1.` for ordered lists, unless you intend to refer to items by their number in the same markdown file or externally.
 
 Prefer unordered lists unless you intent to refer to items by their number.
 
