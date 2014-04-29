@@ -517,7 +517,7 @@ Most major engines however don't add the two extra spaces.
 
         But the original markdown standard requires 4 spaces for inner paragraphs.
 
-### Newlines for separation
+### Lists and empty lines
 
 -   Either:
 
