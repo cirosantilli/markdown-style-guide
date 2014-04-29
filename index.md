@@ -381,12 +381,19 @@ Rationale:
 ### Spaces after marker
 
 - If the content of every item of the list is one line long, use a **1** space.
-- Otherwise, use **3** spaces for every item of the list.
+- Otherwise, for every item of the list:
+    - use **3** spaces for unordered lists.
+    - use **2** spaces for ordered lists. One less than for unordered becase the marker is 2 chars long.
 
 Good:
 
     - a
     - b
+
+<!-- -->
+
+    1. a
+    1. b
 
 <!-- -->
 
@@ -399,6 +406,12 @@ Good:
             code
 
     -   c
+
+<!-- -->
+
+    1.  a
+
+        par
 
 Bad, single line content only:
 
