@@ -260,6 +260,18 @@ Indicate the end of a header's content that is not followed by a new header by a
 
     Outside header.
 
+### Trailing colon
+
+*Don't* add a trailing colon `:` to headers: every header is an introduction to what is about to come next, which is exactly the function of the colon.
+
+Good:
+
+    How to do something important
+
+Bad
+
+    How to do something important:
+
 ## Blockquotes
 
 -   Follow the greater than marker by one space.
