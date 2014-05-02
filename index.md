@@ -260,9 +260,11 @@ Indicate the end of a header's content that is not followed by a new header by a
 
     Outside header.
 
-### Trailing colon
+### Trailing punctuation
 
-*Don't* add a trailing colon `:` to headers: every header is an introduction to what is about to come next, which is exactly the function of the colon.
+*Don't* add a trailing colon `:` to headers.
+
+Rationale: every header is an introduction to what is about to come next, which is exactly the function of the colon.
 
 Good:
 
@@ -271,6 +273,10 @@ Good:
 Bad
 
     How to do something important:
+
+*Don't* add a trailing full stop `.` to headers.
+
+Rationale: every header consists of a single short phrase, so there is not need to add a phrase separator to it.
 
 ## Blockquotes
 
