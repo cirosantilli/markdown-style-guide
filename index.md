@@ -819,6 +819,40 @@ Rationale:
 - more common and readable than the underscore form
 - consistent with the bold format, which also uses asterisks
 
+## Emphasis vs headers
+
+*Don't* use emphasis elements (bold or italics) to introduce a multi line named section: use headers instead.
+
+Rationale: that is exactly the semantic meaning of headers, and not necessarily that of emphasis elements. As a consequence, many implementations add useful behaviors to headers and not to emphasis elements, such as automatic `id` to make it easier to refer to the header later on.
+
+Good:
+
+    # How to make omelets
+
+    Break an egg.
+
+    ...
+
+    # How to bake bread
+
+    Open the flour sack.
+
+    ...
+
+Bad:
+
+    **How to make omelets:**
+
+    Break an egg.
+
+    ...
+
+    **How to bake bread:**
+
+    Open the flour sack.
+
+    ...
+
 ## Automatic links
 
 ### Automatic links without angle brackets
