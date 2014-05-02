@@ -693,6 +693,37 @@ Indent indented code blocks with 4 spaces.
 
 *Don't* indent fenced code blocks.
 
+Prefer to end the phrase before a code block with a colon `:`.
+
+Good:
+
+    Use this code to blow up your PC:
+
+        sudo rm -rf /
+
+<!-- -->
+
+    Use this code to blow up your PC:
+
+    ```bash
+        sudo rm -rf /
+    ```
+
+Bad:
+
+    Use this code to blow up your PC
+
+        sudo rm -rf /
+
+<!-- -->
+
+    Use this code to blow up your PC:
+
+    ```bash
+        sudo rm -rf /
+    ```
+
+
 ## Horizontal rules
 
 *Don't* use horizontal rules except to indicate the [End of a header](#end-of-a-header).
