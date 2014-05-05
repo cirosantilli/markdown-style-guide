@@ -829,12 +829,14 @@ Good:
     **bold**
     `code`
     [link](http://a.com)
+    [text][name]
 
 Bad:
 
     ** bold **
     ` code `
     [ link ]( http://a.com )
+    [text] [name]
 
 For inline code in which the space is crucial:
 
@@ -851,6 +853,22 @@ Rationale: most browsers don't render the surrounding spaces nor add them to the
 
 ### Reference-style links
 
+Links:
+
+-   use the trailing `[]` on implicit links.
+
+    Good:
+
+        [a][]
+
+    Bad:
+
+        [a]
+
+    Rationale: while omitting `[]` works on most major implementations, it is not specified in the documentation not implemented in the original markdown.
+
+Definitions:
+
 - must be the last thing on the file
 - must be sorted alphabetically by the ID
 - don't enclose URLs by angle brackets
@@ -861,6 +879,16 @@ Good:
 
     [id2]     http://long-url.com
     [long id] http://a.com        "name 1"
+
+Bad, not ordered by id:
+
+    [b] http://a.com
+    [a] http://b.com
+
+Bad, not aligned:
+
+    [id] http://id.com
+    [long id] http://long-id.com
 
 ## Emphasis
 
