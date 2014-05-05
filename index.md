@@ -767,6 +767,7 @@ Rationale:
 
 - unaligned tables tables are easier to write, but aligned tables are more readable, and people read code much more often than they edit it.
 - preceding pipes make it easier to determine where a table starts and ends. Trailing pipes make it look better because of symmetry.
+- there exist tools which help keeping the table aligned. For example, Vim has the [Tabular plugin](https://github.com/godlygeek/tabular) which allows to align the entire table with `:Tabular /|`.
 
 ## Separate consecutive elements
 
