@@ -683,6 +683,57 @@ Most major engines however don't add the two extra spaces.
 
         -   no p
 
+## Definition lists
+
+Extension.
+
+*Don't* use definition lists as they are not part of the original implementation, and are not implemented by all major engines.
+
+Instead, use either:
+
+-   Formated lists of the form:
+
+    - item to be defined has a special span format such as bold, italic or link
+    - colon `:` and a space
+    - aligned definitions
+
+    Good:
+
+        - **apple**: red fruit
+        - **dog**:   noisy animal
+
+    <!-- -->
+
+        - [apple](http://apple.com): red fruit
+        - [dot](http://dog.com): red fruit
+
+    Bad, no colon:
+
+        - **apple** red fruit
+        - **dog**   noisy animal
+
+    Bad, space between term and colon:
+
+        - **apple** : red fruit
+        - **dog** :   noisy animal
+
+    Bad, definitions not aligned:
+
+        - **apple**: red fruit
+        - **dog**: noisy animal
+
+-   Headers.
+
+    Good:
+
+        # Apple
+
+        Red fruit
+
+        # Dog
+
+        Noisy animal
+
 ## Code blocks
 
 Use indented code blocks wherever you can, since they are part of the original standard and fenced code blocks are not.
