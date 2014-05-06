@@ -958,7 +958,13 @@ Rationale:
 - more common and readable than the underscore form
 - consistent with the bold format, which also uses asterisks
 
-## Emphasis vs headers
+### Uppercase for emphasis
+
+*Don't* use uppercase for emphasis: use emphasis constructs like **bold** or *italic* instead.
+
+Rationale: CSS has `text-transform:uppercase` which can easily achieve the same effect consistently across the entire website if you really want uppercase letters.
+
+### Emphasis vs headers
 
 *Don't* use emphasis elements (bold or italics) to introduce a multi line named section: use headers instead.
 
