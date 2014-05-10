@@ -925,6 +925,7 @@ Definitions:
 - don't enclose URLs by angle brackets
 - align URLs and link names as in a table
 - link IDs use only lowercase letters. Rationale: they are case insensitive, lowercase only is easier to write, and the readability gain of mixed case is not very big.
+- for the link title, use double quotes, *not* single quotes. Rationale: even if the original documentation says single quotes work, it does not work in the original implementation. Double quotes however work in every major implementation.
 
 Good:
 
