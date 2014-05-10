@@ -12,7 +12,7 @@ Considers both the [original specification](http://daringfireball.net/projects/m
 # Design goals
 
 - readable
-- portable: produces the same output, or good output, across multiple implementations
+- portable: produces the same output, or good output, across multiple implementations. Portability tests are carried out with the [Markdown Test Suite](https://github.com/karlcow/markdown-testsuite).
 - easy to write and modify later
 - diff friendly
 - easy to remember and implement on editors
