@@ -20,6 +20,7 @@ Considers both the [original specification](http://daringfireball.net/projects/m
 # Notable users
 
 - [GitLab](https://github.com/gitlabhq/gitlabhq/blob/master/CONTRIBUTING.md#style-guides)
+- [Vim Markdown](https://github.com/plasticboy/vim-markdown/blob/master/CONTRIBUTING.md#style)
 
 Do you use this style guide? Add your name to [our wiki](https://github.com/cirosantilli/markdown-styleguide/wiki/Users).
 
