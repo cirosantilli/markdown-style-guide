@@ -798,9 +798,7 @@ Extension.
 -   Surround every line of the table by pipes.
 -   Align all border pipes vertically.
 -   Separate header from body by hyphens except at the aligned pipes `|`.
--   Pipes `|` must be surrounded by a space, except for:
-    - pipes at the header separator, which are surrounded by a hyphen `-`.
-    - outer pipes which only get one space or hyphen internally.
+-   Pipes `|` must be surrounded by a space, except for outer pipes which only get one space internally.
 -   Column width is determined by the longest cell in the column.
 -   Left align content inside cells. In flavors where header cells determine text alignment, align only the header, and keep the body cells left aligned.
 
@@ -809,7 +807,7 @@ Good table:
     Before.
 
     | h    |  right align |  center align  |
-    |------|--------------|----------------|
+    | ---- | ------------ | -------------- |
     | abc  | def          | ghi            |
     | abc2 | def2         | ghi2           |
 
@@ -820,6 +818,7 @@ Rationale:
 - unaligned tables tables are easier to write, but aligned tables are more readable, and people read code much more often than they edit it.
 - preceding pipes make it easier to determine where a table starts and ends. Trailing pipes make it look better because of symmetry.
 - there exist tools which help keeping the table aligned. For example, Vim has the [Tabular plugin](https://github.com/godlygeek/tabular) which allows to align the entire table with `:Tabular /|`.
+- why spaces around pipes of the hyphen separator line, i.e.: `| - |` instead of `|---|`? No spaces looks better, but make it harder to implement automatic alignment in editors, as it requires a special rule for the separator line.
 
 ## Separate consecutive elements
 
