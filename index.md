@@ -739,6 +739,8 @@ Instead, use either:
 
 Use indented code blocks wherever you can, since they are part of the original standard and fenced code blocks are not.
 
+One important case where fenced code blocks are needed is to specify the language of the block with the GitHub extension.
+
 Code blocks must be surrounded by one empty line.
 
 Indent indented code blocks with 4 spaces.
@@ -758,23 +760,22 @@ Good:
     Use this code to blow up your PC:
 
     ```bash
-        sudo rm -rf /
+    sudo rm -rf /
     ```
 
-Bad:
+Bad, no colon:
 
     Use this code to blow up your PC
 
         sudo rm -rf /
 
-<!-- -->
+Bad, fenced block indented:
 
     Use this code to blow up your PC:
 
     ```bash
         sudo rm -rf /
     ```
-
 
 ## Horizontal rules
 
