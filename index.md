@@ -704,6 +704,46 @@ Most major engines however don't add the two extra spaces.
 
         -   no p
 
+## Case of first letter of list item
+
+If the list can be replaced by a long phrase separated with commas, start list items with lower case letters as you would if you were using commas. Only add a final period if at least one of the list items contains multiple sentences.
+
+If the list can be replaced by several sentences, start list items with upper case letters and add a final period.
+
+Good:
+
+    I want to eat:
+
+    - apples
+    - bananas
+    - grapes
+
+because it could be separated with commas as in:
+
+    I want to eat apples, bananas and grapes.
+
+Good:
+
+    To ride a bike you have to:
+
+    - get on top of the bike. This step is easy.
+    - put your foot on the pedal.
+    - gake the pedal turn. This is the most fun part.
+
+Good:
+
+    # How to ride a bike
+
+    - Get on top of the bike.
+    - Put your feet on the pedal.
+    - Make the pedal turn.
+
+because it could be replaced by several sentences:
+
+    # How to ride a bike
+
+    Get on top of the bike. Put your feet on the pedal. Make the pedal turn.
+
 ## Definition lists
 
 Extension.
