@@ -133,6 +133,26 @@ Rationale:
 - visual wrapping does not significantly reduce the readability of Markdown, since the only language feature that can be indented to indicate hierarchy are nested lists.
 - at some point GitHub translated single newlines to line breaks in READMEs, and still does so on comments. Who knows which engine will be the next to do it?
 
+## What to mark as code
+
+Use code blocks or inline code for:
+
+-   executable. E.g.:
+
+        `gcc` is the best compiler available.
+
+    Differentiate between tool and the name of related projects. E.g.: `gcc` vs GCC.
+
+-   file paths.
+
+-   terms related to computers that you don't want to add to your dictionary.
+
+Don't mark as code:
+
+-   names of projects. E.g.: GCC.
+
+-   names of libraries. E.g.: libc, glibc.
+
 # Block elements
 
 ## Line breaks
