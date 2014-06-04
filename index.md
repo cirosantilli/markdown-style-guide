@@ -7,14 +7,16 @@ Readable and portable Markdown style guide.
 
 Considers both the [original specification](http://daringfireball.net/projects/markdown/syntax) and common extensions.
 
-[Source code](https://github.com/cirosantilli/markdown-styleguide/blob/master/index.md). This is not automatically updated with the source, but will be updated at every major change.
+[Source code](https://github.com/cirosantilli/markdown-styleguide/blob/master/index.md).
+This is not automatically updated with the source, but will be updated at every major change.
 
 <ol data-toc></ol>
 
 # Design goals
 
 - readable
-- portable: produces the same output, or good output, across multiple implementations. Portability tests are carried out with the [Markdown Test Suite](https://github.com/karlcow/markdown-testsuite).
+- portable: produces the same output, or good output, across multiple implementations.
+    Portability tests are carried out with the [Markdown Test Suite](https://github.com/karlcow/markdown-testsuite).
 - easy to write and modify later
 - diff friendly
 - easy to remember and implement on editors
@@ -30,7 +32,8 @@ Are you notable? Send a pull request.
 
 If you are a notable user:
 
-- you can opt to be contacted before any major changes happen to the standard. Please inform this on the pull request that adds you to the notable list.
+- you can opt to be contacted before any major changes happen to the standard.
+    Please inform this on the pull request that adds you to the notable list.
 
 - your vote on decisions will have much greater weight
 
@@ -38,7 +41,8 @@ You are more likely to be notable if your project:
 
 - uses Markdown heavily. E.g.: Markdown engines, text editors, lots of markdown documentation, etc.
 
-- is popular. Any popularity measure will be taken into account, e.g. GitHub stars, Google Rank, etc. 2K+ GitHub stars makes for a very strong case.
+- is popular. Any popularity measure will be taken into account, e.g. GitHub stars,
+    Google Rank, etc. 2K+ GitHub stars makes for a very strong case.
 
 # Alternatives system
 
@@ -46,19 +50,22 @@ Disputed points will be given multiple alternatives.
 
 The recommended option will be chosen by voting.
 
-Alternatives will be listed here and given an ID. If you want to use the alterantive, link to this guide and list the alternatives.
+Alternatives will be listed here and given an ID. If you want to use the alternative,
+link to this guide and list the alternatives.
 
 # Why fork Carwin
 
-This guide was forked from [carwin/markdown-styleguide](https://github.com/carwin/markdown-styleguide/tree/9121c77bd177a3ade6713d50ab1228782d7c02a7) because there were many important points in which we disagreed. This guide proposes:
+This guide was forked from [carwin/markdown-styleguide](https://github.com/carwin/markdown-styleguide/tree/9121c77bd177a3ade6713d50ab1228782d7c02a7)
+because there were many important points in which we disagreed. This guide proposes:
 
-- don't wrap long lines
+- softer limits on wrapping
 - lists indented with 4 spaces, not 2
 - ordered lists only with `1.`
 - italics with `*it*`, not `_it_`
 - tables have pipes before and after
 
-The general structure of the guide was kept, but almost every line was modified, and many additions were made.
+The general structure of the guide was kept, but almost every line was modified,
+and many additions were made.
 
 # File
 
@@ -91,7 +98,8 @@ Bad, surrounding hyphens:
 
     -file-name-.md
 
-Rationale: why not underscore or camel case? Hyphens are the most popular URL separator today, and markdown files are most often used in contexts where:
+Rationale: why not underscore or camel case? Hyphens are the most popular URL separator today,
+and markdown files are most often used in contexts where:
 
 - there are hyphen separated HTML files in the same project, possibly the same directory as the markdown files.
 - filenames will be used directly to URLs. E.g.: GitHub blobs.
@@ -100,7 +108,9 @@ Rationale: why not underscore or camel case? Hyphens are the most popular URL se
 
 ## Space
 
-*Don't* use 2 or more consecutive empty lines, that is, more than two consecutive newline characters, except where they must appear literally such as in code blocks.
+*Don't* use 2 or more consecutive empty lines, that is,
+more than two consecutive newline characters,
+except where they must appear literally such as in code blocks.
 
 End files with a newline character, and *don't* leave empty lines at the end of the file.
 
@@ -130,18 +140,39 @@ Bad:
 
     # Header
 
-Rationale: multiple empty lines occupy more vertical screen space, and do not significantly improve readability.
+Rationale: multiple empty lines occupy more vertical screen space,
+and do not significantly improve readability.
 
 ## Line wrapping
 
-*Don't* wrap long lines with newlines. Set your editor to wrap them visually instead.
+Try to keep lines under 80 characters by breaking large paragraphs logically at points such as:
+
+- sentences: after a period `.`, question `?` or exclamation mark `!`
+- [clauses](http://www.oxforddictionaries.com/words/clauses):
+    after words like `and`, `which`, `if ... then`, commas `,`
+- large [phrases](http://www.oxforddictionaries.com/words/phrases)
+
+It is acceptable to have a line longer than 80 characters,
+but keep in mind that long sentences are less readable
+and look worse in tools such as `git diff`.
+
+Set your editor to wrap lines visually for Markdown in case a large line is present.
+
+Good:
+
+    This is a very very very very very very very very very very very very very long not wrapped sentence.
+    Second sentence of of the paragraph,
+    third sentence of a paragraph
+    and the fourth one.
 
 Rationale:
 
-- diffs look better, since a change to a paragraph shows up as a single diff line.
-- reduces the effort of deciding where to break lines.
-- visual wrapping does not significantly reduce the readability of Markdown, since the only language feature that can be indented to indicate hierarchy are nested lists.
-- at some point GitHub translated single newlines to line breaks in READMEs, and still does so on comments. Who knows which engine will be the next to do it?
+-   Diffs look better, since a change to a clause shows up as a single diff line.
+-   Occasional visual wrapping does not significantly reduce the readability of Markdown,
+    since the only language feature that can be indented to indicate hierarchy are nested lists.
+-   At some point GitHub translated single newlines to line breaks in READMEs,
+    and still does so on comments.
+    Currently there is no major engine which does it, so it is safe to use newlines.
 
 ## What to mark as code
 
@@ -181,7 +212,8 @@ In the rare case you absolutely need them, end a lines with exactly two spaces.
     - only go up to level 2
     - occupy more screen lines
 
-    `Setex` headers are more visible, but good visibility can be achieved for `atx-style` headers by configuring your editor to syntax highlight them.
+    `Setex` headers are more visible, but good visibility can be achieved for `atx-style` headers
+    by configuring your editor to syntax highlight them.
 
 -   Include a space between the `#` and the text of the header.
 
@@ -231,27 +263,37 @@ The *top-level header* is an:
 
 Top-level headers serve as a title for the entire document.
 
-Top-level headers on files such as `README.md`, `index.md` or analogous serve as a title for their parent directory.
+Top-level headers on files such as `README.md`, `index.md` or analogous
+serve as a title for their parent directory.
 
-Projects must be consistent if they use top-level headers or not: files which serve analogous functions must either all have top-level headers or not.
+Projects must be consistent if they use top-level headers or not:
+files which serve analogous functions must either all have top-level headers or not.
 
 Downsides of top-level headers:
 
-- take up one header level. This means that there are only 5 header levels left, and each new header will have one extra `#`, which looks worse and is harder to write.
+- take up one header level. This means that there are only 5 header levels left,
+    and each new header will have one extra `#`, which looks worse and is harder to write.
 
-- duplicate filename information, which most often can already be seen on a URL. In most cases, the filename can be trivially converted to a top-level, e.g.: `some-filename.md` to `Some filename`.
+- duplicate filename information, which most often can already be seen on a URL.
+    In most cases, the filename can be trivially converted to a top-level,
+    e.g.: `some-filename.md` to `Some filename`.
 
 Advantages of top-level headers:
 
 - more readable than URL's, especially for non-technically inclined users.
 
-If possible, use a technology stack that stores top-level header information outside of the ordinary markdown. For example, in [Jekyll](https://github.com/jekyll/jekyll) projects, top-level header information can be stored as file metadata on the front matter, and used from templates.
+If possible, use a technology stack that stores top-level header information
+outside of the ordinary markdown.
+For example, in [Jekyll](https://github.com/jekyll/jekyll) projects,
+top-level header information can be stored as file metadata on the front matter,
+and used from templates.
 
 Prefer to start headers of files without a top-level header at level `h1`.
 
 ### Header case
 
--   Use an upper case letter as the first letter of a header, unless it is a word that always starts with lowercase letters, e.g. computer code.
+-   Use an upper case letter as the first letter of a header,
+    unless it is a word that always starts with lowercase letters, e.g. computer code.
 
     Good:
 
@@ -275,9 +317,13 @@ Prefer to start headers of files without a top-level header at level `h1`.
 
         # The Header of the Example
 
-    As an exception, [title case](http://en.wikipedia.org/wiki/Title_case#Title_case) may be optionally used for the [top-level header](#top-level-header). Use this exception sparingly, in cases where typographical perfection is important, e.g.: `README` of a project.
+    As an exception, [title case](http://en.wikipedia.org/wiki/Title_case#Title_case)
+    may be optionally used for the [top-level header](#top-level-header).
+    Use this exception sparingly, in cases where typographical perfection is important,
+    e.g.: `README` of a project.
 
-    Rationale: why not [Title case](http://en.wikipedia.org/wiki/Title_case#Title_case) for all headers? It requires too much effort to decide if edge-case words should be upper case or not.
+    Rationale: why not [Title case](http://en.wikipedia.org/wiki/Title_case#Title_case) for all headers?
+    It requires too much effort to decide if edge-case words should be upper case or not.
 
 ### End of a header
 
@@ -295,9 +341,11 @@ Indicate the end of a header's content that is not followed by a new header by a
 
 Keep headers as short as possible.
 
-Instead of using a huge sentence, make the header a summary to the huge sentence, and write the huge sentence as the first paragraph beneath the header.
+Instead of using a huge sentence, make the header a summary to the huge sentence,
+and write the huge sentence as the first paragraph beneath the header.
 
-Rationale: it is easier to refer to the header later, specially if automatic IDs or a TOC are generated by the implementation.
+Rationale: it is easier to refer to the header later,
+specially if automatic IDs or a TOC are generated by the implementation.
 
 Good:
 
@@ -313,11 +361,13 @@ Bad:
 
 *Don't* add a trailing colon `:` to headers.
 
-Rationale: every header is an introduction to what is about to come next, which is exactly the function of the colon.
+Rationale: every header is an introduction to what is about to come next,
+which is exactly the function of the colon.
 
 *Don't* add a trailing period `.` to headers.
 
-Rationale: every header consists of a single short sentence, so there is not need to add a sentence separator to it.
+Rationale: every header consists of a single short sentence,
+so there is not need to add a sentence separator to it.
 
 Good:
 
@@ -391,7 +441,8 @@ Rationale:
 
 #### Ordered
 
-Prefer lists only with the marker `1.` for ordered lists, unless you intend to refer to items by their number in the same markdown file or externally.
+Prefer lists only with the marker `1.` for ordered lists,
+unless you intend to refer to items by their number in the same markdown file or externally.
 
 Prefer unordered lists unless you intent to refer to items by their number.
 
@@ -435,7 +486,8 @@ Acceptable, meant to be referred by number from outside of the markdown file:
 
 Rationale:
 
--   If you want to change a list item in the middle of the list, you don't have to modify all items that follow it.
+-   If you want to change a list item in the middle of the list,
+    you don't have to modify all items that follow it.
 
     Diffs will show only the significant line which was modified.
 
@@ -451,15 +503,22 @@ Rationale:
 
 ### Spaces after marker
 
-- If the content of every item of the list is one line long, use a **1** space.
-- Otherwise, for every item of the list:
+-   If the content of every item of the list is fits in a single paragraph, use **1** space.
+
+    Indent wrapped lines 4 spaces deeper than their parent.
+
+-   Otherwise, for every item of the list:
+
     - use **3** spaces for unordered lists.
-    - use **2** spaces for ordered lists. One less than for unordered becase the marker is 2 chars long.
+    - use **2** spaces for ordered lists.
+        One less than for unordered because the marker is 2 chars long.
 
 Good:
 
     - a
     - b
+    - paragraph
+        with a wrapped line.
 
 <!-- -->
 
@@ -489,6 +548,11 @@ Bad, single line content only:
     -   a
     -   b
 
+Bad, line break but indented only 2 spaces deeper:
+
+    - First part of
+      line break.
+
 Bad, content that does not fit in a single line:
 
     - a
@@ -508,7 +572,9 @@ Bad, content that does not fit in a single line:
 
 #### Rationale: why not always single space?
 
-Because important engines such as Marked and Kramdown indent relative to the last character, and are currently reluctant to even add options that allow to change that behavior, see: <https://github.com/chjj/marked/issues/227>, <https://github.com/gettalong/kramdown/issues/121>.
+Because important engines such as Marked and Kramdown indent relative to the last character,
+and are currently reluctant to even add options that allow to change that behavior,
+see: <https://github.com/chjj/marked/issues/227>, <https://github.com/gettalong/kramdown/issues/121>.
 
 Therefore they compile:
 
@@ -538,13 +604,15 @@ On the other hand, all major engines compile:
 
 without the two extra spaces, so we chose that for greater compatibility.
 
-This divergence probably happened because all the examples of the original markdown documentation are of the above form.
+This divergence probably happened because all the examples
+of the original markdown documentation are of the above form.
 
 Most major engines however don't add the two extra spaces.
 
 ### Indented lists
 
--   Indented list items and their content by 4 spaces further than their parent. The first level has no indent.
+-   Indented list items and their content by 4 spaces further than their parent.
+    The first level has no indent.
 
     Good:
 
@@ -661,6 +729,7 @@ Most major engines however don't add the two extra spaces.
         -   no p
             - no p
             - no p
+                and line break.
             - no p
         -   no p
 
@@ -682,7 +751,9 @@ Most major engines however don't add the two extra spaces.
 
         -   no p
 
--   Avoid multi-paragraph items inside lists without `<p>`, as this adds `<p>` to one element of the list, and some style sheets like GitHub's add an extra vertical space because of that.
+-   Avoid multi-paragraph items inside lists without `<p>`,
+    as this adds `<p>` to one element of the list,
+    and some style sheets like GitHub's add an extra vertical space because of that.
 
     Bad:
 
@@ -716,9 +787,12 @@ Most major engines however don't add the two extra spaces.
 
 ## Case of first letter of list item
 
-If the list can be replaced by a long phrase separated with commas, start list items with lower case letters as you would if you were using commas. Only add a final period if at least one of the list items contains multiple sentences.
+If the list can be replaced by a long phrase separated with commas,
+start list items with lower case letters as you would if you were using commas.
+Only add a final period if at least one of the list items contains multiple sentences.
 
-If the list can be replaced by several sentences, start list items with upper case letters and add a final period.
+If the list can be replaced by several sentences,
+start list items with upper case letters and add a final period.
 
 Good:
 
@@ -758,7 +832,8 @@ because it could be replaced by several sentences:
 
 Extension.
 
-*Don't* use definition lists as they are not part of the original implementation, and are not implemented by all major engines.
+*Don't* use definition lists as they are not part of the original implementation,
+and are not implemented by all major engines.
 
 Instead, use either:
 
@@ -807,9 +882,11 @@ Instead, use either:
 
 ## Code blocks
 
-Use indented code blocks wherever you can, since they are part of the original standard and fenced code blocks are not.
+Use indented code blocks wherever you can,
+since they are part of the original standard and fenced code blocks are not.
 
-One important case where fenced code blocks are needed is to specify the language of the block with the GitHub extension.
+One important case where fenced code blocks are needed is to specify
+the language of the block with the GitHub extension.
 
 Code blocks must be surrounded by one empty line.
 
@@ -854,7 +931,8 @@ Bad, fenced block indented:
 Rationale:
 
 - headers are better section separators since they say what a section is about.
-- horizontal rules don't have a generally accepted semantic meaning. This guide gives them one.
+- horizontal rules don't have a generally accepted semantic meaning.
+    This guide gives them one.
 
 Use 3 hyphens without spaces:
 
@@ -869,7 +947,8 @@ Extension.
 - Surround every line of the table by pipes.
 - Align all border pipes vertically.
 - Separate header from body by hyphens except at the aligned pipes `|`.
-- Pipes `|` must be surrounded by a space, except for outer pipes which only get one space internally, and pipes of the hyphen separator line.
+- Pipes `|` must be surrounded by a space, except for outer pipes
+    which only get one space internally, and pipes of the hyphen separator line.
 - Column width is determined by the longest cell in the column.
 
 Good table:
@@ -885,10 +964,15 @@ Good table:
 
 Rationale:
 
-- unaligned tables tables are easier to write, but aligned tables are more readable, and people read code much more often than they edit it.
-- preceding pipes make it easier to determine where a table starts and ends. Trailing pipes make it look better because of symmetry.
-- there exist tools which help keeping the table aligned. For example, Vim has the [Tabular plugin](https://github.com/godlygeek/tabular) which allows to align the entire table with `:Tabular /|`.
-- why no spaces around pipes of the hyphen separator line, i.e.: `|---|` instead of `| - |`? No spaces looks better, works on GitHub. Downside: harder to implement automatic alignment in editors, as it requires a special rule for the separator line.
+- unaligned tables tables are easier to write, but aligned tables are more readable,
+    and people read code much more often than they edit it.
+- preceding pipes make it easier to determine where a table starts and ends.
+    Trailing pipes make it look better because of symmetry.
+- there exist tools which help keeping the table aligned.
+    For example, Vim has the [Tabular plugin](https://github.com/godlygeek/tabular) which allows to align the entire table with `:Tabular /|`.
+- why no spaces around pipes of the hyphen separator line, i.e.: `|---|` instead of `| - |`?
+    No spaces looks better, works on GitHub. Downside: harder to implement automatic alignment in editors,
+    as it requires a special rule for the separator line.
 
 ## Separate consecutive elements
 
@@ -986,7 +1070,8 @@ Links:
 
         [a]
 
-    Rationale: while omitting `[]` works on most major implementations, it is not specified in the documentation not implemented in the original markdown.
+    Rationale: while omitting `[]` works on most major implementations,
+    it is not specified in the documentation not implemented in the original markdown.
 
 Definitions:
 
@@ -994,7 +1079,8 @@ Definitions:
 - must be sorted alphabetically by the ID
 - don't enclose URLs by angle brackets
 - align URLs and link names as in a table
-- link IDs use only lowercase letters. Rationale: they are case insensitive, lowercase only is easier to write, and the readability gain of mixed case is not very big.
+- link IDs use only lowercase letters. Rationale: they are case insensitive,
+- lowercase only is easier to write, and the readability gain of mixed case is not very big.
 
 Good:
 
@@ -1038,13 +1124,17 @@ Rationale:
 
 *Don't* use uppercase for emphasis: use emphasis constructs like **bold** or *italic* instead.
 
-Rationale: CSS has `text-transform:uppercase` which can easily achieve the same effect consistently across the entire website if you really want uppercase letters.
+Rationale: CSS has `text-transform:uppercase` which can easily achieve the same effect consistently
+across the entire website if you really want uppercase letters.
 
 ### Emphasis vs headers
 
 *Don't* use emphasis elements (bold or italics) to introduce a multi line named section: use headers instead.
 
-Rationale: that is exactly the semantic meaning of headers, and not necessarily that of emphasis elements. As a consequence, many implementations add useful behaviors to headers and not to emphasis elements, such as automatic `id` to make it easier to refer to the header later on.
+Rationale: that is exactly the semantic meaning of headers,
+and not necessarily that of emphasis elements. As a consequence,
+many implementations add useful behaviors to headers and not to emphasis elements,
+such as automatic `id` to make it easier to refer to the header later on.
 
 Good:
 
@@ -1100,4 +1190,11 @@ Bad:
 
 *Don't* use email autolinks `<address@example.com>`. Use raw HTML instead.
 
-Rationale: the original markdown specification states it "performs a bit of randomized decimal and hex entity-encoding to help obscure your address from address-harvesting spambots". Therefore, the output is random, ugly, and as the spec itself mentions "but an address published in this way will probably eventually start receiving spam".
+Rationale: the original markdown specification states it:
+
+> "performs a bit of randomized decimal and hex entity-encoding
+> to help obscure your address from address-harvesting spambots".
+
+Therefore, the output is random, ugly, and as the spec itself mentions:
+
+> but an address published in this way will probably eventually start receiving spam
