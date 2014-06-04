@@ -18,6 +18,9 @@ Considers both the [original specification](http://daringfireball.net/projects/m
 - easy to write and modify later
 - diff friendly
 - easy to remember and implement on editors
+- provide rationale behind difficult choices.
+    Every rationale section or paragraph is marked with `rationale`
+    so you can skip it if you are only interested in the final decisions.
 
 # Notable users
 
