@@ -7,6 +7,8 @@ Readable and portable Markdown style guide.
 
 Considers both the [original specification](http://daringfireball.net/projects/markdown/syntax) and common extensions.
 
+[Source code](https://github.com/cirosantilli/markdown-styleguide/blob/master/index.md). This is not automatically updated with the source, but will be updated at every major change.
+
 <ol data-toc></ol>
 
 # Design goals
