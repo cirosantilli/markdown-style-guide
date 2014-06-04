@@ -40,6 +40,14 @@ You are more likely to be notable if your project:
 
 - is popular. Any popularity measure will be taken into account, e.g. GitHub stars, Google Rank, etc. 2K+ GitHub stars makes for a very strong case.
 
+# Alternatives system
+
+Disputed points will be given multiple alternatives.
+
+The recommended option will be chosen by voting.
+
+Alternatives will be listed here and given an ID. If you want to use the alterantive, link to this guide and list the alternatives.
+
 # Why fork Carwin
 
 This guide was forked from [carwin/markdown-styleguide](https://github.com/carwin/markdown-styleguide/tree/9121c77bd177a3ade6713d50ab1228782d7c02a7) because there were many important points in which we disagreed. This guide proposes:
