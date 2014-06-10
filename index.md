@@ -177,7 +177,41 @@ Rationale:
     and still does so on comments.
     Currently there is no major engine which does it, so it is safe to use newlines.
 
-## What to mark as code
+## Code
+
+### Dollar signs in shell code
+
+*Don't* prefix shell code with dollar signs `$`
+unless you will be showing the command output on the same code block.
+
+If the goal is to clarify what the language is, do it on the preceding paragraph.
+
+Rationale: harder to copy paste, noisier to read.
+
+Good:
+
+    echo a
+    echo a > file
+
+Bad:
+
+    $ echo a
+    $ echo a > file
+
+Good, shows output:
+
+    $ echo a
+    a
+    $ echo a > file
+
+Good, language specified on preceding paragraph:
+
+    Use the following Bash code:
+
+    echo a
+    echo a > file
+
+### What to mark as code
 
 Use code blocks or inline code for:
 
