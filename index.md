@@ -1223,6 +1223,32 @@ Bad:
 
     Rationale: many tools do that conversion by default.
 
+### Content of automatic links
+
+All automatic links must start with the string `http`.
+
+In particular, *don't* use relative automatic links. 
+Use bracket links instead for that purpose.
+
+Good:
+
+    [file.html](file.html)
+
+Bad:
+
+    [file.html](file.html)
+
+Good:
+
+    <https://github.com>
+
+Bad:
+
+    <github.com>
+
+Rationale: it is hard to differentiate automatic links from HTML tags.
+What if you want a relative link to a file called `script`?
+
 ### Email automatic links
 
 *Don't* use email autolinks `<address@example.com>`. Use raw HTML instead.
