@@ -221,15 +221,17 @@ Use code blocks or inline code for:
 
     Differentiate between tool and the name of related projects. E.g.: `gcc` vs GCC.
 
--   file paths.
+-   file paths
 
--   terms related to computers that you don't want to add to your dictionary.
+-   version numbers
+
+-   other terms related to computers that you don't want to add to your dictionary
 
 Don't mark as code:
 
--   names of projects. E.g.: GCC.
+-   names of projects. E.g.: GCC
 
--   names of libraries. E.g.: libc, glibc.
+-   names of libraries. E.g.: libc, glibc
 
 # Block elements
 
