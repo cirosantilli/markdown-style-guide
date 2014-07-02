@@ -439,6 +439,29 @@ Bad:
 
     # How to do make omelet.
 
+### Header synonyms
+
+Headers serve as an index for users searching for keywords.
+
+For this reason, you may want to give multiple keyword possibilities for a given header.
+
+To do so, simply create a synonym header with empty content just before its main header.
+
+E.g.:
+
+    # Purchase
+
+    # Buy
+
+    You give money and get something in return.
+
+Every empty header with the same level as the following one is assumed to be a synonym.
+This is not the case if levels are different:
+
+    # Animals
+
+    ## Dog
+
 ## Blockquotes
 
 -   Follow the greater than marker by one space.
