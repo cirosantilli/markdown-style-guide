@@ -1265,13 +1265,13 @@ Bad:
 
         `http://not-a-link.com`
 
-    Rationale: many tools do that conversion by default.
+    Rationale: many tools automatically interpret any word starting with `http` as a link.
 
 ### Content of automatic links
 
 All automatic links must start with the string `http`.
 
-In particular, *don't* use relative automatic links. 
+In particular, *don't* use relative automatic links.
 Use bracket links instead for that purpose.
 
 Good:
@@ -1280,7 +1280,7 @@ Good:
 
 Bad:
 
-    [file.html](file.html)
+    <file.html>
 
 Good:
 
