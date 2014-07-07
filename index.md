@@ -47,14 +47,35 @@ You are more likely to be notable if your project:
 - is popular. Any popularity measure will be taken into account, e.g. GitHub stars,
     Google Rank, etc. 2K+ GitHub stars makes for a very strong case.
 
-# Alternatives system
+# Options system
 
 Disputed points will be given multiple alternatives.
 
-The recommended option will be chosen by voting.
+Features with multiple alternatives will be given single upper case letter identifiers,
+and marked in key value pairs as follows: feature **Z** with 3 alternatives:
 
-Alternatives will be listed here and given an ID. If you want to use the alternative,
-link to this guide and list the alternatives.
+    # Option Z1
+    # Option Z2
+    # Option Z3
+
+Then, for another feature **X** with too alternatives:
+
+    # Option Z1
+    # Option Z2
+    # Option Z3
+
+When referring to this guide, specify all alternatives as follows:
+
+    Use the Markdown Style Guide A2 C3
+
+to say you want feature `A` to use alternative `2` and feature `C` to use alternative `3`.
+
+If not specified, the alternative **1** is assumed for the feature by default.
+
+This default alternative shall be determined by popular vote.
+
+We will attempt to give intuitive letter identifiers for each feature if one is available,
+e.g. the `Line Wrapping` feature could get identifier `W`.
 
 # Why fork Carwin
 
@@ -148,6 +169,8 @@ and do not significantly improve readability.
 
 ## Line wrapping
 
+### Option W1
+
 Try to keep lines under 80 characters by breaking large paragraphs logically at points such as:
 
 - sentences: after a period `.`, question `?` or exclamation mark `!`
@@ -176,6 +199,24 @@ Rationale:
 -   At some point GitHub translated single newlines to line breaks in READMEs,
     and still does so on comments.
     Currently there is no major engine which does it, so it is safe to use newlines.
+-   Some tools are not well adapted for long lines, e.g. Vim and `git diff` will not wrap lines by default.
+    This can be configured however via `git config --global core.pager 'less -r'` for Git and `set wrap` for Vim.
+
+Downsides:
+
+- requires considerable writer effort, specially when modifying code.
+- Markdown does not look like the rendered output, in which there are no line breaks.
+    Manual line breaking can make the Markdown more readable than the rendered output,
+    which is bad because it gives a false sense of readability encouraging less
+    readable long paragraphs.
+
+### Option W2
+
+Don't wrap lines.
+
+### Option W3
+
+Always wrap at the end of the first word that exceeds 80 characters.
 
 ## Code
 
