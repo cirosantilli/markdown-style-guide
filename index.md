@@ -266,6 +266,10 @@ Use code blocks or inline code for:
 
 -   version numbers
 
+-   capitalized explanation of abbreviations:
+
+        xinetd stands for `eXtended Internet daemon`
+
 -   other terms related to computers that you don't want to add to your dictionary
 
 Don't mark as code:
