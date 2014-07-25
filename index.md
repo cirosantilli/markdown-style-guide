@@ -126,7 +126,7 @@ Rationale: why not underscore or camel case? Hyphens are the most popular URL se
 and markdown files are most often used in contexts where:
 
 - there are hyphen separated HTML files in the same project, possibly the same directory as the markdown files.
-- filenames will be used directly to URLs. E.g.: GitHub blobs.
+- filenames will be used directly on URLs. E.g.: GitHub blobs.
 
 # General rules
 
@@ -361,41 +361,42 @@ Bad:
 
 ### Top-level header
 
-The *top-level header* is an:
+If you target HTML output, write your documents so that it will have one
+and only one `h1` element as the first thing in it that serves as the title of the document.
+This is the HTML top-level header.
 
-- optional
-- `h1` header
-- that is the first line of a `.md` file
-- and contains the entire file, that is, there are not other `h1` headers in the same file
+How this `h1` is produced may vary depending on your exact technology stack:
+some stacks may generate it from metadata, for example Jekyll through the front-matter.
 
-Top-level headers serve as a title for the entire document.
+Storing the top-level header as metadata has the advantage that it can be reused elsewhere more easily,
+e.g. on a global index, but the downside lower portability portable.
 
-Top-level headers on files such as `README.md`, `index.md` or analogous
-serve as a title for their parent directory.
+If your target stack does not generate the top-level header in another way,
+include it in your markdown file. E.g., GitHub.
 
-Projects must be consistent if they use top-level headers or not:
-files which serve analogous functions must either all have top-level headers or not.
+Top-level headers on index-like files such as `README.md` or `index.md`
+should serve as a title for their parent directory.
+
+Prefer top-level headers that match the file / directory name, e.g., for file:
+
+    file-name.md
+
+Use:
+
+    # File name
 
 Downsides of top-level headers:
 
-- take up one header level. This means that there are only 5 header levels left,
+-   take up one header level. This means that there are only 5 header levels left,
     and each new header will have one extra `#`, which looks worse and is harder to write.
 
-- duplicate filename information, which most often can already be seen on a URL.
+-   duplicate filename information, which most often can already be seen on a URL.
     In most cases, the filename can be trivially converted to a top-level,
     e.g.: `some-filename.md` to `Some filename`.
 
 Advantages of top-level headers:
 
 - more readable than URL's, especially for non-technically inclined users.
-
-If possible, use a technology stack that stores top-level header information
-outside of the ordinary markdown.
-For example, in [Jekyll](https://github.com/jekyll/jekyll) projects,
-top-level header information can be stored as file metadata on the front matter,
-and used from templates.
-
-Prefer to start headers of files without a top-level header at level `h1`.
 
 ### Header case
 
