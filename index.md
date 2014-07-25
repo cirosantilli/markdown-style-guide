@@ -282,6 +282,10 @@ Don't mark as code:
 
 Use correct spelling and grammar.
 
+Prefer writing in English, and in particular American English.
+Rationale: American English speakers have the largest GDP,
+specially in the computing industry.
+
 Use markup like URL or code on words which you do not want to add to your dictionary
 so that spell checkers can ignore them automatically.
 
