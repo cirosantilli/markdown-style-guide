@@ -377,14 +377,6 @@ include it in your markdown file. E.g., GitHub.
 Top-level headers on index-like files such as `README.md` or `index.md`
 should serve as a title for their parent directory.
 
-Prefer top-level headers that match the file / directory name, e.g., for file:
-
-    file-name.md
-
-Use:
-
-    # File name
-
 Downsides of top-level headers:
 
 -   take up one header level. This means that there are only 5 header levels left,
