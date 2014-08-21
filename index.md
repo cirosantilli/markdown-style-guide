@@ -91,9 +91,11 @@ because there were many important points in which we disagreed. This guide propo
 The general structure of the guide was kept, but almost every line was modified,
 and many additions were made.
 
-# File
+# General rules
 
-## File extension
+## File
+
+### File extension
 
 Use `.md`.
 
@@ -103,7 +105,7 @@ Rationale: why not `.mkd` or `.markdown`?
 - more popular
 - does not have important conflicts
 
-## File name
+### File name
 
 - use lower case letters
 - replace punctuation and white space characters by hyphens
@@ -127,8 +129,6 @@ and markdown files are most often used in contexts where:
 
 - there are hyphen separated HTML files in the same project, possibly the same directory as the markdown files.
 - filenames will be used directly on URLs. E.g.: GitHub blobs.
-
-# General rules
 
 ## Space
 
