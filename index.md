@@ -10,7 +10,8 @@ Considers both the [original specification](http://daringfireball.net/projects/m
 [Source code](https://github.com/cirosantilli/markdown-styleguide/blob/master/index.md).
 This is not automatically updated with the source, but will be updated at every major change.
 
-<ol data-toc></ol>
+- a
+{:toc}
 
 # Design goals
 
@@ -58,11 +59,10 @@ and marked in key value pairs as follows: feature **Z** with 3 alternatives:
     # Option Z2
     # Option Z3
 
-Then, for another feature **X** with too alternatives:
+Then, for another feature **X** with two alternatives:
 
-    # Option Z1
-    # Option Z2
-    # Option Z3
+    # Option X1
+    # Option X2
 
 When referring to this guide, specify all alternatives as follows:
 
