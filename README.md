@@ -6,7 +6,7 @@ Contributors:
 
 -   The main source file is [index.md](index.md).
 
--   Hosted on GitHub pages so it gets the Js generated TOC.
+-   Hosted on GitHub pages so it gets the Kramdown generated TOC.
 
 -   Deployed as a submodule of: <https://github.com/cirosantilli/cirosantilli.github.io>
 

@@ -1,6 +1,5 @@
 ---
 title: Markdown Style Guide
-layout: default
 ---
 
 Readable and portable Markdown style guide.
