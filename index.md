@@ -1015,6 +1015,20 @@ Comparison to indented code blocks:
 
 *Don't* indent fenced code blocks.
 
+Always specify the language of the code is applicable.
+
+Good:
+
+    ```ruby
+    a = 1
+    ```
+
+Bad:
+
+    ```
+    a = 1
+    ```
+
 ### Option C2
 
 Only use indented code blocks.
