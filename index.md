@@ -1004,17 +1004,26 @@ Instead, use either:
 
 ## Code blocks
 
-Use indented code blocks wherever you can,
-since they are part of the original standard and fenced code blocks are not.
+### Option C1
 
-One important case where fenced code blocks are needed is to specify
-the language of the block with the GitHub extension.
+Only use fenced code blocks.
 
-Code blocks must be surrounded by one empty line.
+Comparison to indented code blocks:
+
+- disadvantage: not part of the original markdown, thus less portable
+- advantage: many implementations, including GitHub's, allow to specify the code language with it
+
+*Don't* indent fenced code blocks.
+
+### Option C2
+
+Only use indented code blocks.
 
 Indent indented code blocks with 4 spaces.
 
-*Don't* indent fenced code blocks.
+---
+
+Code blocks must be surrounded by one empty line.
 
 Prefer to end the phrase before a code block with a colon `:`.
 
@@ -1024,27 +1033,11 @@ Good:
 
         sudo rm -rf /
 
-<!-- -->
-
-    Use this code to blow up your PC:
-
-    ```bash
-    sudo rm -rf /
-    ```
-
-Bad, no colon:
+Bad, no colon
 
     Use this code to blow up your PC
 
         sudo rm -rf /
-
-Bad, fenced block indented:
-
-    Use this code to blow up your PC:
-
-    ```bash
-        sudo rm -rf /
-    ```
 
 ## Horizontal rules
 
