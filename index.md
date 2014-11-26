@@ -106,7 +106,10 @@ Rationale: why not `.mkd` or `.markdown`?
 
 ### File name
 
-- use lower case letters
+Prefer to base the file name on the top-header level:
+
+- replace upper case letters with lower case
+- strip articles (`the`, `a`, `an`) and prepositions (`from`, `to`)
 - replace punctuation and white space characters by hyphens
 - replace consecutive hyphens by a single hyphen
 - strip surrounding hyphens
