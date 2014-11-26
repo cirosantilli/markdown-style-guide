@@ -53,32 +53,26 @@ You are more likely to be notable if your project:
 
 # Options system
 
-Disputed points will be given multiple alternatives.
+Disputed points will be given multiple alternative style options.
 
-Features with multiple alternatives will be given single upper case letter identifiers,
-and marked in key value pairs as follows: feature **Z** with 3 alternatives:
+Each feature and option will receive a lowercase hyphen separated identifier.
 
-    # Option Z1
-    # Option Z2
-    # Option Z3
+Each option will have a header of form:
 
-Then, for another feature **X** with two alternatives:
+    # Option key:value
 
-    # Option X1
-    # Option X2
+The first option header that appears in this text is the default value.
 
-When referring to this guide, specify all alternatives as follows:
+E.g., if line wrapping had 3 alternatives, we could give it the key `wrap`,
+and for each alternative create a header:
 
-    Use the Markdown Style Guide A2 C3
+    # Option wrap:space
+    # Option wrap:no
+    # Option wrap:sentence
 
-to say you want feature `A` to use alternative `2` and feature `C` to use alternative `3`.
+When referring to this guide, specify all non-default options in a comma separated fashion:
 
-If not specified, the alternative **1** is assumed for the feature by default.
-
-This default alternative shall be determined by popular vote.
-
-We will attempt to give intuitive letter identifiers for each feature if one is available,
-e.g. the `Line Wrapping` feature could get identifier `W`.
+    Use the Markdown Style Guide wrap:space, code:indented
 
 # Why fork Carwin
 
@@ -177,7 +171,7 @@ and do not significantly improve readability.
 
 ### Wrap at logical intra-sentence points
 
-### Option W1
+### Option wrap:intra-sentence
 
 Try to keep lines under 80 characters by breaking large paragraphs logically at points such as:
 
@@ -218,24 +212,18 @@ Downsides:
     which is bad because it gives a false sense of readability encouraging less
     readable long paragraphs.
 
-### Don't wrap
-
-### Option W2
+### Option wrap:no
 
 Don't wrap lines.
 
-### Wrap at spaces
-
-### Option W3
+### Option wrap:space
 
 Always wrap at the end of the first word that exceeds 80 characters.
 
 Rationale: source code becomes is very readable and text editors support it automatically.
 But diffs will look bad, and changing lines will be hard.
 
-### Wrap at sentences
-
-### Option W4
+### Option wrap:sentence
 
 Similar to Option W1, but easier for people to follow since the rule is simple:
 break after the period.
@@ -1029,9 +1017,7 @@ Instead, use either:
 
 ## Code blocks
 
-### Fenced only
-
-### Option C1
+### Option code:fenced
 
 Only use fenced code blocks.
 
@@ -1056,9 +1042,7 @@ Bad:
     a = 1
     ```
 
-### Indented only
-
-### Option C2
+### Option code:indented
 
 Only use indented code blocks.
 
