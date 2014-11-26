@@ -4,14 +4,15 @@ title: Markdown Style Guide
 
 Readable and portable Markdown style guide.
 
-Considers both the [original specification](http://daringfireball.net/projects/markdown/syntax) and common extensions.
+Considers [original specification](http://daringfireball.net/projects/markdown/syntax),
+[CommonMark](http://commonmark.org) and other extensions.
 
-After this project was started, [CommonMark](http://commonmark.org) was released.
-Our decisions will also consider it since it is well specified and has a strong industry backing
-(GitHub + Stack Overflow + reddit).
+This project is community driven, and tries to reach consensus.
+Maintainers will only step in if the community cannot reach a decision.
+Discussion will take place [on the issue tracker](https://github.com/cirosantilli/markdown-styleguide/issues).
 
-[Source code](https://github.com/cirosantilli/markdown-styleguide/blob/master/index.md).
-This is not automatically updated with the source, but will be updated at every major change.
+The [source code is available here](https://github.com/cirosantilli/markdown-styleguide/blob/master/index.md).
+This page is not automatically updated with the source, but will be updated at every major change.
 
 - a
 {:toc}
@@ -169,9 +170,7 @@ and do not significantly improve readability.
 
 ## Line wrapping
 
-### Wrap at logical intra-sentence points
-
-### Option wrap:intra-sentence
+### Option wrap:inner-sentence {#option-wrap-inner-sentence}
 
 Try to keep lines under 80 characters by breaking large paragraphs logically at points such as:
 
@@ -212,18 +211,18 @@ Downsides:
     which is bad because it gives a false sense of readability encouraging less
     readable long paragraphs.
 
-### Option wrap:no
+### Option wrap:no {#option-wrap-no}
 
 Don't wrap lines.
 
-### Option wrap:space
+### Option wrap:space {#option-wrap-space}
 
 Always wrap at the end of the first word that exceeds 80 characters.
 
 Rationale: source code becomes is very readable and text editors support it automatically.
 But diffs will look bad, and changing lines will be hard.
 
-### Option wrap:sentence
+### Option wrap:sentence {#option-wrap-sentence}
 
 Similar to Option W1, but easier for people to follow since the rule is simple:
 break after the period.
@@ -1017,7 +1016,7 @@ Instead, use either:
 
 ## Code blocks
 
-### Option code:fenced
+### Option code:fenced {#option-code-fenced}
 
 Only use fenced code blocks.
 
@@ -1042,7 +1041,7 @@ Bad:
     a = 1
     ```
 
-### Option code:indented
+### Option code:indented {#option-code-indented}
 
 Only use indented code blocks.
 
