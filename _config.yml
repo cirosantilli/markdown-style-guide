@@ -1,0 +1,27 @@
+#permalink:     date
+baseurl:       /
+permalink:     /:title
+markdown:      kramdown
+
+defaults:
+  -
+    scope:
+      path: '' # an empty string here means all files in the project
+    values:
+      layout: 'default'
+
+kramdown:
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..6
+  smart_quotes: lsquo,rsquo,ldquo,rdquo
+  use_coderay: false
+
+  coderay:
+    coderay_wrap: div
+    coderay_line_numbers: inline
+    coderay_line_numbers_start: 1
+    coderay_tab_width: 4
+    coderay_bold_every: 10
+    coderay_css: style

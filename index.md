@@ -12,12 +12,13 @@ Maintainers will only step in if the community cannot reach a decision.
 Discussion will take place [on the issue tracker](https://github.com/cirosantilli/markdown-styleguide/issues).
 
 The [source code is available here](https://github.com/cirosantilli/markdown-styleguide/blob/master/index.md).
-This page is not automatically updated with the source, but will be updated at every major change.
 
 - a
 {:toc}
 
-# Design goals
+## About
+
+### Design goals
 
 - readable
 - portable: produces the same output, or good output, across multiple implementations.
@@ -29,7 +30,7 @@ This page is not automatically updated with the source, but will be updated at e
     Every rationale section or paragraph is marked with `rationale`
     so you can skip it if you are only interested in the final decisions.
 
-# Notable users
+### Notable users
 
 - [GitLab](https://github.com/gitlabhq/gitlabhq/blob/master/CONTRIBUTING.md#style-guides)
 - [Vim Markdown](https://github.com/plasticboy/vim-markdown/blob/master/CONTRIBUTING.md#style)
@@ -52,7 +53,7 @@ You are more likely to be notable if your project:
 - is popular. Any popularity measure will be taken into account, e.g. GitHub stars,
     Google Rank, etc. 2K+ GitHub stars makes for a very strong case.
 
-# Options system
+### Options system
 
 Disputed points will be given multiple alternative style options.
 
@@ -75,25 +76,15 @@ When referring to this guide, specify all non-default options in a comma separat
 
     Use the Markdown Style Guide wrap:space, code:indented
 
-# Why fork Carwin
+### Alternatives
 
-This guide was forked from [carwin/markdown-styleguide](https://github.com/carwin/markdown-styleguide/tree/9121c77bd177a3ade6713d50ab1228782d7c02a7)
-because there were many important points in which we disagreed. This guide proposes:
+This guide was originally forked from [carwin/markdown-styleguide](https://github.com/carwin/markdown-styleguide/tree/9121c77bd177a3ade6713d50ab1228782d7c02a7). It has been extended considerably, some decisions were modified, and not original lines remain.
 
-- softer limits on wrapping
-- lists indented with 4 spaces, not 2
-- ordered lists only with `1.`
-- italics with `*it*`, not `_it_`
-- tables have pipes before and after
+## General rules
 
-The general structure of the guide was kept, but almost every line was modified,
-and many additions were made.
+### File
 
-# General rules
-
-## File
-
-### File extension
+#### File extension
 
 Use `.md`.
 
@@ -103,7 +94,7 @@ Rationale: why not `.mkd` or `.markdown`?
 - more popular
 - does not have important conflicts
 
-### File name
+#### File name
 
 Prefer to base the file name on the top-header level:
 
@@ -131,7 +122,7 @@ and markdown files are most often used in contexts where:
 - there are hyphen separated HTML files in the same project, possibly the same directory as the markdown files.
 - filenames will be used directly on URLs. E.g.: GitHub blobs.
 
-## Space
+### Space
 
 *Don't* use 2 or more consecutive empty lines, that is,
 more than two consecutive newline characters,
@@ -168,9 +159,9 @@ Bad:
 Rationale: multiple empty lines occupy more vertical screen space,
 and do not significantly improve readability.
 
-## Line wrapping
+### Line wrapping
 
-### Option wrap:inner-sentence {#option-wrap-inner-sentence}
+#### Option wrap:inner-sentence {#option-wrap-inner-sentence}
 
 Try to keep lines under 80 characters by breaking large paragraphs logically at points such as:
 
@@ -211,27 +202,27 @@ Downsides:
     which is bad because it gives a false sense of readability encouraging less
     readable long paragraphs.
 
-### Option wrap:no {#option-wrap-no}
+#### Option wrap:no {#option-wrap-no}
 
 Don't wrap lines.
 
-### Option wrap:space {#option-wrap-space}
+#### Option wrap:space {#option-wrap-space}
 
 Always wrap at the end of the first word that exceeds 80 characters.
 
 Rationale: source code becomes is very readable and text editors support it automatically.
 But diffs will look bad, and changing lines will be hard.
 
-### Option wrap:sentence {#option-wrap-sentence}
+#### Option wrap:sentence {#option-wrap-sentence}
 
 Similar to Option W1, but easier for people to follow since the rule is simple:
 break after the period.
 
 Notable occurrence: [ProGit 2](https://raw.githubusercontent.com/progit/progit2/5c285553c0605342339284981a9bb8a6c4e7c18e/book/01-introduction/1-introduction.asc).
 
-## Code
+### Code
 
-### Dollar signs in shell code
+#### Dollar signs in shell code
 
 *Don't* prefix shell code with dollar signs `$`
 unless you will be showing the command output on the same code block.
@@ -263,7 +254,7 @@ Good, language specified on preceding paragraph:
     echo a
     echo a > file
 
-### What to mark as code
+#### What to mark as code
 
 Use code blocks or inline code for:
 
@@ -289,7 +280,7 @@ Don't mark as code:
 
 -   names of libraries. E.g.: libc, glibc
 
-### Spelling and grammar
+#### Spelling and grammar
 
 Use correct spelling and grammar.
 
@@ -312,15 +303,15 @@ Avoid informal contractions:
 - Good: biography, repository, directory
 - Bad: `bio`, `repo`, `dir`
 
-# Block elements
+## Block elements
 
-## Line breaks
+### Line breaks
 
 Avoid line breaks, as they don't have generally accepted semantic meaning.
 
 In the rare case you absolutely need them, end a lines with exactly two spaces.
 
-## Headers
+### Headers
 
 -   Use the `atx-style` with no closing `#` character.
 
@@ -370,7 +361,7 @@ Bad:
 
      # Header
 
-### Top-level header
+#### Top-level header
 
 If you target HTML output, write your documents so that it will have one
 and only one `h1` element as the first thing in it that serves as the title of the document.
@@ -401,7 +392,7 @@ Advantages of top-level headers:
 
 - more readable than URL's, especially for non-technically inclined users.
 
-### Header case
+#### Header case
 
 -   Use an upper case letter as the first letter of a header,
     unless it is a word that always starts with lowercase letters, e.g. computer code.
@@ -436,7 +427,7 @@ Advantages of top-level headers:
     Rationale: why not [Title case](http://en.wikipedia.org/wiki/Title_case#Title_case) for all headers?
     It requires too much effort to decide if edge-case words should be upper case or not.
 
-### End of a header
+#### End of a header
 
 Indicate the end of a header's content that is not followed by a new header by an horizontal rule:
 
@@ -448,7 +439,7 @@ Indicate the end of a header's content that is not followed by a new header by a
 
     Outside header.
 
-### Header length
+#### Header length
 
 Keep headers as short as possible.
 
@@ -468,7 +459,7 @@ Bad:
 
     # Huge header that talks about a complex subject
 
-### Trailing punctuation
+#### Trailing punctuation
 
 *Don't* add a trailing colon `:` to headers.
 
@@ -492,7 +483,7 @@ Bad:
 
     # How to do make omelet.
 
-### Header synonyms
+#### Header synonyms
 
 Headers serve as an index for users searching for keywords.
 
@@ -515,7 +506,7 @@ This is not the case if levels are different:
 
     ## Dog
 
-## Blockquotes
+### Blockquotes
 
 -   Follow the greater than marker by one space.
 
@@ -545,11 +536,11 @@ This is not the case if levels are different:
 
         > b
 
-## Lists
+### Lists
 
-### Marker
+#### Marker
 
-#### Unordered
+##### Unordered
 
 Use the hyphen marker.
 
@@ -573,7 +564,7 @@ Rationale:
 - asterisk `*` can be confused with bold or italic markers.
 - plus sign `+` is not popular.
 
-#### Ordered
+##### Ordered
 
 Prefer lists only with the marker `1.` for ordered lists,
 unless you intend to refer to items by their number in the same markdown file or externally.
@@ -635,7 +626,7 @@ Rationale:
     - keep references close to the list so authors are less likely to forget to update them
     - when referring from an external document, always refer to an specific version of the markdown file
 
-### Spaces after marker
+#### Spaces after marker
 
 -   If the content of every item of the list is fits in a single paragraph, use **1** space.
 
@@ -704,7 +695,7 @@ Bad, content that does not fit in a single line:
     - a
         - nested list
 
-#### Rationale: why not always single space?
+##### Rationale: why not always single space?
 
 Because important engines such as Marked and Kramdown indent relative to the last character,
 and are currently reluctant to even add options that allow to change that behavior,
@@ -743,7 +734,7 @@ of the original markdown documentation are of the above form.
 
 Most major engines however don't add the two extra spaces.
 
-### Indented lists
+#### Indented lists
 
 -   Indented list items and their content by 4 spaces further than their parent.
     The first level has no indent.
@@ -790,7 +781,7 @@ Most major engines however don't add the two extra spaces.
 
         But the original markdown standard requires 4 spaces for inner paragraphs.
 
-### Lists and empty lines
+#### Lists and empty lines
 
 -   Either:
 
@@ -919,7 +910,7 @@ Most major engines however don't add the two extra spaces.
 
         -   no p
 
-## Case of first letter of list item
+### Case of first letter of list item
 
 If the list can be replaced by a long phrase separated with commas,
 start list items with lower case letters as you would if you were using commas.
@@ -962,7 +953,7 @@ because it could be replaced by several sentences:
 
     Get on top of the bike. Put your feet on the pedal. Make the pedal turn.
 
-## Definition lists
+### Definition lists
 
 Extension.
 
@@ -1014,9 +1005,9 @@ Instead, use either:
 
         Noisy animal
 
-## Code blocks
+### Code blocks
 
-### Option code:fenced {#option-code-fenced}
+#### Option code:fenced {#option-code-fenced}
 
 Only use fenced code blocks.
 
@@ -1041,7 +1032,7 @@ Bad:
     a = 1
     ```
 
-### Option code:indented {#option-code-indented}
+#### Option code:indented {#option-code-indented}
 
 Only use indented code blocks.
 
@@ -1065,7 +1056,7 @@ Bad, no colon
 
         sudo rm -rf /
 
-## Horizontal rules
+### Horizontal rules
 
 *Don't* use horizontal rules except to indicate the [End of a header](#end-of-a-header).
 
@@ -1079,7 +1070,7 @@ Use 3 hyphens without spaces:
 
     ---
 
-## Tables
+### Tables
 
 Extension.
 
@@ -1115,7 +1106,7 @@ Rationale:
     No spaces looks better, works on GitHub. Downside: harder to implement automatic alignment in editors,
     as it requires a special rule for the separator line.
 
-## Separate consecutive elements
+### Separate consecutive elements
 
 Separate consecutive:
 
@@ -1166,7 +1157,7 @@ with an empty HTML comment `<!-- -->`.
         code outside list
         code outside list
 
-# Span elements
+## Span elements
 
 *Don't* use inner spaces.
 
@@ -1195,9 +1186,9 @@ Good:
 
 Rationale: most browsers don't render the surrounding spaces nor add them to the clipboard on copy.
 
-## Links
+### Links
 
-### Reference-style links
+#### Reference-style links
 
 Links:
 
@@ -1238,21 +1229,21 @@ Bad, not aligned:
     [id] http://id.com
     [long id] http://long-id.com
 
-### Single or double quote titles
+#### Single or double quote titles
 
 Use double quotes, *not* single quotes.
 
 Rationale: single quotes do not work in all major implementations, double quotes do.
 
-## Emphasis
+### Emphasis
 
-### Bold
+#### Bold
 
 Use double asterisk format: `**bold**`.
 
 Rationale: more common and readable than the double underline `__bold__` form.
 
-### Italic
+#### Italic
 
 Use single asterisk format: `*italic*`.
 
@@ -1261,14 +1252,14 @@ Rationale:
 - more common and readable than the underscore form
 - consistent with the bold format, which also uses asterisks
 
-### Uppercase for emphasis
+#### Uppercase for emphasis
 
 *Don't* use uppercase for emphasis: use emphasis constructs like **bold** or *italic* instead.
 
 Rationale: CSS has `text-transform:uppercase` which can easily achieve the same effect consistently
 across the entire website if you really want uppercase letters.
 
-### Emphasis vs headers
+#### Emphasis vs headers
 
 *Don't* use emphasis elements (bold or italics) to introduce a multi line named section: use headers instead.
 
@@ -1305,9 +1296,9 @@ Bad:
 
     ...
 
-## Automatic links
+### Automatic links
 
-### Automatic links without angle brackets
+#### Automatic links without angle brackets
 
 -   *Don't* use automatic links without angle brackets.
 
@@ -1327,7 +1318,7 @@ Bad:
 
     Rationale: many tools automatically interpret any word starting with `http` as a link.
 
-### Content of automatic links
+#### Content of automatic links
 
 All automatic links must start with the string `http`.
 
@@ -1353,7 +1344,7 @@ Bad:
 Rationale: it is hard to differentiate automatic links from HTML tags.
 What if you want a relative link to a file called `script`?
 
-### Email automatic links
+#### Email automatic links
 
 *Don't* use email autolinks `<address@example.com>`. Use raw HTML instead.
 
