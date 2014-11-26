@@ -11,4 +11,4 @@ This is a one-page Jekyll website, so to develop just:
     bundle install
     bundle exec jekyll serve -w
 
-and visit `localhost:4000`.
+and visit `localhost:4000`

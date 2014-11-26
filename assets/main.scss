@@ -1,78 +1,83 @@
+---
+---
+
+$border: 1px solid black;
+
 body {
   background-color: #222;
   margin: 0px;
 }
 
-div.content, div.comments {
+main {
   background-color: white;
-  border: 1px solid black;
+  border: $border;
   border-radius: 3px;
   margin: 0px auto 10px;
   max-width: 800px;
   padding: 5px 15px 10px;
   position: relative;
 }
-div.content h1, h2, h3, h4, h5, h6 {
-  border-bottom: 1px solid black;
-  padding-bottom: 2px;
-  margin-bottom: 16px;
+main {
+  h1, h2, h3, h4, h5, h6 {
+    border-bottom: $border;
+    padding-bottom: 2px;
+    margin-bottom: 16px;
+  }
 }
-div.content p {
+main p {
   /* Otherwise paragraphs after *nested* lists are too close. TODO why? */
   margin-top: 5px;
 }
-div.content ul, div.content ol {
-  /*list-style-position:inside;*/
-  margin-left: 14px;
-  padding-left: 14px;
+main {
+  ul, ol {
+    /*list-style-position:inside;*/
+    margin-left: 14px;
+    padding-left: 14px;
+  }
 }
-div.content > ul, div.content > ol {
-}
-div.content a:visited {
+main a:visited {
   color: purple;
 }
 /* Override the above */
-div.content .sidebar a:visited {
+main .sidebar a:visited {
   color: #28F;
 }
-div.content .sidebar a:hover {
+main .sidebar a:hover {
   color: red;
 }
-div.content table {
+main table {
   border-collapse: collapse;
-  border: 1px solid black;
+  border: $border;
   margin-bottom: 15px;
   text-align: left;
 }
-div.content table tr > :not(:last-child) {
+main table tr > :not(:last-child) {
   white-space: nowrap;
   width: 1px;
 }
-div.content td, div.content th {
-  border: 1px solid black;
-  padding: 2px 4px;
+main {
+  td, th {
+    border: $border;
+    padding: 2px 4px;
+  }
 }
-div.content th {
+main th {
   font-weight: bold;
 }
-div.content pre {
+main pre {
   margin-left: 0px;
   /*padding-left: 0px;*/
 }
-div.page-title, .comments .title {
-  border-bottom: 1px solid black;
-  font-size: 40px;
-  font-weight: bold;
-  margin-bottom: 15px;
-}
 
-div.content ul[data-toc],
-div.content ol[data-toc],
-div.content ul.toc
-{
-  font-weight: bold;
-  margin-left: 30px;
-  padding-left: 0px;
+main {
+  ul[data-toc],
+  ol[data-toc],
+  ul.toc
+  {
+    font-weight: bold;
+    margin-left: 30px;
+    padding-left: 0px;
+  }
 }
 
 #sharethis {
@@ -92,6 +97,6 @@ div.content ul.toc
 
 /*#addthis*/
 /*.addthis_toolbox {*/
-  /*border-top: 1px solid black;*/
+  /*border-top: $border;*/
   /*padding-top: 10px;*/
 /*}*/
