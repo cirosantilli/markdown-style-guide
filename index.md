@@ -9,9 +9,9 @@ Considers [original specification](http://daringfireball.net/projects/markdown/s
 
 This project is community driven, and tries to reach consensus.
 Maintainers will only step in if the community cannot reach a decision.
-Discussion will take place [on the issue tracker](https://github.com/cirosantilli/markdown-styleguide/issues).
+Discussion will take place [on the issue tracker]({{ site.github }}/issues).
 
-The [source code is available here](https://github.com/cirosantilli/markdown-styleguide/blob/master/index.md).
+The [source code is available here]({{ site.github }}/blob/master/index.md).
 
 - a
 {:toc}
@@ -35,7 +35,7 @@ The [source code is available here](https://github.com/cirosantilli/markdown-sty
 - [GitLab](https://github.com/gitlabhq/gitlabhq/blob/master/CONTRIBUTING.md#style-guides)
 - [Vim Markdown](https://github.com/plasticboy/vim-markdown/blob/master/CONTRIBUTING.md#style)
 
-Do you use this style guide? Add your name to [our wiki](https://github.com/cirosantilli/markdown-styleguide/wiki/Users).
+Do you use this style guide? Add your name to [our wiki]({{ site.github }}/wiki/Users).
 
 Are you notable? Send a pull request.
 
