@@ -85,8 +85,9 @@ main {
   margin-top: 7px;
   padding-right: 5px;
 }
-#sharethis > div:not(:last-child) {
+#sharethis > div {
   display: inline-block;
+  vertical-align: top;
 }
 /* Breaks with bootstrap without this: http://stackoverflow.com/questions/18165901/twitters-bootstrap-3-with-sharethis-widget*/
 #sharethis span {
@@ -94,9 +95,3 @@ main {
   -moz-box-sizing: content-box;
   box-sizing: content-box;
 }
-
-/*#addthis*/
-/*.addthis_toolbox {*/
-  /*border-top: $border;*/
-  /*padding-top: 10px;*/
-/*}*/
