@@ -6,6 +6,10 @@ Readable and portable Markdown style guide.
 
 Considers both the [original specification](http://daringfireball.net/projects/markdown/syntax) and common extensions.
 
+After this project was started, [CommonMark](http://commonmark.org) was released.
+Our decisions will also consider it since it is well specified and has a strong industry backing
+(GitHub + Stack Overflow + reddit).
+
 [Source code](https://github.com/cirosantilli/markdown-styleguide/blob/master/index.md).
 This is not automatically updated with the source, but will be updated at every major change.
 
@@ -171,6 +175,8 @@ and do not significantly improve readability.
 
 ## Line wrapping
 
+### Wrap at logical intra-sentence points
+
 ### Option W1
 
 Try to keep lines under 80 characters by breaking large paragraphs logically at points such as:
@@ -212,13 +218,29 @@ Downsides:
     which is bad because it gives a false sense of readability encouraging less
     readable long paragraphs.
 
+### Don't wrap
+
 ### Option W2
 
 Don't wrap lines.
 
+### Wrap at spaces
+
 ### Option W3
 
 Always wrap at the end of the first word that exceeds 80 characters.
+
+Rationale: source code becomes is very readable and text editors support it automatically.
+But diffs will look bad, and changing lines will be hard.
+
+### Wrap at sentences
+
+### Option W4
+
+Similar to Option W1, but easier for people to follow since the rule is simple:
+break after the period.
+
+Notable occurrence: [ProGit 2](https://raw.githubusercontent.com/progit/progit2/5c285553c0605342339284981a9bb8a6c4e7c18e/book/01-introduction/1-introduction.asc).
 
 ## Code
 
@@ -1007,13 +1029,15 @@ Instead, use either:
 
 ## Code blocks
 
+### Fenced only
+
 ### Option C1
 
 Only use fenced code blocks.
 
 Comparison to indented code blocks:
 
-- disadvantage: not part of the original markdown, thus less portable
+- disadvantage: not part of the original markdown, thus less portable, but added to CommonMark.
 - advantage: many implementations, including GitHub's, allow to specify the code language with it
 
 *Don't* indent fenced code blocks.
@@ -1031,6 +1055,8 @@ Bad:
     ```
     a = 1
     ```
+
+### Indented only
 
 ### Option C2
 
