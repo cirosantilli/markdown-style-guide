@@ -12,7 +12,7 @@ This project is community driven, and tries to reach consensus.
 Maintainers will only step in if the community cannot reach a decision.
 Discussion will take place [on the issue tracker]({{ site.github }}/issues).
 
-The [source code is available on GitHub]({{ site.github }}/blob/master/index.md).
+The [source code is available on GitHub]({{ site.github }}).
 
 - a
 {:toc}
