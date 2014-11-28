@@ -21,13 +21,20 @@ The [source code is available on GitHub]({{ site.github }}).
 
 ### Design goals
 
-- readable
-- portable: produces the same output, or good output, across multiple implementations.
+-   readable
+
+-   portable: produces the same output, or good output, across multiple implementations.
+
     Portability tests are carried out with the [Markdown Test Suite](https://github.com/karlcow/markdown-testsuite).
-- easy to write and modify later
-- diff friendly
-- easy to remember and implement on editors
-- provide rationale behind difficult choices.
+
+-   easy to write and modify later
+
+-   diff friendly
+
+-   easy to remember and implement on editors
+
+-   provide rationale behind difficult choices.
+
     Every rationale section or paragraph is marked with `rationale`
     so you can skip it if you are only interested in the final decisions.
 
@@ -42,16 +49,16 @@ Are you notable? Send a pull request.
 
 If you are a notable user:
 
-- you can opt to be contacted before any major changes happen to the standard.
+-   you can opt to be contacted before any major changes happen to the standard.
     Please inform this on the pull request that adds you to the notable list.
 
-- your vote on decisions will have much greater weight
+-   your vote on decisions will have much greater weight
 
 You are more likely to be notable if your project:
 
-- uses Markdown heavily. E.g.: Markdown engines, text editors, lots of markdown documentation, etc.
+-   uses Markdown heavily. E.g.: Markdown engines, text editors, lots of markdown documentation, etc.
 
-- is popular. Any popularity measure will be taken into account, e.g. GitHub stars,
+-   is popular. Any popularity measure will be taken into account, e.g. GitHub stars,
     Google Rank, etc. 2K+ GitHub stars makes for a very strong case.
 
 ### Options system
@@ -79,7 +86,8 @@ When referring to this guide, specify all non-default options in a comma separat
 
 ### Alternatives
 
-This guide was originally forked from [carwin/markdown-styleguide](https://github.com/carwin/markdown-styleguide/tree/9121c77bd177a3ade6713d50ab1228782d7c02a7). It has been extended considerably, some decisions were modified, and not original lines remain.
+This guide was originally forked from [carwin/markdown-styleguide](https://github.com/carwin/markdown-styleguide/tree/9121c77bd177a3ade6713d50ab1228782d7c02a7).
+It has been extended considerably, some decisions were modified, and not original lines remain.
 
 ## General rules
 
@@ -166,10 +174,12 @@ and do not significantly improve readability.
 
 Try to keep lines under 80 characters by breaking large paragraphs logically at points such as:
 
-- sentences: after a period `.`, question `?` or exclamation mark `!`
-- [clauses](http://www.oxforddictionaries.com/words/clauses):
+-   sentences: after a period `.`, question `?` or exclamation mark `!`
+
+-   [clauses](http://www.oxforddictionaries.com/words/clauses):
     after words like `and`, `which`, `if ... then`, commas `,`
-- large [phrases](http://www.oxforddictionaries.com/words/phrases)
+
+-   large [phrases](http://www.oxforddictionaries.com/words/phrases)
 
 It is acceptable to have a line longer than 80 characters,
 but keep in mind that long sentences are less readable
@@ -187,18 +197,22 @@ Good:
 Rationale:
 
 -   Diffs look better, since a change to a clause shows up as a single diff line.
+
 -   Occasional visual wrapping does not significantly reduce the readability of Markdown,
     since the only language feature that can be indented to indicate hierarchy are nested lists.
+
 -   At some point GitHub translated single newlines to line breaks in READMEs,
     and still does so on comments.
     Currently there is no major engine which does it, so it is safe to use newlines.
+
 -   Some tools are not well adapted for long lines, e.g. Vim and `git diff` will not wrap lines by default.
     This can be configured however via `git config --global core.pager 'less -r'` for Git and `set wrap` for Vim.
 
 Downsides:
 
-- requires considerable writer effort, specially when modifying code.
-- Markdown does not look like the rendered output, in which there are no line breaks.
+-   requires considerable writer effort, specially when modifying code.
+
+-   Markdown does not look like the rendered output, in which there are no line breaks.
     Manual line breaking can make the Markdown more readable than the rendered output,
     which is bad because it gives a false sense of readability encouraging less
     readable long paragraphs.
@@ -627,31 +641,62 @@ Rationale:
     - keep references close to the list so authors are less likely to forget to update them
     - when referring from an external document, always refer to an specific version of the markdown file
 
-#### Spaces after marker
+#### Spaces after list marker
+
+##### Option list-space:mixed
 
 -   If the content of every item of the list is fits in a single paragraph, use **1** space.
 
-    Indent wrapped lines 4 spaces deeper than their parent.
-
 -   Otherwise, for every item of the list:
 
-    - use **3** spaces for unordered lists.
-    - use **2** spaces for ordered lists.
+    -   use **3** spaces for unordered lists.
+
+    -   use **2** spaces for ordered lists.
         One less than for unordered because the marker is 2 chars long.
+
+Bad, every item is one line long:
+
+    -   a
+    -   b
 
 Good:
 
     - a
     - b
-    - paragraph
-        with a wrapped line.
 
-<!-- -->
+Bad, every item is one line long:
+
+    1.  a
+    1.  b
+
+Good:
 
     1. a
     1. b
 
-<!-- -->
+Bad: item is longer than one line:
+
+    - item that
+      is wrapped
+
+    - item 2
+
+Good:
+
+    -   item that
+        is wrapped
+
+    -   item 2
+
+Bad: item is longer than one line:
+
+    - a
+
+      par
+
+    - b
+
+Good:
 
     -   a
 
@@ -659,85 +704,108 @@ Good:
 
     -   b
 
-            code
+##### Option list-space:1
+
+Always add one space to the list marker.
+
+Bad, 3 spaces:
+
+    -   a
+
+        b
 
     -   c
 
-<!-- -->
+Good:
+
+    - a
+
+      b
+
+    - c
+
+Bad, 2 spaces:
 
     1.  a
 
-        par
+        b
 
-Bad, single line content only:
+    1.  c
+
+Good:
+
+    1. a
+
+       b
+
+    1. c
+
+##### Rationale: list-space mixed vs 1
+
+The advantage of `list-space:1` is that it removes the decision of
+how many spaces you should put after the list marker: it is always one.
+
+We could choose to always have list content indented as:
 
     -   a
     -   b
 
-Bad, line break but indented only 2 spaces deeper:
+but that is ugly.
 
-    - First part of
-      line break.
+The disadvantages of `list-space:1`
 
-Bad, content that does not fit in a single line:
+-   creates three indentation levels for the language:
 
-    - a
+    - 4 for indented code blocks
+    - 3 for ordered lists
+    - 2 for unordered lists
 
-        par
+    That means that you cannot easily configure your editor indent level to deal with all cases
+    when you want to change the indentation level of multiple list item lines.
 
-<!-- -->
+-   Is not implemented consistently across editors.
 
-    - a
+    In particular what should happen at:
 
-            code
+        - a
 
-<!-- -->
+                code
 
-    - a
-        - nested list
+    This (2 spaces):
 
-##### Rationale: why not always single space?
+        <pre><code>  code
 
-Because important engines such as Marked and Kramdown indent relative to the last character,
-and are currently reluctant to even add options that allow to change that behavior,
-see: <https://github.com/chjj/marked/issues/227>, <https://github.com/gettalong/kramdown/issues/121>.
+    Or no spaces:
 
-Therefore they compile:
+        <pre><code>code
 
-    - a
+    Likely the original markdown said no spaces:
 
-            code
+    > To put a code block within a list item, the code block
+    > needs to be indented twice — 8 spaces or two tabs
 
-As:
+    But many implementations did otherwise.
 
-    <pre><code>  code
-
-with **2 extra spaces**, Instead of:
-
-    <pre><code>code
-
-This goes against our interpretation of the Original markdown documentation:
-
-> To put a code block within a list item, the code block needs to be indented twice — 8 spaces or two tabs
-
-and also from the actual behavior of the original markdown.
-
-On the other hand, all major engines compile:
-
-    -   a
-
-            code
-
-without the two extra spaces, so we chose that for greater compatibility.
-
-This divergence probably happened because all the examples
-of the original markdown documentation are of the above form.
-
-Most major engines however don't add the two extra spaces.
+    CommonMark [adds the 2 spaces](http://spec.commonmark.org/0.12/#example-176).
 
 #### Indentation of content inside lists
 
-The indentation level of what comes inside list and of further list items must be the same as the first list item.
+The indentation level of what comes inside list and of further list items
+must be the same as the first list item.
+
+Bad:
+
+    -   item that
+      is wrapped
+
+    -   item 2
+
+Good:
+
+    -   item that
+        is wrapped
+
+    -   item 2
 
 Bad:
 
@@ -1103,8 +1171,9 @@ Bad, no colon
 
 Rationale:
 
-- headers are better section separators since they say what a section is about.
-- horizontal rules don't have a generally accepted semantic meaning.
+-   headers are better section separators since they say what a section is about.
+
+-   horizontal rules don't have a generally accepted semantic meaning.
     This guide gives them one.
 
 Use 3 hyphens without spaces:
@@ -1115,14 +1184,20 @@ Use 3 hyphens without spaces:
 
 Extension.
 
-- Surround tables by one empty line.
-- Don't indent tables.
-- Surround every line of the table by pipes.
-- Align all border pipes vertically.
-- Separate header from body by hyphens except at the aligned pipes `|`.
-- Pipes `|` must be surrounded by a space, except for outer pipes
+-   Surround tables by one empty line.
+
+-   Don't indent tables.
+
+-   Surround every line of the table by pipes.
+
+-   Align all border pipes vertically.
+
+-   Separate header from body by hyphens except at the aligned pipes `|`.
+
+-   Pipes `|` must be surrounded by a space, except for outer pipes
     which only get one space internally, and pipes of the hyphen separator line.
-- Column width is determined by the longest cell in the column.
+
+-   Column width is determined by the longest cell in the column.
 
 Good table:
 
@@ -1137,13 +1212,16 @@ Good table:
 
 Rationale:
 
-- unaligned tables tables are easier to write, but aligned tables are more readable,
+-   unaligned tables tables are easier to write, but aligned tables are more readable,
     and people read code much more often than they edit it.
-- preceding pipes make it easier to determine where a table starts and ends.
+
+-   preceding pipes make it easier to determine where a table starts and ends.
     Trailing pipes make it look better because of symmetry.
-- there exist tools which help keeping the table aligned.
+
+-   there exist tools which help keeping the table aligned.
     For example, Vim has the [Tabular plugin](https://github.com/godlygeek/tabular) which allows to align the entire table with `:Tabular /|`.
-- why no spaces around pipes of the hyphen separator line, i.e.: `|---|` instead of `| - |`?
+
+-   why no spaces around pipes of the hyphen separator line, i.e.: `|---|` instead of `| - |`?
     No spaces looks better, works on GitHub. Downside: harder to implement automatic alignment in editors,
     as it requires a special rule for the separator line.
 
