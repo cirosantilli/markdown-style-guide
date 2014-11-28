@@ -460,7 +460,7 @@ Bad:
 
     # Huge header that talks about a complex subject
 
-#### Trailing punctuation
+#### Punctuation at the end of headers
 
 *Don't* add a trailing colon `:` to headers.
 
