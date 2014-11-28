@@ -735,52 +735,56 @@ of the original markdown documentation are of the above form.
 
 Most major engines however don't add the two extra spaces.
 
-#### Indented lists
+#### Indentation of content inside lists
 
--   Indented list items and their content by 4 spaces further than their parent.
-    The first level has no indent.
+The indentation level of what comes inside list and of further list items must be the same as the first list item.
 
-    Good:
+Bad:
 
-        Before.
+    -   item 1
 
-        -   item 1
+      Content 1
 
-            Content 1
+    -   item 2
 
-            - item 11
+          Content 2
 
-            Content 1
+Good (if it matches your spaces after list marker style):
 
-        -   item 2
+    -   item 1
 
-            - item 21
-            - item 22
+        Content 1
 
-        After.
+    -   item 2
 
-    Rationale: same indent as:
+        Content 2
 
-    -   code blocks, so it is simpler for editors to implement: 1 tab always equals 4 spaces.
-    -   inner content must have, so inner lists look aligned with inner paragraphs.
+Bad:
 
-        Bad:
+    - item 1
 
-            -   Outer list.
+        Content 1
 
-                Inner paragraph.
+    - item 2
 
-              - Inner list. Bad. not aligend.
+        Content 2
 
-        It is true that many implementations render the following the same as the above:
+Good (if it matches your spaces after list marker style):
 
-            - Outer list.
+    - item 1
 
-              Inner paragraph. 2 spaces: not standard.
+      Content 1
 
-              - Inner list.
+    - item 2
 
-        But the original markdown standard requires 4 spaces for inner paragraphs.
+      Content 2
+
+Avoid starting a list item directly with indented code blocks because that is not consistently implemented.
+[CommonMark states that](http://spec.commonmark.org/0.12/#example-176) a single space is assumed in that case:
+
+    -     code
+
+      a
 
 #### Lists and empty lines
 
@@ -958,6 +962,46 @@ because it could be replaced with:
     Get on top of the bike.
     Put your feet on the pedal.
     Push the the pedal.
+
+### Punctuation at the end of list items
+
+If the list item contains multiple sentences, punctuate it. If not, omit the punctuation if it would be a period.
+
+Bad, single sentences:
+
+    - apple.
+    - banana.
+    - orange.
+
+Good:
+
+    - apple
+    - banana
+    - orange
+
+Idem:
+
+    - go to the market
+    - then buy some fruit
+    - finally eat the fruit
+
+Good, not terminated by period but by other punctuation.
+
+    - go to the marked
+    - then buy fruit?
+    - of course!
+
+Bad, multiple sentences:
+
+    - go to the market. Good exercise
+    - then buy some fruit. Bad for wallet
+    - finally eat the fruit. Good for tummy
+
+Good:
+
+    - go to the market. Good exercise.
+    - then buy some fruit. Bad for wallet.
+    - finally eat the fruit. Good for tummy.
 
 ### Definition lists
 
