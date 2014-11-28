@@ -786,134 +786,104 @@ Avoid starting a list item directly with indented code blocks because that is no
 
       a
 
-#### Lists and empty lines
+#### Empty lines inside lists
 
--   Either:
+If every item of a list is a single line long, don't add empty lines between items.
+Otherwise, add empty lines between every item.
 
-    - separate all list items of a list by one empty line to generate `<li><p>`
-    - don't separate any of them by empty lines to generate only `<li>`
+Bad, single lines:
 
-    Don't mix both, which is unspecified. If you need the mixed case, use raw HTML.
+    - item 1
 
-    Good:
+    - item 2
 
-        - p
+    - item 3
 
-        - p
+Good
 
-        - p
+    - item 1
+    - item 2
+    - item 3
 
-    <!-- -->
+Bad, multiple lines:
 
-        - no p
-        - no p
-        - no p
+    -   item that
+        is wrapped
+    -   item 2
+    -   item 3
 
-    Bad, mixed:
+Good:
 
-        - p
+    -   item that
+        is wrapped
 
-        - no p
-        - no p
+    -   item 2
 
--   Surround lists by one empty line, except for a list without `<p>` inside another.
+    -   item 3
 
-    Good:
+Bad, multiple lines:
 
-        Before.
+    -   item 1
 
-        - list
-        - list
+        Paragraph.
 
-        After.
+    -   item 2
+    -   item 3
 
-    <!-- -->
+Good:
 
-        -   p
+    -   item 1.
 
-        -   p
+        Paragraph.
 
-            - no p
-            - no p
-            - no p
+    -   item 2
 
-        -   p
+    -   item 3
 
-    <!-- -->
+Bad, multiple lines:
 
-        -   p
+    -   item 1
 
-        -   p
+        - item 11
+        - item 12
+        - item 13
 
-            - no p
+    -   item 2
+    -   item 3
 
-            - no p
+Good:
 
-            - no p
+    -   item 1
 
-        -   p
+        - item 11
+        - item 12
+        - item 13
 
-    Good, list without `<p>` inside another:
+    -   item 2
 
-        -   no p
-        -   no p
-            - no p
-            - no p
-                and line break.
-            - no p
-        -   no p
+    -   item 3
 
-    Bad:
+Rationale: it is hard to tell where multi-line list items start and end without empty lines.
 
-        Before.
-        - list
-        - list
-        After.
+### Empty lines around lists
 
-    Bad, list without `<p>` inside list with `<p>` without preceding empty line:
+Surround lists by one empty line.
 
-        -   no p
+Bad:
 
-        -   no p
-            - no p
-            - no p
-            - no p
+    Before.
+    - item
+    - item
+    After.
 
-        -   no p
+Good:
 
--   Avoid multi-paragraph items inside lists without `<p>`,
-    as this adds `<p>` to one element of the list,
-    and some style sheets like GitHub's add an extra vertical space because of that.
+    Before.
 
-    Bad:
+    - list
+    - list
 
-        -   no p
-        -   no p
-        -   no p
-
-            Content
-        -   no p
-
-    Because this generates:
-
-        <li>no p<li>
-        <li>no p<li>
-        <li>no p<li>
-        <li><p>p. Looks too separated from the item above if compared to the others.</p>
-            <p>Content</p>
-        <li>p<li>
-
-    Bad for the same reason:
-
-        -   no p
-        -   no p
-        -   no p
-
-            - p
-
-            - p
-
-        -   no p
+    After.
 
 ### Case of first letter of list item
 
