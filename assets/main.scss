@@ -23,6 +23,24 @@ main {
     padding-bottom: 2px;
     margin-bottom: 16px;
   }
+  h1 {
+    font-size: 3em;
+  }
+  h2 {
+    font-size: 2.6em;
+  }
+  h3 {
+    font-size: 2.2em;
+  }
+  h4 {
+    font-size: 1.8em;
+  }
+  h5 {
+    font-size: 1.4em;
+  }
+  h6 {
+    font-size: 1em;
+  }
 }
 main p {
   /* Otherwise paragraphs after *nested* lists are too close. TODO why? */
@@ -68,7 +86,6 @@ main pre {
   margin-left: 0px;
   /*padding-left: 0px;*/
 }
-
 main {
   ul[data-toc],
   ol[data-toc],
@@ -78,6 +95,9 @@ main {
     margin-left: 30px;
     padding-left: 0px;
   }
+}
+main blockquote {
+  font-size: 1.2em;
 }
 
 #sharethis {
