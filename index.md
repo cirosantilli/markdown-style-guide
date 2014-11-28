@@ -799,7 +799,7 @@ Bad, single lines:
 
     - item 3
 
-Good
+Good:
 
     - item 1
     - item 2
@@ -935,7 +935,14 @@ because it could be replaced with:
 
 ### Punctuation at the end of list items
 
-If the list item contains multiple sentences, punctuate it. If not, omit the punctuation if it would be a period.
+If the list item either:
+
+- contains multiple sentences
+- starts with an upper case letter
+
+punctuate it.
+
+Otherwise, omit the punctuation if it would be a period.
 
 Bad, single sentences:
 
@@ -963,15 +970,29 @@ Good, not terminated by period but by other punctuation.
 
 Bad, multiple sentences:
 
-    - go to the market. Good exercise
+    - go to the market
     - then buy some fruit. Bad for wallet
     - finally eat the fruit. Good for tummy
 
 Good:
 
-    - go to the market. Good exercise.
+    - go to the market
     - then buy some fruit. Bad for wallet.
     - finally eat the fruit. Good for tummy.
+
+Note: nothing forbids one list item from ending in period while another in the same list does not.
+
+Bad, starts with upper case:
+
+    - Go to the market
+    - Then buy some fruit
+    - Finally eat the fruit
+
+Good:
+
+    - Go to the market.
+    - Then buy some fruit.
+    - Finally eat the fruit.
 
 ### Definition lists
 
