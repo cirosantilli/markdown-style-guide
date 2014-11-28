@@ -913,12 +913,7 @@ Most major engines however don't add the two extra spaces.
 
 ### Case of first letter of list item
 
-If the list can be replaced by a long phrase separated with commas,
-start list items with lower case letters as you would if you were using commas.
-Only add a final period if at least one of the list items contains multiple sentences.
-
-If the list can be replaced by several sentences,
-start list items with upper case letters and add a final period.
+Each list item has the same case as it would have if it were concatenated with the sentence that comes before the list.
 
 Good:
 
@@ -928,9 +923,11 @@ Good:
     - bananas
     - grapes
 
-because it could be separated with commas as in:
+because would would write
 
-    I want to eat apples, bananas and grapes.
+    I want to eat apples
+    I want to eat babanas
+    I want to eat grapes
 
 Good:
 
@@ -938,7 +935,13 @@ Good:
 
     - get on top of the bike. This step is easy.
     - put your foot on the pedal.
-    - gake the pedal turn. This is the most fun part.
+    - push t the pedal. This is the most fun part.
+
+because would would write
+
+    To ride a bike you have to get on top of the bike. This step is easy.
+    To ride a bike you have to put your foot on the pedal.
+    To ride a bike you have to push the pedal. This is the most fun part.
 
 Good:
 
@@ -948,11 +951,13 @@ Good:
     - Put your feet on the pedal.
     - Make the pedal turn.
 
-because it could be replaced by several sentences:
+because it could be replaced with:
 
     # How to ride a bike
 
-    Get on top of the bike. Put your feet on the pedal. Make the pedal turn.
+    Get on top of the bike.
+    Put your feet on the pedal.
+    Push the the pedal.
 
 ### Definition lists
 
