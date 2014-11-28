@@ -897,7 +897,7 @@ Good:
     - bananas
     - grapes
 
-because would would write
+because it could be replaced with:
 
     I want to eat apples
     I want to eat babanas
@@ -911,7 +911,7 @@ Good:
     - put your foot on the pedal.
     - push t the pedal. This is the most fun part.
 
-because would would write
+because it could be replaced with:
 
     To ride a bike you have to get on top of the bike. This step is easy.
     To ride a bike you have to put your foot on the pedal.
