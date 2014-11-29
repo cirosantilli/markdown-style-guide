@@ -218,6 +218,10 @@ Downsides:
     which is bad because it gives a false sense of readability encouraging less
     readable long paragraphs.
 
+-   Requires users of programming text editors like Vim, which are usually configured to not wrap,
+    to toggle visual wrapping on. This can be automated,
+    but [EditorConfig gave it WONTFIX](https://github.com/editorconfig/editorconfig/issues/168)
+
 #### Option wrap:no {#option-wrap-no}
 
 Don't wrap lines.
@@ -277,7 +281,7 @@ Good, language specified on preceding paragraph:
 
 Use code blocks or inline code for:
 
--   executable. E.g.:
+-   executables. E.g.:
 
         `gcc` is the best compiler available.
 
@@ -296,7 +300,6 @@ Use code blocks or inline code for:
 Don't mark as code:
 
 -   names of projects. E.g.: GCC
-
 -   names of libraries. E.g.: libc, glibc
 
 #### Spelling and grammar
