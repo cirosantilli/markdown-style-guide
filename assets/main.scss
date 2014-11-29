@@ -1,117 +1,113 @@
 ---
 ---
 
-$border: 1px solid black;
-
 body {
+  $border: 1px solid black;
   background-color: #222;
   margin: 0px;
-}
-
-main {
-  background-color: white;
-  border: $border;
-  border-radius: 3px;
-  margin: 0px auto 10px;
-  max-width: 800px;
-  padding: 5px 15px 10px;
-  position: relative;
-}
-main {
-  h1, h2, h3, h4, h5, h6 {
-    border-bottom: $border;
-    padding-bottom: 2px;
-    margin-bottom: 16px;
-  }
-  h1 {
-    font-size: 3em;
-  }
-  h2 {
-    font-size: 2.6em;
-  }
-  h3 {
-    font-size: 2.2em;
-  }
-  h4 {
-    font-size: 1.8em;
-  }
-  h5 {
-    font-size: 1.4em;
-  }
-  h6 {
-    font-size: 1em;
-  }
-}
-main p {
-  /* Otherwise paragraphs after *nested* lists are too close. TODO why? */
-  margin-top: 5px;
-}
-main {
-  ul, ol {
-    /*list-style-position:inside;*/
-    margin-left: 14px;
-    padding-left: 14px;
-  }
-}
-main a:visited {
-  color: purple;
-}
-/* Override the above */
-main .sidebar a:visited {
-  color: #28F;
-}
-main .sidebar a:hover {
-  color: red;
-}
-main table {
-  border-collapse: collapse;
-  border: $border;
-  margin-bottom: 15px;
-  text-align: left;
-}
-main table tr > :not(:last-child) {
-  white-space: nowrap;
-  width: 1px;
-}
-main {
-  td, th {
+  main {
+    background-color: white;
     border: $border;
-    padding: 2px 4px;
+    border-radius: 3px;
+    margin: 0px auto 10px;
+    max-width: 800px;
+    padding: 5px 15px 10px;
+    position: relative;
+    h1, h2, h3, h4, h5, h6 {
+      border-bottom: $border;
+      padding-bottom: 2px;
+      margin-bottom: 16px;
+    }
+    h1 {
+      font-size: 3em;
+    }
+    h2 {
+      font-size: 2.6em;
+    }
+    h3 {
+      font-size: 2.2em;
+    }
+    h4 {
+      font-size: 1.8em;
+    }
+    h5 {
+      font-size: 1.4em;
+    }
+    h6 {
+      font-size: 1em;
+    }
+    p {
+      /* Otherwise paragraphs after *nested* lists are too close. TODO why? */
+      margin-top: 5px;
+    }
+    ul, ol {
+      /*list-style-position:inside;*/
+      margin-left: 14px;
+      padding-left: 14px;
+    }
+    a:visited {
+      color: purple;
+    }
+    table {
+      border-collapse: collapse;
+      border: $border;
+      margin-bottom: 15px;
+      text-align: left;
+    }
+    table tr > :not(:last-child) {
+      white-space: nowrap;
+      width: 1px;
+    }
+    td, th {
+      border: $border;
+      padding: 2px 4px;
+    }
+    th {
+      font-weight: bold;
+    }
+    pre {
+      margin-left: 0px;
+      /*padding-left: 0px;*/
+    }
+    ul[data-toc],
+    ol[data-toc],
+    ul.toc
+    {
+      font-weight: bold;
+      margin-left: 30px;
+      padding-left: 0px;
+    }
+    blockquote {
+      font-size: 1.2em;
+    }
   }
-}
-main th {
-  font-weight: bold;
-}
-main pre {
-  margin-left: 0px;
-  /*padding-left: 0px;*/
-}
-main {
-  ul[data-toc],
-  ol[data-toc],
-  ul.toc
-  {
-    font-weight: bold;
-    margin-left: 30px;
-    padding-left: 0px;
-  }
-}
-main blockquote {
-  font-size: 1.2em;
-}
 
-#sharethis {
-  height: 30px;
-  margin-top: 7px;
-  padding-right: 5px;
-}
-#sharethis > div {
-  display: inline-block;
-  vertical-align: top;
-}
-/* Breaks with bootstrap without this: http://stackoverflow.com/questions/18165901/twitters-bootstrap-3-with-sharethis-widget*/
-#sharethis span {
-  -webkit-box-sizing: content-box;
-  -moz-box-sizing: content-box;
-  box-sizing: content-box;
+  /* sharethis */
+
+    #sharethis {
+      height: 30px;
+      margin-top: 7px;
+      padding-right: 5px;
+    }
+    #sharethis > div {
+      display: inline-block;
+      vertical-align: top;
+    }
+    /* Breaks with bootstrap without this: http://stackoverflow.com/questions/18165901/twitters-bootstrap-3-with-sharethis-widget*/
+    #sharethis span {
+      -webkit-box-sizing: content-box;
+      -moz-box-sizing: content-box;
+      box-sizing: content-box;
+    }
+
+  /* Header links */
+
+    h2, h3, h4, h5, h6 {
+      .header-link {
+        opacity: 0;
+      }
+      &:hover .header-link {
+        opacity: 1;
+      }
+    }
 }
