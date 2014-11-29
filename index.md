@@ -213,6 +213,7 @@ Downsides:
 -   requires considerable writer effort, specially when modifying code.
 
 -   Markdown does not look like the rendered output, in which there are no line breaks.
+
     Manual line breaking can make the Markdown more readable than the rendered output,
     which is bad because it gives a false sense of readability encouraging less
     readable long paragraphs.
@@ -220,6 +221,8 @@ Downsides:
 #### Option wrap:no {#option-wrap-no}
 
 Don't wrap lines.
+
+Rationale: very easy to edit. But diffs on huge lines are hard to read.
 
 #### Option wrap:space {#option-wrap-space}
 
@@ -230,8 +233,9 @@ But diffs will look bad, and changing lines will be hard.
 
 #### Option wrap:sentence {#option-wrap-sentence}
 
-Similar to Option W1, but easier for people to follow since the rule is simple:
-break after the period.
+Rationale: similar advantages as `wrap:inner-sentence`,
+but easier for people to follow since the rule is simple:
+break after the period. But may produce long lines with hard to read diffs.
 
 Notable occurrence: [ProGit 2](https://raw.githubusercontent.com/progit/progit2/5c285553c0605342339284981a9bb8a6c4e7c18e/book/01-introduction/1-introduction.asc).
 
