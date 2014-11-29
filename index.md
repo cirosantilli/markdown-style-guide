@@ -87,7 +87,7 @@ When referring to this guide, specify all non-default options in a comma separat
 ### Alternatives
 
 This guide was originally forked from [carwin/markdown-styleguide](https://github.com/carwin/markdown-styleguide/tree/9121c77bd177a3ade6713d50ab1228782d7c02a7).
-It has been extended considerably, some decisions were modified, and not original lines remain.
+It has been extended considerably, some decisions were modified, and no original lines remain.
 
 ## General rules
 
