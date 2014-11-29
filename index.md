@@ -749,15 +749,36 @@ Good:
 
 ##### Rationale: list-space mixed vs 1
 
-The advantage of `list-space:1` is that it removes the decision of
-how many spaces you should put after the list marker: it is always one.
+The advantages of `list-space:1` are that
 
-We could choose to always have list content indented as:
+-   it removes the decision of how many spaces you should put after the list marker:
+    it is always one.
 
-    -   a
-    -   b
+    We could choose to always have list content indented as:
 
-but that is ugly.
+        -   a
+        -   b
+
+    but that is ugly.
+
+-   You never need to change the indentation of the entire list because of a new item.
+
+    This may happen in `list-space:mixed` if you have:
+
+        - a
+        - b
+
+    and will add a multi-line item:
+
+        -   a
+
+        -   b
+
+        -   c
+
+            d
+
+    Note how `a` and `b` were changed because of `c`.
 
 The disadvantages of `list-space:1`
 
