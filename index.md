@@ -535,7 +535,7 @@ This is not the case if levels are different:
 
 ### Blockquotes
 
--   Follow the greater than marker by one space.
+-   Follow the greater than marker `>` by one space.
 
     Good:
 
@@ -548,6 +548,18 @@ This is not the case if levels are different:
     Bad, 2 spaces:
 
         >  a
+
+-   Use a greater than sign for every line, including wrapped.
+
+    Bad:
+
+        > Long line
+        that was wrapped.
+
+    Good:
+
+        > Long line
+        > that was wrapped.
 
 -   *Don't* use empty lines inside a single block quote.
 
