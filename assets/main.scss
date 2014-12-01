@@ -13,10 +13,11 @@ body {
     max-width: 800px;
     padding: 5px 15px 10px;
     position: relative;
-    h1, h2, h3, h4, h5, h6 {
-      border-bottom: $border;
-      padding-bottom: 2px;
-      margin-bottom: 16px;
+    a:visited {
+      color: purple;
+    }
+    blockquote {
+      font-size: 1.2em;
     }
     h1 {
       font-size: 3em;
@@ -36,17 +37,25 @@ body {
     h6 {
       font-size: 1em;
     }
+    h1, h2, h3, h4, h5, h6 {
+      border-bottom: $border;
+      padding-bottom: 2px;
+      margin-bottom: 16px;
+    }
+    hr {
+      border-top: $border;
+    }
+    ol, ul {
+      margin-left: 14px;
+      padding-left: 14px;
+    }
     p {
       /* Otherwise paragraphs after *nested* lists are too close. TODO why? */
       margin-top: 5px;
     }
-    ul, ol {
-      /*list-style-position:inside;*/
-      margin-left: 14px;
-      padding-left: 14px;
-    }
-    a:visited {
-      color: purple;
+    pre {
+      margin-left: 0px;
+      /*padding-left: 0px;*/
     }
     table {
       border-collapse: collapse;
@@ -65,39 +74,24 @@ body {
     th {
       font-weight: bold;
     }
-    pre {
-      margin-left: 0px;
-      /*padding-left: 0px;*/
-    }
-    ul[data-toc],
-    ol[data-toc],
-    ul.toc
-    {
-      font-weight: bold;
-      margin-left: 30px;
-      padding-left: 0px;
-    }
-    blockquote {
-      font-size: 1.2em;
-    }
   }
 
-  /* sharethis */
+  /* ShareThis */
 
     #sharethis {
       height: 30px;
       margin-top: 7px;
       padding-right: 5px;
-    }
-    #sharethis > div {
-      display: inline-block;
-      vertical-align: top;
-    }
-    /* Breaks with bootstrap without this: http://stackoverflow.com/questions/18165901/twitters-bootstrap-3-with-sharethis-widget*/
-    #sharethis span {
-      -webkit-box-sizing: content-box;
-      -moz-box-sizing: content-box;
-      box-sizing: content-box;
+      & > div {
+        display: inline-block;
+        vertical-align: top;
+      }
+      /* Breaks with bootstrap without this: http://stackoverflow.com/questions/18165901/twitters-bootstrap-3-with-sharethis-widget*/
+      span {
+        -webkit-box-sizing: content-box;
+        -moz-box-sizing: content-box;
+        box-sizing: content-box;
+      }
     }
 
   /* Header links */
