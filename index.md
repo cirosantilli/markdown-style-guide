@@ -205,7 +205,7 @@ and do not significantly improve readability.
 
 #### Spaces after sentences
 
-##### Option space-sentence:1
+##### Option space-sentence:1 {#option-space-sentence-1}
 
 Use a single space after sentences.
 
@@ -232,7 +232,7 @@ Advantages of `space-sentence:2`:
 
 - easier to see where sentences end
 
-##### Option space-sentence:2
+##### Option space-sentence:2 {#option-space-sentence-2}
 
 Bad, single space:
 
@@ -409,7 +409,7 @@ In the rare case you absolutely need them, end a lines with exactly two spaces.
 
 ### Headers
 
-#### Option header:atx
+#### Option header:atx {#option-header-atx}
 
 Bad:
 
@@ -476,7 +476,7 @@ Good:
 
         # Header
 
-#### Option header:setex
+#### Option header:setex {#option-header-setex}
 
 Bad:
 
@@ -858,7 +858,7 @@ Rationale:
 
 #### Spaces after list marker
 
-##### Option list-space:mixed
+##### Option list-space:mixed {#option-list-space-mixed}
 
 -   If the content of every item of the list is fits in a single paragraph, use **1** space.
 
@@ -919,7 +919,7 @@ Good:
 
     -   b
 
-##### Option list-space:1
+##### Option list-space:1 {#option-list-space-1}
 
 Always add one space to the list marker.
 
