@@ -84,6 +84,30 @@ When referring to this guide, specify all non-default options in a comma separat
 
     Use the Markdown Style Guide wrap:space, code:indented
 
+### Typographic conventions
+
+When this style guide needs to represent multiple adjacent spaces,
+or spaces at the beginning or ending of code blocks, this will be mentioned
+explicitly in prose, and a dot will be used to make the space visible.
+
+E.g.:
+
+`a`, space, `b`:
+
+    a b
+
+`a`, 2 spaces, `b`:
+
+    a..b
+
+space, `ab`:
+
+    .ab
+
+`ab`, space:
+
+    ab.
+
 ### Alternatives
 
 This guide was originally forked from [carwin/markdown-styleguide](https://github.com/carwin/markdown-styleguide/tree/9121c77bd177a3ade6713d50ab1228782d7c02a7).
@@ -1276,8 +1300,8 @@ Good:
 
 ### Definition lists
 
-*Avoid* using the definition extension since it is not present in many implementations
-nor in CommonMark.
+*Avoid* the definition list extension since it is not present
+in many implementations nor in CommonMark.
 
 Instead, use either:
 
@@ -1291,6 +1315,16 @@ Instead, use either:
 
         - **apple**: red fruit
         - **dog**: noisy animal
+
+    Good:
+
+        -   **apple**: red fruit.
+
+            Very tasty.
+
+        -   **dog**: noisy animal.
+
+            Not tasty.
 
     Good:
 
