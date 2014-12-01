@@ -91,7 +91,7 @@ It has been extended considerably, some decisions were modified, and no original
 
 Miguel de Icaza (GNOME, Mono) has proposed a short style guide at:
 <http://tirania.org/blog/archive/2014/Sep-30.html>
-He chooses `wrap:space`, two spaces after period, mixed code blocks:
+He chooses `wrap:space`, `sentence-space:2`, mixed code blocks:
 fenced only for many lines, and lists always indented at 4 without empty lines.
 
 ## General rules
@@ -136,7 +136,9 @@ and markdown files are most often used in contexts where:
 - there are hyphen separated HTML files in the same project, possibly the same directory as the markdown files.
 - filenames will be used directly on URLs. E.g.: GitHub blobs.
 
-### Space
+### Whitespaces
+
+#### Newlines
 
 *Don't* use 2 or more consecutive empty lines, that is,
 more than two consecutive newline characters,
@@ -172,6 +174,45 @@ Bad:
 
 Rationale: multiple empty lines occupy more vertical screen space,
 and do not significantly improve readability.
+
+#### Spaces after sentences
+
+##### Option space-sentence:1
+
+Use a single space after sentences.
+
+Bad, 2 spaces:
+
+    First sentence.  Second sentence.
+
+Good:
+
+    First sentence. Second sentence.
+
+Rationale: advantages over `space-sentence:2`:
+
+-   easier to edit
+
+-   usually not necessary if you use `wrap:inner-sentence` or `wrap:sentence`
+
+-   `space-sentence:2` gives a false sense of readability
+    as it is ignored on the HTML output
+
+-   more popular
+
+Advantages of `space-sentence:2`:
+
+- easier to see where sentences end
+
+##### Option space-sentence:2
+
+Bad, single space:
+
+    First sentence. Second sentence.
+
+Good:
+
+    First sentence.  Second sentence.
 
 ### Line wrapping
 
@@ -353,9 +394,9 @@ In the rare case you absolutely need them, end a lines with exactly two spaces.
 
 -   Include a space between the `#` and the text of the header.
 
--   Headers must be surrounded by one empty line except at the beginning of a file.
-
 -   Headers must *not* have spaces preceding the number sign.
+
+-   Headers must be surrounded by one empty line except at the beginning of a file.
 
 -   *Don't* use two headers with the same content in the same markdown file.
 
