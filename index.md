@@ -94,6 +94,12 @@ Miguel de Icaza (GNOME, Mono) has proposed a short style guide at:
 He chooses `wrap:space`, `sentence-space:2`, mixed code blocks:
 fenced only for many lines, and lists always indented at 4 without empty lines.
 
+### Lint tools
+
+<https://github.com/mivok/markdownlint>
+[can be configured](https://github.com/mivok/markdownlint/blob/c7d3615e8899b68d766fad7c70859b3e62b66704/lib/mdl/styles/cirosantilli.rb)
+to enforce this style. It is still in early stage, but it is a very good starting point.
+
 ## General rules
 
 ### File
