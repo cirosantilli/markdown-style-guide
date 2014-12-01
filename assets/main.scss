@@ -79,12 +79,12 @@ body {
   /* ShareThis */
 
     #sharethis {
-      height: 30px;
-      margin-top: 7px;
-      padding-right: 5px;
-      & > div {
-        display: inline-block;
-        vertical-align: top;
+      & > {
+        div, iframe {
+          height: 25px;
+          display: inline-block;
+          vertical-align: top;
+        }
       }
       /* Breaks with bootstrap without this: http://stackoverflow.com/questions/18165901/twitters-bootstrap-3-with-sharethis-widget*/
       span {
