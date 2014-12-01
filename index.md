@@ -89,6 +89,11 @@ When referring to this guide, specify all non-default options in a comma separat
 This guide was originally forked from [carwin/markdown-styleguide](https://github.com/carwin/markdown-styleguide/tree/9121c77bd177a3ade6713d50ab1228782d7c02a7).
 It has been extended considerably, some decisions were modified, and no original lines remain.
 
+Miguel de Icaza (GNOME, Mono) has proposed a short style guide at:
+<http://tirania.org/blog/archive/2014/Sep-30.html>
+He chooses `wrap:space`, two spaces after period, mixed code blocks:
+fenced only for many lines, and lists always indented at 4 without empty lines.
+
 ## General rules
 
 ### File
