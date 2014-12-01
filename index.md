@@ -1145,7 +1145,7 @@ Good:
 
 Rationale: it is hard to tell where multi-line list items start and end without empty lines.
 
-### Empty lines around lists
+#### Empty lines around lists
 
 Surround lists by one empty line.
 
@@ -1165,7 +1165,7 @@ Good:
 
     After.
 
-### Case of first letter of list item
+#### Case of first letter of list item
 
 Each list item has the same case as it would have if it were concatenated with the sentence that comes before the list.
 
@@ -1213,7 +1213,7 @@ because it could be replaced with:
     Put your feet on the pedal.
     Push the the pedal.
 
-### Punctuation at the end of list items
+#### Punctuation at the end of list items
 
 If the list item either:
 
