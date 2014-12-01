@@ -1239,12 +1239,10 @@ because it could be replaced with:
 
 #### Punctuation at the end of list items
 
-If the list item either:
+Punctuate at the end of list items if either it:
 
-- contains multiple sentences
+- contains multiple sentences or paragraphs
 - starts with an upper case letter
-
-punctuate it.
 
 Otherwise, omit the punctuation if it would be a period.
 
@@ -1285,6 +1283,30 @@ Good:
     - finally eat the fruit. Good for tummy.
 
 Note: nothing forbids one list item from ending in period while another in the same list does not.
+
+Bad, multiple paragraphs:
+
+    -   go to the market
+
+    -   then buy some fruit
+
+        Bad for wallet
+
+    -   finally eat the fruit
+
+        Good for tummy
+
+Good:
+
+    -   go to the market
+
+    -   then buy some fruit.
+
+        Bad for wallet.
+
+    -   finally eat the fruit.
+
+        Good for tummy.
 
 Bad, starts with upper case:
 
@@ -1468,7 +1490,8 @@ Rationale:
     Trailing pipes make it look better because of symmetry.
 
 -   there exist tools which help keeping the table aligned.
-    For example, Vim has the [Tabular plugin](https://github.com/godlygeek/tabular) which allows to align the entire table with `:Tabular /|`.
+    For example, Vim has the [Tabular plugin](https://github.com/godlygeek/tabular)
+    which allows to align the entire table with `:Tabular /|`.
 
 -   why no spaces around pipes of the hyphen separator line, i.e.: `|---|` instead of `| - |`?
     No spaces looks better, works on GitHub. Downside: harder to implement automatic alignment in editors,
