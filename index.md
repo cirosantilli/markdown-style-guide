@@ -1276,45 +1276,48 @@ Good:
 
 ### Definition lists
 
-Extension.
-
-*Don't* use definition lists as they are not part of the original implementation,
-and are not implemented by all major engines.
+*Avoid* using the definition extension since it is not present in many implementations
+nor in CommonMark.
 
 Instead, use either:
 
--   Formated lists of the form:
+-   formated lists:
 
-    - item to be defined has a special span format such as bold, italic or link
-    - colon `:` and a space
-    - aligned definitions
+    - format the item be defined as either of bold, link or code
+    - separate the item from the definition with a colon and a space `:.`
+    - don't align definitions as it is harder to maintain and does not show on the HTML output
 
     Good:
 
         - **apple**: red fruit
-        - **dog**:   noisy animal
+        - **dog**: noisy animal
 
-    <!-- -->
+    Good:
 
         - [apple](http://apple.com): red fruit
         - [dot](http://dog.com): red fruit
 
+    Good:
+
+        - `-f`: force
+        - `-r`: recursive
+
     Bad, no colon:
 
         - **apple** red fruit
-        - **dog**   noisy animal
+        - **dog** noisy animal
 
     Bad, space between term and colon:
 
         - **apple** : red fruit
-        - **dog** :   noisy animal
+        - **dog** : noisy animal
 
-    Bad, definitions not aligned:
+    Bad, definitions aligned:
 
         - **apple**: red fruit
-        - **dog**: noisy animal
+        - **dog**:   noisy animal
 
--   Headers.
+-   headers.
 
     Good:
 
