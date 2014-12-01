@@ -385,53 +385,175 @@ In the rare case you absolutely need them, end a lines with exactly two spaces.
 
 ### Headers
 
--   Use the `atx-style` with no closing `#` character.
-
-    Rationale: `Setex` style headers are:
-
-    - harder to write
-    - only go up to level 2
-    - occupy more screen lines
-
-    `Setex` headers are more visible, but good visibility can be achieved for `atx-style` headers
-    by configuring your editor to syntax highlight them.
-
--   Include a space between the `#` and the text of the header.
-
--   Headers must *not* have spaces preceding the number sign.
-
--   Headers must be surrounded by one empty line except at the beginning of a file.
-
--   *Don't* use two headers with the same content in the same markdown file.
-
-    Rationale: many markdown engines generate IDs for headers based on the header content.
-
--   Don't skip header levels.
-
-Good:
-
-    Before.
-
-    # Header
-
-    After.
+#### Option header:atx
 
 Bad:
 
-    Before.
-    # Header
+    Header 1
+    ========
 
-    # Header
-    After.
+    Header 2
+    --------
 
-    Header
-    =======
+    ### Header 3
 
-    # Header #
+Good:
 
-    #Header
+    # Header 1
 
-     # Header
+    ## Header 2
+
+    ### Header 3
+
+-   Rationale: advantages over Setex:
+
+    -   easier to write because in Setex you have to match
+        the number of characters in both lines for it to look good
+
+    -   works for all levels, while Setex only goes up to level 2
+
+    -   occupy only one screen line, while Setex occupies 2
+
+    Advantages of Setex
+
+    -   more visible. Not very important if you have syntax highlighting.
+
+-   Include a single space between the `#` and the text of the header.
+
+    Bad:
+
+        #Header
+
+        #..Header
+
+    Good:
+
+        # Header
+
+-   *Don't* use the closing `#` character.
+
+    Bad:
+
+        # Header #
+
+    Good:
+
+        # Header
+
+    Rationale: easier to maintain.
+
+-   *Don't* add spaces before the number sign `#`.
+
+    Bad:
+
+        .# Header
+
+    Good:
+
+        # Header
+
+#### Option header:setex
+
+Bad:
+
+    # Header 1
+
+    ## Header 2
+
+    ### Header 3
+
+
+Good:
+
+    Header 1
+    ========
+
+    Header 2
+    --------
+
+    ### Header 3
+
+---
+
+-   *Don't* skip header levels.
+
+    Bad:
+
+        # Header 1
+
+        ### Header 3
+
+    Good:
+
+        # Header 1
+
+        ## Header 2
+
+-   Surround headers by a single empty line except at the beginning of the file.
+
+    Bad:
+
+        Before.
+        # Header 1
+
+        ## Header 2
+        After.
+
+    Good:
+
+        Before.
+
+        # Header 1
+
+        ## Header 2
+
+        After.
+
+    Bad:
+
+        Before.
+        Header 1
+        ========
+
+        ## Header 2
+        -----------
+        After.
+
+    Good:
+
+        Before.
+
+        Header 1
+        ========
+
+        ## Header 2
+        -----------
+
+        After.
+
+-   *Avoid* using two headers with the same content in the same markdown file.
+
+    Rationale: many markdown engines generate IDs for headers based on the header content.
+
+    Bad:
+
+        # Dogs
+
+        ## Anatomy
+
+        # Cats
+
+        ## Anatomy
+
+    Good:
+
+        # Dogs
+
+        ## Anatomy of the dog
+
+        # Cats
+
+        ## Anatomy of the cat
 
 #### Top-level header
 
