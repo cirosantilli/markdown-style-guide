@@ -91,8 +91,6 @@ It has been extended considerably, some decisions were modified, and no original
 
 Miguel de Icaza (GNOME, Mono) has proposed a short style guide at:
 <http://tirania.org/blog/archive/2014/Sep-30.html>
-He chooses `wrap:space`, `sentence-space:2`, mixed code blocks:
-fenced only for many lines, and lists always indented at 4 without empty lines.
 
 ### Lint tools
 
