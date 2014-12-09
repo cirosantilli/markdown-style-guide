@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
+    {% if page.description %}<meta name="description" content="{{ page.description }}">{% endif %}
     <title>{{ page.title }}</title>
     <link rel="shortcut icon" type="image/x-icon" href="assets/logo.png" />
 
@@ -33,6 +34,7 @@
             <script type="text/javascript">stLight.options({publisher: "b6a81f16-5bb1-46de-83c8-6b4c3e94ec99", doNotHash:false, doNotCopy:true, hashAddressBar:false});</script>
         </div>
       </div>
+      {% if page.description %}<p>{{ page.description }}</p>{% endif %}
       {{ content }}
     </main>
     <!--google analytics-->

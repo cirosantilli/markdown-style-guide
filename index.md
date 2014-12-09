@@ -1,9 +1,7 @@
 ---
 title: Markdown Style Guide
-redirect_from: "/markdown-styleguide"
+description: Readable and portable Markdown style guide.
 ---
-
-Readable and portable Markdown style guide.
 
 Considers [original specification](http://daringfireball.net/projects/markdown/syntax),
 [CommonMark](http://commonmark.org) and other extensions.
