@@ -79,32 +79,29 @@ body {
     }
   }
 
-  /* ShareThis */
-
-    #sharethis {
-      & > {
-        div, iframe {
-          height: 25px;
-          display: inline-block;
-          vertical-align: top;
-        }
-      }
-      /* Breaks with bootstrap without this: http://stackoverflow.com/questions/18165901/twitters-bootstrap-3-with-sharethis-widget*/
-      span {
-        -webkit-box-sizing: content-box;
-        -moz-box-sizing: content-box;
-        box-sizing: content-box;
+  .social-media {
+    & > {
+      div, iframe {
+        height: 25px;
+        display: inline-block;
+        vertical-align: top;
       }
     }
+    /* Breaks with bootstrap without this: http://stackoverflow.com/questions/18165901/twitters-bootstrap-3-with-sharethis-widget*/
+    span {
+      -webkit-box-sizing: content-box;
+      -moz-box-sizing: content-box;
+      box-sizing: content-box;
+    }
+  }
 
   /* Header links */
-
-    h2, h3, h4, h5, h6 {
-      .header-link {
-        opacity: 0;
-      }
-      &:hover .header-link {
-        opacity: 1;
-      }
+  h2, h3, h4, h5, h6 {
+    .header-link {
+      opacity: 0;
     }
+    &:hover .header-link {
+      opacity: 1;
+    }
+  }
 }
