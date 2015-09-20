@@ -108,11 +108,14 @@ space, `ab`:
 
 ### Alternatives
 
-This guide was originally forked from [carwin/markdown-styleguide](https://github.com/carwin/markdown-styleguide/tree/9121c77bd177a3ade6713d50ab1228782d7c02a7).
-It has been extended considerably, some decisions were modified, and no original lines remain.
+[google/styleguide](https://github.com/google/styleguide/blob/3591b2e540cbcb07423e02d20eee482165776603/docguide/style.md)
+by Google.
 
-Miguel de Icaza (GNOME, Mono) has proposed a short style guide at:
-<http://tirania.org/blog/archive/2014/Sep-30.html>
+[carwin/markdown-styleguide](https://github.com/carwin/markdown-styleguide/tree/9121c77bd177a3ade6713d50ab1228782d7c02a7).
+This guide was originally forked from it. It has been extended considerably,
+some decisions were modified, and no original lines remain.
+
+<http://tirania.org/blog/archive/2014/Sep-30.html> by Miguel de Icaza (GNOME, Mono). Short.
 
 ### Lint tools
 
