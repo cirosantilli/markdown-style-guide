@@ -590,7 +590,7 @@ How this `h1` is produced may vary depending on your exact technology stack:
 some stacks may generate it from metadata, for example Jekyll through the front-matter.
 
 Storing the top-level header as metadata has the advantage that it can be reused elsewhere more easily,
-e.g. on a global index, but the downside lower portability portable.
+e.g. on a global index, but the downside of lower portability.
 
 If your target stack does not generate the top-level header in another way,
 include it in your markdown file. E.g., GitHub.
