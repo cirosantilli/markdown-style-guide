@@ -3,6 +3,13 @@ title: Markdown Style Guide
 description: Readable and portable Markdown style guide.
 ---
 
+- a
+{:toc}
+
+## About
+
+The [source code is available on GitHub]({{ site.github }}).
+
 Considers [original specification](http://daringfireball.net/projects/markdown/syntax),
 [CommonMark](http://commonmark.org) and other extensions.
 
@@ -10,12 +17,7 @@ This project is community driven, and tries to reach consensus.
 Maintainers will only step in if the community cannot reach a decision.
 Discussion will take place [on the issue tracker]({{ site.github }}/issues).
 
-The [source code is available on GitHub]({{ site.github }}).
-
-- a
-{:toc}
-
-## About
+A Chinese translation can be found at: <http://einverne.github.io/markdown-style-guide/zh.html>
 
 ### Design goals
 
