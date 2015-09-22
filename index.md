@@ -1748,3 +1748,5 @@ Rationale: the original markdown specification states it:
 Therefore, the output is random, ugly, and as the spec itself mentions:
 
 > but an address published in this way will probably eventually start receiving spam
+
+{% include_relative LICENSE.md %}
