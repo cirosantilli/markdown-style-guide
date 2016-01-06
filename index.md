@@ -1610,18 +1610,18 @@ Definitions:
 
 Good:
 
-    [id2]     http://long-url.com
-    [long id] http://a.com        "name 1"
+    [id2]:     http://long-url.com
+    [long id]: http://a.com        "name 1"
 
 Bad, not ordered by id:
 
-    [b] http://a.com
-    [a] http://b.com
+    [b]: http://a.com
+    [a]: http://b.com
 
 Bad, not aligned:
 
-    [id] http://id.com
-    [long id] http://long-id.com
+    [id]: http://id.com
+    [long id]: http://long-id.com
 
 #### Single or double quote titles
 
