@@ -19,25 +19,6 @@ Discussion will take place [on the issue tracker]({{ site.github }}/issues).
 
 A Chinese translation can be found at: <http://einverne.github.io/markdown-style-guide/zh.html>
 
-### Design goals
-
--   readable
-
--   portable: produces the same output, or good output, across multiple implementations.
-
-    Portability tests are carried out with the [Markdown Test Suite](https://github.com/karlcow/markdown-testsuite).
-
--   easy to write and modify later
-
--   diff friendly
-
--   easy to remember and implement on editors
-
--   provide rationale behind difficult choices.
-
-    Every rationale section or paragraph is marked with `rationale`
-    so you can skip it if you are only interested in the final decisions.
-
 ### Notable users
 
 - [GitLab](https://github.com/gitlabhq/gitlabhq/blob/master/CONTRIBUTING.md#style-guides)
@@ -83,6 +64,57 @@ and for each alternative create a header:
 When referring to this guide, specify all non-default options in a comma separated fashion:
 
     Use the Markdown Style Guide wrap:space, code:indented
+
+### Design goals
+
+-   readable
+
+-   portable: produces the same output, or good output, across multiple implementations.
+
+    Portability tests are carried out with the [Markdown Test Suite](https://github.com/karlcow/markdown-testsuite).
+
+-   easy to write and modify later
+
+-   diff friendly
+
+-   easy to remember and implement on editors
+
+-   provide rationale behind difficult choices.
+
+#### Readability vs writability
+
+Many design choices come down to:
+
+- do you want to write fast
+- or do you want people to read fast
+
+There may be use cases in which either is preferred:
+
+-   for source code, readability becomes more important,
+    as programmers are going to open the files on their editors often.
+
+    Editor features like syntax highlighting and line wrapping
+    can greatly reduce problems, but it is of course better if people
+    don't need to change their editors at all.
+
+-   for forums like Stack Overflow, people will very rarely read the source,
+    only the rendered output. So it might be better to optimize writing speed.
+
+The current style is inconsistent with either of those optimizations. For now,
+we propose two sets of options (profiles) which optimize either one: readability
+and writability profiles.
+
+##### Readability profile
+
+- `wrap:space`
+- `list-marker:asterisk`
+- `code:indented`
+
+##### Writability profile
+
+- `wrap:no`
+- `list-marker:hyphen`
+- `code:fenced`
 
 ### Typographic conventions
 
@@ -797,11 +829,11 @@ Bad:
 Rationale:
 
 - asterisk `*` can be confused with bold or italic markers.
-- plus sign `+` is not popular.
+- plus sign `+` is not popular
 
 Downsides:
 
-- `*` and `+` are more visible
+- `*` and `+` are more visible. `*` is more visible
 
 ###### Option list-marker:asterisk {#option-list-marker-asterisk}
 
