@@ -775,6 +775,8 @@ This is not the case if levels are different:
 
 ##### Unordered
 
+###### Option list-marker:hyphen {#option-list-marker-hyphen}
+
 Use the hyphen marker.
 
 Good:
@@ -796,6 +798,18 @@ Rationale:
 
 - asterisk `*` can be confused with bold or italic markers.
 - plus sign `+` is not popular.
+
+Downsides:
+
+- `*` and `+` are more visible
+
+###### Option list-marker:asterisk {#option-list-marker-asterisk}
+
+Use `*`.
+
+###### Option list-marker:plus {#option-list-marker-plus}
+
+Use `+`.
 
 ##### Ordered
 
