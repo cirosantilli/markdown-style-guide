@@ -329,8 +329,13 @@ Downsides:
     readable long paragraphs.
 
 -   Requires users of programming text editors like Vim, which are usually configured to not wrap,
-    to toggle visual wrapping on. This can be automated,
-    but [EditorConfig gave it WONTFIX](https://github.com/editorconfig/editorconfig/issues/168)
+    to toggle visual wrapping on. This can be automated, but
+    [EditorConfig gave it WONTFIX](https://github.com/editorconfig/editorconfig/issues/168)
+
+-   Breaks some email systems, which always break a line on a single newline, and  
+    make your email  
+    look  
+    something like this.
 
 #### Option wrap:no {#option-wrap-no}
 
