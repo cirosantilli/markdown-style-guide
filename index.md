@@ -151,12 +151,15 @@ some decisions were modified, and no original lines remain.
 
 <http://tirania.org/blog/archive/2014/Sep-30.html> by Miguel de Icaza (GNOME, Mono). Short.
 
+<https://github.com/slang800/markdown-styleguide>
+
 ### Lint tools
 
 Asked on Stack Exchange: <http://softwarerecs.stackexchange.com/questions/7138/markdown-lint-tool/>
 
 - <https://github.com/wooorm/mdast-lint>
 - <https://github.com/mivok/markdownlint>
+- <https://github.com/slang800/tidy-markdown>
 
 ## General rules
 
