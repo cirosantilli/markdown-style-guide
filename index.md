@@ -6,6 +6,19 @@ description: Readable and portable Markdown style guide.
 - a
 {:toc}
 
+## Use AsciiDoc
+
+If:
+
+- you have the choice, e.g. GitHub READMEs, self-rendered documentation
+- your document is large enough to need a header
+
+use [AsciiDoc](https://en.wikipedia.org/wiki/AsciiDoc) instead of Markdown.
+
+The [Asciidoctor implementation](https://github.com/asciidoctor/asciidoctor) is likely the best choice as of 2019.
+
+Rationale: <https://github.com/cirosantilli/essays/tree/59adcc6dcd0b16430fe97495aa5b98707abc53d8#moving-from-markdown-to-asciidoc>
+
 ## About
 
 The [source code is available on GitHub]({{ site.github }}).
