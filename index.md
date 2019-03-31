@@ -13,11 +13,65 @@ If:
 - you have the choice, e.g. GitHub READMEs, self-rendered documentation
 - your document is large enough to need a header
 
-use [AsciiDoc](https://en.wikipedia.org/wiki/AsciiDoc) instead of Markdown.
+consider using [AsciiDoc](https://en.wikipedia.org/wiki/AsciiDoc) instead of Markdown.
 
 The [Asciidoctor implementation](https://github.com/asciidoctor/asciidoctor) is likely the best choice as of 2019.
 
-Rationale: <https://github.com/cirosantilli/essays/tree/59adcc6dcd0b16430fe97495aa5b98707abc53d8#moving-from-markdown-to-asciidoc>
+AsciiDoc It takes markdown, and adds just enough to write serious books, while reducing some markdown annoyances at the same time.
+
+Here is one example of what you can achieve on GitHub with a `README.adoc`: <https://github.com/cirosantilli/linux-kernel-module-cheat/tree/v3.0#linux-kernel-module-cheat>
+
+And here is Buildroot's perfect AsciiDoc-based generated documentation:
+
+-   <https://buildroot.org/downloads/manual/manual.html>
+-   source: <https://github.com/buildroot/buildroot/tree/master/docs/manual>
+
+Advantages:
+
+-   AsciiDoc has built-in Table of Contents and file inclusion functionality.
+
+    This allows you to easily put everything one HTML page or source file.
+
+    This has tremendous advantages:
+
+    -   Ctrl+F on the browser finds everything
+    -   `sed` refactors everything if you use a single source file
+    -   forget about GitHub Pages difficulties such as:
+        -   page formatting effort
+        -   broken builds on forced dependency updates
+        -   non-immediate page updates
+    -   Focused PageRank
+
+    Markdown GitHub feature request: <https://github.com/isaacs/github/issues/215>
+
+-   built-in syntax can link to headers, give headers custom IDs independent of text, and with `asciidoctor -v` get a warning for broken links
+
+-   everything can be done without indentation, which is hard to type on browser boxes. Nested lists and code blocks notably.
+
+    GitHub even added the triple backticks block code extension syntax because of that!
+
+    This is also a major source of style divergence in Markdown, since there are so many ways to achieve the same HTML output, e.g.: [Spaces after list marker](#spaces-after-list-marker)
+
+-   `link::mycode.c[]` instead of `[mycode.c](mycode.c)`
+
+    `<<my-header>>` inserts the human readable header title of the given ID by default
+
+    Less duplication in links.
+
+Disadvantages:
+
+-   less commonly used as of 2019, so slightly higher entry barrier
+-   slightly more complex, due to more features. But too much worth it.
+-   escaping certain constructs is more painful:
+    - `C++`: <https://github.com/asciidoctor/asciidoctor/issues/1208>
+    -  inline code: <https://github.com/asciidoctor/asciidoctor/issues/2582>
+-    GitHub uses its own default header ID calculation mechanism, which can get out of sync with your local version: <https://github.com/asciidoctor/asciidoctor/issues/3093>
+
+Wishlist:
+
+- <https://github.com/asciidoctor/asciidoctor/issues/3148> Allow setting ID prefix blocks under any header with automatic resolution from inside the header
+- <https://github.com/asciidoctor/asciidoctor/issues/3147> Warn on automatically generated ID duplicates
+- <https://github.com/asciidoctor/asciidoctor/issues/3210> Warn on link to a local file that does not exist with -v
 
 ## About
 
