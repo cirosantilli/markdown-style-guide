@@ -983,6 +983,37 @@ Rationale:
     - keep references close to the list so authors are less likely to forget to update them
     - when referring from an external document, always refer to an specific version of the markdown file
 
+#### Spaces before list marker
+
+Do not add any space before list markers, except to obey the current level of indentation.
+
+Bad:
+
+      - a
+      - b
+
+Good:
+
+    - a
+    - b
+
+Good, `c` is just following the indentation of `b`:
+
+    -   a
+    -   b
+        - c
+
+Bad, `c` modified the indentation of `b`:
+
+    -   a
+    -   b
+          - c
+
+Rationale:
+
+- easier to type
+- easier to reason about levels
+
 #### Spaces after list marker
 
 ##### Option list-space:mixed {#option-list-space-mixed}
