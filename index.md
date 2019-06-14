@@ -40,6 +40,7 @@ Advantages:
         -   page formatting effort
         -   broken builds on forced dependency updates
         -   non-immediate page updates
+        -   not possible to view older versions of the documents
     -   Focused PageRank
 
     Markdown GitHub feature request: <https://github.com/isaacs/github/issues/215>
@@ -227,6 +228,7 @@ Asked on Stack Exchange: <http://softwarerecs.stackexchange.com/questions/7138/m
 - <https://github.com/wooorm/mdast-lint>
 - <https://github.com/mivok/markdownlint>
 - <https://github.com/slang800/tidy-markdown>
+- <https://github.com/DavidAnson/markdownlint>. Documentation has some links back to this style: <https://github.com/DavidAnson/markdownlint/blob/v0.14.2/doc/Rules.md>
 
 ## General rules
 
