@@ -74,6 +74,19 @@ Wishlist:
 - <https://github.com/asciidoctor/asciidoctor/issues/3147> Warn on automatically generated ID duplicates
 - <https://github.com/asciidoctor/asciidoctor/issues/3210> Warn on link to a local file that does not exist with -v
 
+If you already have a Markdown document and want to convert it to asciidoc,
+Pandoc is a good way to start. The conversion is not yet perfect, but it does go a long way.
+One good command is:
+
+    markdown-to-adoc() (
+      # Markdown to asciidoc the way I like it.
+      f="$1"
+      shift
+      pandoc --atx-headers --base-header-level 2 -o "${f%.*}.adoc" --wrap=none "$f" "$@"
+    )
+
+[GitHub upstream](https://github.com/cirosantilli/dotfiles/blob/81f668749ef317371154e84a974fb4a1d7af6ca3/home/.bashrc#L391).
+
 ## About
 
 The [source code is available on GitHub]({{ site.github }}).
