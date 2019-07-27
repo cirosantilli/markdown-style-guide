@@ -17,23 +17,6 @@
   <body>
     <main>
       <h1>{{ page.title }}</h1>
-      <div>
-        <div class="social-media">
-          <!--Github star count: https://github.com/mdo/github-buttons-->
-            <iframe
-              src="http://ghbtns.com/github-btn.html?user=cirosantilli&amp;repo=markdown-style-guide&amp;type=watch&amp;count=true"
-              style=" border:none; background-color:transparent; margin-top:2px;" width="80px">
-            </iframe>
-          <!-- #ShareThis share -->
-            <!-- #INVALID HTML5: https://getsatisfaction.com/sharethis/topics/attribute_displaytext_is_not_valid_xhtml -->
-            <div class='st_twitter_hcount' displayText='Tweet'></div>
-            <div class='st_facebook_hcount' displayText='Facebook'></div>
-            <div class='st_googleplus_hcount' displayText='Google +'></div>
-            <!--<span class='st_linkedin_hcount' displayText='LinkedIn'></span>-->
-            <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
-            <script type="text/javascript">stLight.options({publisher: "b6a81f16-5bb1-46de-83c8-6b4c3e94ec99", doNotHash:false, doNotCopy:true, hashAddressBar:false});</script>
-        </div>
-      </div>
       {% if page.description %}<p>{{ page.description }}</p>{% endif %}
       {{ content }}
     </main>
