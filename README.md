@@ -1,10 +1,10 @@
 # Markdown Style Guide
 
-Readable and portable Markdown style guide: <http://www.cirosantilli.com/markdown-style-guide>
+Readable and portable Markdown style guide: <https://cirosantilli.com/markdown-style-guide>
 
 The main source file is [index.md](index.md)
 
-Hosted on GitHub pages for the Kramdown generated TOC and social media buttons.
+Hosted on GitHub pages for the Kramdown generated TOC.
 
 This is a one-page Jekyll website, so to develop just:
 
