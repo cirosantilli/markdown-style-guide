@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% if page.meta_title %}{{ page.title }} - {% endif %}{{ site.name }}</title>
+    {% if page.description %}
+      <meta name="description" content="{{ page.description }}">
+    {% endif %}
+    <link rel="shortcut icon" type="image/x-icon" href="{{ site.cirosantilli-media-prefix }}ID_photo_of_Ciro_Santilli_taken_in_2013.jpg" />
+
+    {% comment %}
+      DataTables JavaScript sortable tables.
+      https://github.com/DataTables/DataTables
+    {% endcomment %}
+    <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/css/jquery.dataTables.css"/>
+
+    {% comment %}
+      bootstrap has good basic font settings tha make browsers uniform.
+      https://github.com/twbs/bootstrap
+      Not using the JS if we can avoid it:
+      <script src="https://netdna.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+    {% endcomment %}
+    <link href="https://netdna.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet"/>
+
+    {% comment %}
+      font awesome for font icons like the Stack Overflow icon for the navbar.
+      https://github.com/FortAwesome/Font-Awesome
+    {% endcomment %}
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.1/css/all.css">
+
+    {% comment %}
+      Custom styles and scripts. Come at end to use and override libraries.
+      TODO: move main.js to bottom of page.
+    {% endcomment %}
+    <script src="main.js"></script>
+    <link rel="stylesheet" href="main.css"/>
+    <link rel="stylesheet" href="header-link.css"/>
+    <link rel="stylesheet" href="syntax.css"/>
+  </head>
+  <body>
+    <header>
+      <a class="home" href="/">{{ site.name }}</a>
+      <span class="social">
+        <a href="{{ site.cirosantilli-stack-overflow }}"><i class="fab fa-stack-overflow fa-fw"></i></a>
+        <a href="{{ site.cirosantilli-github }}"><i class="fab fa-github fa-fw"></i></a>
+        <a href="{{ site.cirosantilli-linkedin }}"><i class="fab fa-linkedin fa-fw"></i></a>
+        <a href="{{ site.cirosantilli-youtube }}"><i class="fab fa-youtube fa-fw"></i></a>
+        <a href="{{ site.cirosantilli-twitter }}"><i class="fab fa-twitter fa-fw"></i></a>
+        {% comment %}
+        Was added recently https://github.com/FortAwesome/Font-Awesome/issues/11562 but I tried to update the CSS
+        and it obviously broke everything. I'm going to do just a single page with a huge TOC one day.
+        {% endcomment %}
+        <a href="{{ site.cirosantilli-zhihu }}"><i class="fab fa-zhihu fa-fw"></i></a>
+        <a href="{{ site.cirosantilli-weibo }}"><i class="fab fa-weibo fa-fw"></i></a>
+      </span>
+    </header>
+    <main>
+        <h1 class="page-title">{{ page.title }}</h1>
+        {% if page.description %}<p>{{ page.description }}</p>{% endif %}
+        {{ content }}
+    </main>
+    <footer>
+        <div>License: <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA 4.0</a> unless noted</div>
+        <div>Suggestions and corrections: <a href="{{ site.cirosantilli-repo-url }}/issues">{{ site.cirosantilli-repo-url }}/issues</a></div>
+        <div>Website source code: <a href="{{ site.cirosantilli-repo-url }}">{{ site.cirosantilli-repo-url }}</a></div>
+        <div>Website version: <a href="{{ site.cirosantilli-repo-url }}/commit/{{ site.git.last_commit.long_sha }}">{{ site.git.last_commit.long_sha }}</a></div>
+        <div>Cite with: <a href="https://zenodo.org/badge/latestdoi/16453261">this DOI</a></div>
+    </footer>
+    {% comment %}Scripts.{% endcomment %}
+
+    {% comment %}
+      jQuery
+      Must come *before* all its many dependencies. We should try to get rid of it.
+      https://github.com/jquery/jquery
+    {% endcomment %}
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+
+    {% comment %}DataTables.{% endcomment %}
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/jquery.dataTables.min.js"></script>
+    <script>
+      $('.data-table').dataTable({
+        //"aaSorting": [[0,'asc'], [1,'asc'], [2, 'asc'], [3, 'asc']],
+        "aaSorting": [],
+        "bFilter": false,
+        "bInfo": false,
+        "bPaginate": false
+      });
+    </script>
+
+    {% comment %}MathJax.{% endcomment %}
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+          jax: ["input/TeX","output/HTML-CSS"],
+          displayAlign: "left",
+          displayIndent: "20px"
+      });
+    </script>
+    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  </body>
+</html>

@@ -1,0 +1,15 @@
+---
+---
+
+/* Separated from the main CSS because non-markdown cheatsheets
+ * like the HTML only use this and not the main style.
+ */
+h2, h3, h4, h5, h6 {
+  .header-link {
+    opacity: 0;
+    font-size: 0.8em;
+  }
+  &:hover .header-link {
+    opacity: 1;
+  }
+}

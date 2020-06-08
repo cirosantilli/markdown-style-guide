@@ -1,0 +1,196 @@
+---
+---
+
+body {
+  $border: 1px solid black;
+  $header_link_color: #CC0;
+  $link_color: #28F;
+  $main_padding: 15px;
+
+  overflow-wrap: break-word;
+  header {
+    background-color: black;
+    border-radius: 0;
+    border-width: 0;
+    font-size: 2.0em;
+    margin: 0;
+    @mixin header_link_hover {
+      background-color: white;
+      color: black;
+    }
+    a {
+      // Otherwise the black background shows around the links for some reason.
+      padding-bottom: 10px;
+      padding-top: 10px;
+      margin: 0;
+      &.home {
+        color: white;
+        font-weight: bold;
+        padding-left: 5px;
+        padding-right: 5px;
+        text-decoration: none;
+      }
+      &:hover {
+        @include header_link_hover;
+      }
+    }
+    span.social a {
+      color: $header_link_color;
+      &:hover {
+        @include header_link_hover;
+      }
+      &:visited {
+        &:hover {
+          @include header_link_hover;
+        }
+        color: $header_link_color;
+      }
+    }
+  }
+
+  main {
+    /* Don't stay too close to the edge of the screen. */
+    padding-bottom: $main_padding;
+    padding-right: $main_padding;
+    padding-left: $main_padding;
+
+    /* asciidoctor output. */
+    .imageblock {
+      margin-bottom: 15px;
+    }
+
+    /* kramdown output. */
+    #markdown-toc {
+      font-weight: bold;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      a {
+        &:link, &:visited {
+          color: black;
+        }
+      }
+    }
+    h2, h3, h4, h5, h6 {
+      font-size: 24px;
+    }
+
+    /* Generic elements. */
+    a:link {
+      color: $link_color;
+    }
+    a:visited {
+      color: purple;
+    }
+    blockquote {
+      font-size: 1.2em;
+    }
+    code {
+      color: black;
+    }
+    p {
+      /* Otherwise paragraphs after *nested* lists are too close. TODO why? */
+      margin-top: 5px;
+    }
+    pre {
+      margin-left: 0px;
+      white-space: pre;
+    }
+    ul, ol {
+      /*list-style-position:inside;*/
+      margin-left: 14px;
+      padding-left: 14px;
+    }
+    table {
+      border-collapse: collapse;
+      border: $border;
+      margin-bottom: 15px;
+      text-align: left;
+    }
+    table tr > :not(:last-child) {
+      white-space: nowrap;
+      width: 1px;
+    }
+    td, th {
+      border: $border;
+      padding: 2px 4px;
+    }
+    th {
+      font-weight: bold;
+    }
+
+    /* Custom classes. */
+    .canvas-demo {
+      border: 1px solid black;
+      padding-left: 5px;
+      padding-right: 5px;
+      margin-bottom: 10px;
+    }
+    .patches-table tr {
+      > :nth-child(1),
+      > :nth-child(3) {
+        text-align: center;
+      }
+    }
+    #bugs-table tr > :nth-child(1) {
+      text-align: center;
+    }
+    #grading-table tr > :nth-child(1) {
+      font-weight: bold;
+      text-align: center;
+      padding-left: 8px;
+      padding-right: 8px;
+    }
+    #languages-table tr > :nth-child(1) {
+      text-align: center;
+    }
+    #other-tech-table tr > :nth-child(1) {
+      text-align: center;
+    }
+    #natural-languages-table tr > :nth-child(1) {
+      text-align: center;
+    }
+
+    // DataTables
+    $data_table_color: white;
+    table.dataTable tr {
+      &.odd {
+        background-color: $data_table_color;
+        td {
+          &.sorting_1 { background-color: $data_table_color; }
+          &.sorting_2 { background-color: $data_table_color; }
+          &.sorting_3 { background-color: $data_table_color; }
+        }
+      }
+      &.even {
+        background-color: $data_table_color;
+        td {
+          &.sorting_1 { background-color: $data_table_color; }
+          &.sorting_2 { background-color: $data_table_color; }
+          &.sorting_3 { background-color: $data_table_color; }
+        }
+      }
+    }
+  }
+
+  footer {
+    background-color: black;
+    color: white;
+    padding: $main_padding;
+    @mixin footer_link_hover {
+      color: $header_link_color;
+    }
+    a {
+      color: $header_link_color;
+      &:hover {
+        @include footer_link_hover;
+      }
+      &:visited {
+        &:hover {
+          @include footer_link_hover;
+        }
+        color: $header_link_color;
+      }
+    }
+  }
+}

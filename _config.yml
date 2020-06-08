@@ -1,0 +1,63 @@
+exclude: ['local', 'out', 'submodules']
+paginate_path: 'page:num'
+markdown: kramdown
+sass:
+    sass_dir: .
+defaults:
+  -
+    scope:
+      path: ''
+    values:
+      layout: 'default'
+      meta_title: true
+  -
+    scope:
+      path: 'r'
+    values:
+      layout: 'redirect'
+      sitemap: false
+
+kramdown:
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..6
+  smart_quotes: lsquo,rsquo,ldquo,rdquo
+
+# Define attributes that will be visible in both Liquid templates and Asciidoctor.
+asciidoc_and_liquid_attributes: &asciidoc_and_liquid_attributes
+  cirosantilli-github: 'https://github.com/cirosantilli'
+  cirosantilli-linkedin: 'https://www.linkedin.com/in/cirosantilli'
+  cirosantilli-media-prefix: 'https://raw.githubusercontent.com/cirosantilli/media/master/'
+  cirosantilli-media-repo: 'https://github.com/cirosantilli/media'
+  cirosantilli-repo-url: 'https://github.com/cirosantilli/cirosantilli.github.io'
+  cirosantilli-stack-overflow: 'https://stackoverflow.com/users/895245'
+  cirosantilli-twitter: 'https://twitter.com/cirosantilli'
+  cirosantilli-weibo: 'https://www.weibo.com/p/1005055601627311'
+  cirosantilli-youtube: 'https://www.youtube.com/c/CiroSantilli'
+  cirosantilli-zhihu: 'https://www.zhihu.com/people/cirosantilli/activities'
+  name: 'Ciro Santilli'
+
+# Make those attributes visible to liquid.
+<< : *asciidoc_and_liquid_attributes
+
+asciidoctor:
+  attributes:
+    # Make the attributes visible to Asciidoctor.
+    << : *asciidoc_and_liquid_attributes
+    listing-caption: 'Listing '
+    sectanchors: true
+    sectlinks: true
+    sectnumlevels: 6
+    sectnums: true
+    stem: ''
+    stem-caption: 'Equation '
+    toc-title: ''
+    toc: macro
+    toclevels: 6
+    video-caption: 'Video '
+
+# Markdown helpers.
+toc: |
+  1. a
+  {:toc}

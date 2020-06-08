@@ -1,0 +1,16 @@
+*.css
+!/main.liquid.html
+.sass-cache
+/node_modules
+/out
+
+/.jekyll-metadata
+# Local cache.
+/local
+/_site
+# Auto-generated, but need to be visible to Jekyll.
+/generated
+tmp.*
+
+# jekyll-git_metadata
+.git-metadata
