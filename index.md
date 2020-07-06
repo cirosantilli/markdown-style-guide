@@ -1384,7 +1384,7 @@ Good:
 
     - get on top of the bike. This step is easy.
     - put your foot on the pedal.
-    - push t the pedal. This is the most fun part.
+    - push the pedal. This is the most fun part.
 
 because it could be replaced with:
 
