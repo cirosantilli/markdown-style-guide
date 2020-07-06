@@ -1406,7 +1406,7 @@ because it could be replaced with:
 
     Get on top of the bike.
     Put your feet on the pedal.
-    Push the the pedal.
+    Push the pedal.
 
 #### Punctuation at the end of list items
 
