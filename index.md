@@ -89,7 +89,7 @@ One good command is:
 
 ## About
 
-The [source code is available on GitHub]({{ site.cirosantilli-github }}).
+The source code is available on GitHub: <https://cirosantilli.com/markdown-style-guide/>
 
 Considers [original specification](http://daringfireball.net/projects/markdown/syntax),
 [CommonMark](http://commonmark.org) and other extensions.
