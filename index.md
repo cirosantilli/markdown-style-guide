@@ -1375,7 +1375,7 @@ Good:
 because it could be replaced with:
 
     I want to eat apples
-    I want to eat babanas
+    I want to eat bananas
     I want to eat grapes
 
 Good:
