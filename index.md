@@ -961,7 +961,7 @@ Worse, we will never refer to the items of this list by their number:
 
 Acceptable, refer to them in the text:
 
-    The ouput of the `ls` command is of the form:
+    The output of the `ls` command is of the form:
 
         drwx------  2 ciro ciro        4096 Jul  5  2013 dir0
         drwx------  4 ciro ciro        4096 Apr 27 08:00 dir1
@@ -1498,7 +1498,7 @@ in many implementations nor in CommonMark.
 
 Instead, use either:
 
--   formated lists:
+-   formatted lists:
 
     - format the item be defined as either of bold, link or code
     - separate the item from the definition with a colon and a space `:.`
