@@ -3,6 +3,8 @@ title: Markdown Style Guide
 description: Readable and portable Markdown style guide.
 ---
 
+The source code is available on GitHub: <https://github.com/cirosantilli/markdown-style-guide/>
+
 - a
 {:toc}
 
@@ -88,8 +90,6 @@ One good command is:
 [GitHub upstream](https://github.com/cirosantilli/dotfiles/blob/81f668749ef317371154e84a974fb4a1d7af6ca3/home/.bashrc#L391).
 
 ## About
-
-The source code is available on GitHub: <https://cirosantilli.com/markdown-style-guide/>
 
 Considers [original specification](http://daringfireball.net/projects/markdown/syntax),
 [CommonMark](http://commonmark.org) and other extensions.
