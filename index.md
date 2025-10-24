@@ -1918,3 +1918,9 @@ Rationale: the original markdown specification states it:
 Therefore, the output is random, ugly, and as the spec itself mentions:
 
 > but an address published in this way will probably eventually start receiving spam
+
+## Backlinks
+
+-   2025-10 https://xrpl.org/resources/contribute-documentation
+
+    > When in doubt, follow Ciro Santilli's Markdown Style Guide (Writability Profile).
